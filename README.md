@@ -1,31 +1,57 @@
 # WindowServices.ca
 
-Codex build instructions for the Canada-wide, bilingual commercial and residential window-services brand.
+Bilingual static website for commercial and residential window-service enquiries. Canonical source: [GrafovGroup/WindowServices](https://github.com/GrafovGroup/WindowServices).
 
-## Master prompt
+The initial review build has **42 EN/FR routes**: home, four core services, commercial, residential, property management, a national enquiry hub, three guides, contact, quote, about, privacy, accessibility, next steps and localized 404s. The quote form uses the owner's Formspree endpoint `https://formspree.io/f/mppdzldb`.
 
-Read [MASTER_PROMPT.md](MASTER_PROMPT.md) in full. It is the self-contained project brief and implementation instruction, based on Grafov Group standards and the already selected concept #1 logo direction.
+**Review build, not a production launch.** All pages are noindex. Production is gated on the evidence in [the launch checklist](docs/LAUNCH_CHECKLIST.md). The original concept #1 artwork could not be retrieved from its private Library link. The present wordmark and W favicon are temporary, not the approved final identity.
 
-The prompt covers business positioning; service scope; approved identity; desktop/mobile design; English/Québec French content and routes; service-area publication controls; imagery; quote forms; SEO/AEO; favicons on every route; accessibility; hosting; testing; deployment; source recovery; and measured growth.
+## Build and preview
 
-## Start the build in Codex
+Use Node.js 24 LTS. No package installation is needed to build or serve the site.
 
-Open this repository in Codex and send:
+```sh
+node scripts/build.mjs
+node scripts/serve.mjs
+```
 
-> Read MASTER_PROMPT.md in full and execute APPROVED_BRAND_BUILD. Build and verify the complete bilingual WindowServices.ca website using approved logo concept #1. Retrieve the selected logo reference and discover existing integrations before asking for missing details. Continue all independent work, record any genuine blockers, and push the completed source to this repository. Prepare the finished site for review; do not change DNS or publish production without the applicable release authorization.
+Open `http://127.0.0.1:4173/en/` or `/fr/`. Rebuild after source edits, then reload. Stop the server with Ctrl+C. Set `PORT` to change the port. The loopback preview server always sends noindex headers and is not a production server.
 
-The owner can explicitly authorize launch in the same build request if desired. Existing applicable authorization takes precedence; routine implementation does not require phase-by-phase permission.
+Equivalent npm scripts: `npm run build`, `npm run dev`, `npm run check`. The lockfile records the intentionally dependency-free build. Generated `dist/` is ignored; deploy its contents only after release checks.
 
-## Current status — November 11, 2026
+## Checks
 
-- Master prompt prepared for implementation; website code has not been built by this documentation task.
-- Logo concept #1 is selected. The prompt identifies the original reference sheet; a production logo export is not included here.
-- Phone: (833) 696-9996. Intended mailbox: info@windowservices.ca; provisioning and delivery remain unverified.
-- Hosting/project binding, form endpoint, operational coverage and launch integrations must be resolved during implementation.
-- No deployment, DNS change, test enquiry, or Google/Bing submission has been performed by this preparation task.
+```sh
+node scripts/build.mjs
+node --test tests/*.test.mjs
+node scripts/audit.mjs
+```
 
-## Source and continuity
+Optional browser tooling is separate from the production build:
 
-Canonical repository: https://github.com/GrafovGroup/WindowServices . Default branch: `main`.
+```sh
+npm install --no-save --package-lock=false playwright@1.62.1 axe-core@4.11.0
+npx playwright install chromium
+# Keep the local preview server running in another terminal.
+node tests/browser.mjs
+node tests/accessibility.mjs
+```
 
-During implementation, retain the source, approved assets, dependency lockfile, safe environment example and concise project records specified in the master prompt. Never commit credentials or customer enquiries. On resuming, read project status and decisions before changing completed work.
+Use `CHROME_PATH` for an existing Chrome executable, `NODE_PATH` for an existing package directory, or `AXE_SCRIPT` for a separately installed axe bundle. Reports/screenshots go to ignored `artifacts/`. Browser tests intercept Formspree traffic; they never create real submissions. Live delivery testing requires separate explicit authorization.
+
+## Editing
+
+- `src/content/`: paired service copy and guides.
+- `src/i18n/`: messages and route equivalents.
+- `src/config/site.mjs`: contacts, region list, endpoint and production gates.
+- `src/components/`: shared page and form templates.
+- `public/`: CSS, small JS modules, responsive photography and temporary brand/icon assets.
+- `assets/originals/`: licensed photographic originals.
+- `scripts/`, `tests/`: build, preview and verification.
+- `docs/`: project continuity, source evidence and deployment notes.
+
+Use `route()` and `quoteLink()` rather than hardcoded navigation. Add both translations together. No analytics, uploads, accounts, payments or database are included. The build reads environment variables directly; `.env` is not automatically loaded. Use `.env.example` as a reference or `node --env-file=.env scripts/build.mjs`. Never commit credentials or enquiries. The Formspree form ID is intentionally public.
+
+## Resume
+
+Read [MASTER_PROMPT.md](MASTER_PROMPT.md), [status](docs/PROJECT_STATUS.md), [decisions](docs/DECISIONS.md) and [launch checklist](docs/LAUNCH_CHECKLIST.md). Preserve concept #1, resolve its source artwork, verify form delivery and business facts, then select the actual host. No production publishing, DNS changes or search submissions have been performed.

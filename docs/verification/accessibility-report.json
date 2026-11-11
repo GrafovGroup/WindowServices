@@ -1,0 +1,180 @@
+[
+  {
+    "path": "/en/",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      "aria-valid-attr-value",
+      "color-contrast",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/en/services/window-repair/",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      "aria-valid-attr-value",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/en/request-a-quote/",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      "aria-valid-attr-value",
+      "color-contrast",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/en/areas/",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      "aria-valid-attr-value",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/en/privacy/",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      "aria-valid-attr-value",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/fr/",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      "aria-valid-attr-value",
+      "color-contrast",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/fr/services/reparation-fenetres/",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      "aria-valid-attr-value",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/fr/demander-une-soumission/",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      "aria-valid-attr-value",
+      "color-contrast",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/fr/regions/",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      "aria-valid-attr-value",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/fr/confidentialite/",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      "aria-valid-attr-value",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/en/",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      "color-contrast",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/en/services/window-repair/",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/en/request-a-quote/",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      "color-contrast",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/en/areas/",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/en/privacy/",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/fr/",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      "color-contrast",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/fr/services/reparation-fenetres/",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/fr/demander-une-soumission/",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      "color-contrast",
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/fr/regions/",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      "link-in-text-block"
+    ]
+  },
+  {
+    "path": "/fr/confidentialite/",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      "link-in-text-block"
+    ]
+  }
+]
