@@ -30,10 +30,10 @@
       "uiMessage": "✓\nVotre demande a été acceptée.\n\nMerci pour les détails de votre projet. Il s’agit d’une demande, et non d’un rendez-vous ou d’une soumission confirmée.\n\nLES PROCHAINES ÉTAPES"
     }
   ],
-  "notificationProcessing": "Unverified: provider dashboard is not connected.",
-  "inboxReceipt": "Unverified: no matching test or Formspree notification found in the connected Gmail account after submission. Configured recipient may be a different inbox.",
+  "notificationProcessing": "Owner confirmed receipt of the test notifications on November 11, 2026. Provider dashboard was not independently inspected.",
+  "inboxReceipt": "Owner-confirmed: replied 'received' after the two live tests. No additional submissions were sent.",
   "limitations": [
-    "Acceptance does not establish inbox receipt.",
+    "Inbox receipt is based on the owner's confirmation, not direct inspection of the recipient mailbox.",
     "Production origin restrictions and provider settings still need verification.",
     "French characters were sent in the request; their notification rendering is not verified."
   ]
