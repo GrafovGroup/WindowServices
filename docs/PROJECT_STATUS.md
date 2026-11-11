@@ -4,7 +4,7 @@ Phase: **initial bilingual review build implemented; production launch awaits ev
 
 Implemented: 42 EN/FR routes; responsive header/footer; four service pillars; commercial/residential/property-management journeys; all 13 regions in a qualified hub; three guides; contact/about/privacy/accessibility; quote/next steps and localized 404s. Includes temporary wordmark/icons, self-hosted responsive stock media, metadata/schema, reciprocal language alternates, root redirect and noindex review safeguards.
 
-Owner's Formspree endpoint is integrated. Simulated validation, acceptance/error, Unicode and contextual-field checks do not establish real delivery. Live test authorization/results, if available, are recorded in the launch checklist. No production publishing, DNS/mail changes or search submission has been performed.
+Owner's Formspree endpoint is integrated. On November 11, 2026, after explicit authorization, exactly two live enquiries (EN/email, FR/phone-only) were accepted by Formspree with HTTP 200 and `ok: true`; both showed localized UI confirmation. Notification processing and inbox receipt remain unverified: no matching messages were found in the connected Gmail account. See the launch checklist and docs/verification/live-form-report.json. No production publishing, DNS/mail changes or search submission has been performed.
 
 Build, route/link audit, meaningful unit tests and browser/accessibility checks are documented in the checklist. No real-device Safari/iOS verification, field performance data or ranking is claimed.
 

@@ -13,8 +13,8 @@ Statuses distinguish a tested review build from a public launch. Production flag
 | Favicon implementation | PASS / BLOCKED | Valid three-size ICO plus SVG, 96/180/192/512 PNGs and manifest. Final approved emblem missing; current W is temporary. |
 | Approved concept #1 | BLOCKED | Private Library artwork inaccessible; original/production export needed. Current wordmark not approved. |
 | Form endpoint integration | PASS | Owner's `mppdzldb` endpoint in real HTML POST and JS enhancement. |
-| Live form acceptance | NOT TESTED | Explicit permission requested for two labelled test submissions. Browser tests intercept all external submission traffic. |
-| Notification/inbox receipt | NOT TESTED | Needs actual provider/recipient evidence. HTTP acceptance is insufficient. |
+| Live form acceptance | PASS | Two owner-authorized live submissions on November 11, 2026 at about 6:15 p.m. Toronto time: EN/email and FR/phone-only. Both returned HTTP 200 with `ok: true` and displayed localized confirmation. Exactly two POSTs, no retries. See docs/verification/live-form-report.json. |
+| Notification/inbox receipt | NOT VERIFIED | No matching notifications found in the connected Gmail account. Formspree dashboard and configured recipient are not visible. Provider acceptance does not establish notification processing or inbox receipt. |
 | Provider rules and abuse controls | BLOCKED | Dashboard verification required: required/contact rules, limits, CAPTCHA/spam and host restrictions. Honeypot is not complete protection. |
 | Service/region capability | BLOCKED | Core pages are review content. Region availability qualified; no office claims. Confirm fulfilment before release. |
 | Legal/privacy/retention | BLOCKED | Confirm contracting entity and real access/retention practices. Current privacy copy reflects the chosen form processor. |

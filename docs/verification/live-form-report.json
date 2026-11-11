@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-11",
+  "timezone": "America/Toronto",
+  "authorization": "Owner explicitly approved two labelled live test enquiries in this chat.",
+  "sourceCommit": "2bc1378d1fb8efc6a9bff6a88ea88226f2b7b83e",
+  "endpoint": "https://formspree.io/f/mppdzldb",
+  "totalPosts": 2,
+  "method": "Actual quote forms submitted through Chrome from localhost; no response mocks; one POST per language; no retries.",
+  "tests": [
+    {
+      "language": "en-CA",
+      "reference": "WS-LIVE-20261111-EN-1814",
+      "contactMode": "email",
+      "origin": "http://127.0.0.1:4173",
+      "submittedAt": "2026-11-11T23:15:06.747Z",
+      "httpStatus": 200,
+      "providerOk": true,
+      "uiSuccess": true,
+      "uiMessage": "✓\nYour request has been accepted.\n\nThank you for the project details. This is an enquiry, not an appointment or a confirmed quote.\n\nWHAT HAPPENS NEXT"
+    },
+    {
+      "language": "fr-CA",
+      "reference": "WS-LIVE-20261111-FR-1814",
+      "contactMode": "phone-only",
+      "origin": "http://127.0.0.1:4173",
+      "submittedAt": "2026-11-11T23:15:08.562Z",
+      "httpStatus": 200,
+      "providerOk": true,
+      "uiSuccess": true,
+      "uiMessage": "✓\nVotre demande a été acceptée.\n\nMerci pour les détails de votre projet. Il s’agit d’une demande, et non d’un rendez-vous ou d’une soumission confirmée.\n\nLES PROCHAINES ÉTAPES"
+    }
+  ],
+  "notificationProcessing": "Unverified: provider dashboard is not connected.",
+  "inboxReceipt": "Unverified: no matching test or Formspree notification found in the connected Gmail account after submission. Configured recipient may be a different inbox.",
+  "limitations": [
+    "Acceptance does not establish inbox receipt.",
+    "Production origin restrictions and provider settings still need verification.",
+    "French characters were sent in the request; their notification rendering is not verified."
+  ]
+}
