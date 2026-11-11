@@ -11,7 +11,8 @@ Statuses distinguish a tested review build from a public launch. Production flag
 | Automated accessibility | PASS | axe-core 4.11.0 in Chrome; 20 page/viewport combinations, zero automatic A/AA violations. Not an accessibility certification. |
 | Visual review | PASS | Desktop EN home/repair, mobile FR home/quote, tablet FR areas screenshots inspected. Long French copy fits. |
 | Favicon implementation | PASS / BLOCKED | Valid three-size ICO plus SVG, 96/180/192/512 PNGs and manifest. Final approved emblem missing; current W is temporary. |
-| Approved concept #1 | BLOCKED | Private Library artwork inaccessible; original/production export needed. Current wordmark not approved. |
+| Logo concept selection | PASS | Owner reconfirmed option #1 — Architectural / Commercial — on November 11, 2026. |
+| Approved concept #1 artwork implementation | BLOCKED | Private Library artwork inaccessible; original concept-sheet PNG or production export needed. Current wordmark not approved. |
 | Form endpoint integration | PASS | Owner's `mppdzldb` endpoint in real HTML POST and JS enhancement. |
 | Live form acceptance | PASS | Two owner-authorized live submissions on November 11, 2026 at about 6:15 p.m. Toronto time: EN/email and FR/phone-only. Both returned HTTP 200 with `ok: true` and displayed localized confirmation. Exactly two POSTs, no retries. See docs/verification/live-form-report.json. |
 | Notification/inbox receipt | PASS — OWNER CONFIRMED | Owner replied "received" after the two live tests on November 11, 2026. Receipt is owner-confirmed; mailbox contents, French notification formatting and dashboard settings were not independently inspected. |
