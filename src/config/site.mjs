@@ -10,7 +10,7 @@ export const site = {
 
 // Change only when evidence is recorded in docs/LAUNCH_CHECKLIST.md.
 export const launch = {
-  approvedLogo: false,
+  approvedLogo: true,
   serviceScopeVerified: false,
   legalAndPrivacyReviewed: false,
   formDeliveryVerified: false,

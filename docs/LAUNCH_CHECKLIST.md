@@ -1,6 +1,6 @@
 # Launch checklist — November 11, 2026
 
-Statuses distinguish a tested review build from a public launch. Production flags remain false until evidence resolves the blockers.
+Statuses distinguish a tested review build from a public launch. Each production flag is enabled only when its supporting evidence is recorded.
 
 | Check | Status | Evidence / remaining work |
 | --- | --- | --- |
@@ -11,9 +11,9 @@ Statuses distinguish a tested review build from a public launch. Production flag
 | Browser HTTP/interaction/responsive checks | PASS | Chrome 157.0.8103.51 via Playwright 1.62.1: 42 routes, 84 responsive views (360/390/768/1280/1440/1920), EN/FR provider mocks, menu focus/Escape, locale links, 404s, no-JS form and reduced motion. Exact browser version in docs/verification/browser-report.json. |
 | Automated accessibility | PASS | axe-core 4.11.0 in Chrome; 20 page/viewport combinations, zero automatic A/AA violations. Not an accessibility certification. |
 | Visual review | PASS | Desktop EN home/repair, mobile FR home/quote, tablet FR areas screenshots inspected. Long French copy fits. |
-| Favicon implementation | PASS / VISUAL REVIEW | Reconstructed architectural emblem in valid 16/32/48 ICO, SVG, 96/180/192/512 PNGs and manifest. Final owner review pending. |
+| Favicon implementation | PASS | Approved reconstructed architectural emblem in valid 16/32/48 ICO, SVG, 96/180/192/512 PNGs and manifest. Owner approved the visual proof on November 11, 2026. |
 | Logo concept selection | PASS | Owner reconfirmed option #1 — Architectural / Commercial — on November 11, 2026. |
-| Concept #1 artwork implementation | PASS / VISUAL REVIEW | Original sheet recovered and retained unchanged. Real SVG paths, transparent/reversed/monochrome PNGs and bilingual social cards are installed. Reconstruction uses outlined Manrope lettering; owner visual check pending. |
+| Concept #1 artwork implementation | PASS — OWNER APPROVED | Owner explicitly replied “Approve this logo reconstruction” on November 11, 2026 after viewing the proof. Real SVG paths, transparent/reversed/monochrome PNGs, icons and bilingual social cards are installed. See docs/verification/brand-approval.json. |
 | Form endpoint integration | PASS | Owner's `mppdzldb` endpoint in real HTML POST and JS enhancement. |
 | Live form acceptance | PASS | Two owner-authorized live submissions on November 11, 2026 at about 6:15 p.m. Toronto time: EN/email and FR/phone-only. Both returned HTTP 200 with `ok: true` and displayed localized confirmation. Exactly two POSTs, no retries. See docs/verification/live-form-report.json. |
 | Notification/inbox receipt | PASS — OWNER CONFIRMED | Owner replied "received" after the two live tests on November 11, 2026. Receipt is owner-confirmed; mailbox contents, French notification formatting and dashboard settings were not independently inspected. |
@@ -29,4 +29,4 @@ Statuses distinguish a tested review build from a public launch. Production flag
 | Google/Bing | NOT TESTED | No property verification, sitemap submission or indexing evidence. Review sitemap is empty. |
 | Analytics, uploads, accounts/payments | NOT APPLICABLE | Not included in this scope. |
 
-Before public release: complete the logo visual check, confirm actual operations and legal/privacy facts, confirm provider controls, and verify DNS/HTTPS and form behaviour on the final domain. No fake placeholder offices, reviews, projects, certifications, prices or guarantees appear.
+Before public release: confirm actual operations and legal/privacy facts, confirm provider controls, and verify DNS/HTTPS and form behaviour on the final domain. The logo visual check is complete. No fake placeholder offices, reviews, projects, certifications, prices or guarantees appear.

@@ -9,8 +9,8 @@
 | `/en/` and `/fr/`, shared route equivalence map | Master prompt. No geolocation redirect. |
 | Dependency-free Node 24 static generator | Implementation choice permitted by the static-first brief. No client framework is needed. Portable output for ordinary hosting. |
 | Native HTML POST plus vanilla-JS enhancement | Matches the owner's Formspree HTML/JS guides. Endpoint `mppdzldb` supplied by owner; no CDN SDK dependency. |
-| Noindex review build with production gates | Pending logo visual check, operating/privacy details, provider controls and final-domain cutover. Live test receipt is owner-confirmed. |
-| Reconstructed option #1 replaces temporary wordmark and W icon | Original sheet recovered from the owner's Library and retained unchanged. Geometry traced; licensed Manrope lettering outlined. Final visual check pending. |
+| Noindex review build with production gates | Pending operating/privacy details, provider controls and final-domain cutover. Logo reconstruction and live test receipt are owner-confirmed. |
+| Reconstructed option #1 replaces temporary wordmark and W icon | Original sheet recovered and retained unchanged. Geometry traced; licensed Manrope lettering outlined. Owner explicitly approved the reconstruction on November 11, 2026 after viewing the proof. |
 | Four service pages, useful guides, one coverage hub | No verified specialist capability/local presence to justify more advertised services or city pages. |
 | No uploads, analytics or accounts | No approved integrations or need. Personal data never goes into URLs or analytics. |
 | Mocked submission tests | Real Formspree tests may send notifications; explicit authorization requested separately. |

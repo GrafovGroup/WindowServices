@@ -8,7 +8,7 @@ The original [WindowServices.ca concept sheet](https://chatgpt.com/library?file_
 
 The navy/blue architectural panels and curved base were traced into editable SVG geometry after visual inspection. Wordmark lettering is standardized in Manrope ExtraBold; it is not represented as an exact font match to the raster reference. Solid colours normalize the slightly varying source pixels to navy `#00244C` and blue `#0094E4`. The spelling is WindowServices.ca.
 
-This is a **vector reconstruction awaiting the owner's visual check**, not an untouched production original. See `docs/preview/brand-proof.png`. It is applied to the review site; `launch.approvedLogo` remains false until that check is recorded.
+This is an **owner-approved vector reconstruction**. After reviewing `docs/preview/brand-proof.png`, the owner explicitly replied **“Approve this logo reconstruction”** on November 11, 2026. That approval includes the reconstructed architectural emblem, curved base and standardized Manrope lettering. `launch.approvedLogo` is now true. Reconstruction provenance remains recorded; it is not represented as an untouched original export. Evidence and approved-file hashes: `docs/verification/brand-approval.json`.
 
 ## Delivered assets
 

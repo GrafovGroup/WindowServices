@@ -1,4 +1,4 @@
-// Option 1 reconstructed from the recovered original sheet; visual review pending.
+// Option 1 reconstruction visually approved by the owner on November 11, 2026.
 // These are editable vectors with outlined Manrope lettering and transparent backgrounds.
 export const brand = {
   selectedConcept: 1,

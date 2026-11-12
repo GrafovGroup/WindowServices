@@ -4,7 +4,7 @@ Bilingual static website for commercial and residential window-service enquiries
 
 The initial review build has **42 EN/FR routes**: home, four core services, commercial, residential, property management, a national enquiry hub, three guides, contact, quote, about, privacy, accessibility, next steps and localized 404s. The quote form uses the owner's Formspree endpoint `https://formspree.io/f/mppdzldb`.
 
-**Review build, not a production launch.** All pages are noindex. Production is gated on the evidence in [the launch checklist](docs/LAUNCH_CHECKLIST.md). The original option #1 reference has been recovered and reconstructed as editable logo variants and icons. The reconstruction is installed in the review site; its final visual approval is pending. See [the logo proof](docs/preview/brand-proof.png).
+**Review build, not a production launch.** All pages are noindex. Production is gated on the evidence in [the launch checklist](docs/LAUNCH_CHECKLIST.md). The original option #1 reference has been recovered and reconstructed as editable logo variants and icons. The owner approved this reconstruction on November 11, 2026, and it is installed in the review site and verified WHC staging package. See [the approved logo proof](docs/preview/brand-proof.png).
 
 ## Build and preview
 
@@ -71,4 +71,4 @@ Use `route()` and `quoteLink()` rather than hardcoded navigation. Add both trans
 
 ## Resume
 
-Read [MASTER_PROMPT.md](MASTER_PROMPT.md), [status](docs/PROJECT_STATUS.md), [decisions](docs/DECISIONS.md) and [launch checklist](docs/LAUNCH_CHECKLIST.md). Review the reconstructed option #1 artwork, confirm business facts and provider controls, and prepare the final WHC/DNS cutover. Live test receipt is owner-confirmed. No production publishing, DNS changes or search submissions have been performed.
+Read [MASTER_PROMPT.md](MASTER_PROMPT.md), [status](docs/PROJECT_STATUS.md), [decisions](docs/DECISIONS.md) and [launch checklist](docs/LAUNCH_CHECKLIST.md). Preserve the approved option #1 reconstruction, confirm business facts and provider controls, and prepare the final WHC/DNS cutover. Live test receipt is owner-confirmed. No production publishing, registrar DNS/mail changes or search submissions have been performed.

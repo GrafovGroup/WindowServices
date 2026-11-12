@@ -1,0 +1,49 @@
+{
+  "approvedOn": "2026-11-11",
+  "timezone": "America/Toronto",
+  "authority": "Owner response in this project chat",
+  "ownerResponse": "Approve this logo reconstruction",
+  "concept": 1,
+  "scope": "Architectural emblem and curved base reconstructed from the recovered original, with standardized Manrope lettering and displayed site variants.",
+  "launchFlag": {
+    "approvedLogo": true
+  },
+  "proof": "docs/preview/brand-proof.png",
+  "assets": [
+    {
+      "path": "docs/preview/brand-proof.png",
+      "sha256": "2a3d91ab93d51c741fe281ebbf145727f779c105d9aa5aa547727b60147daa36"
+    },
+    {
+      "path": "public/brand/logo-horizontal.svg",
+      "sha256": "596c8bdc0b3e56ea8abb9ed5efece95ae51c4d1a2bc0bdf01346289b8aa24036"
+    },
+    {
+      "path": "public/brand/logo-horizontal-white.svg",
+      "sha256": "514c23058fca1ea5eac5a83f08001e18454ad4ed23dfea41614f15f2713354d6"
+    },
+    {
+      "path": "public/brand/logo-horizontal-mono.svg",
+      "sha256": "72236399ed6e72e5abd52f50fdd4ff39704c792a1697e4b38ca62426e83fd14e"
+    },
+    {
+      "path": "public/brand/logo-stacked-en.svg",
+      "sha256": "5fa671fee4fbb606be311b7ed988924f0bec29816daca53e2ee9b1c1f6561a56"
+    },
+    {
+      "path": "public/brand/logo-emblem.svg",
+      "sha256": "e0665ebf3ae84123fa59dd875a75b983561713b6cc271de66d61aa8a3a224e13"
+    },
+    {
+      "path": "public/favicon.ico",
+      "sha256": "49b7c6b573ab1ad21c0e2bf81d2e9930fa44005237e3e286ebaebb9c1e78d33b"
+    }
+  ],
+  "existingStagingPackage": {
+    "sourceCommit": "5263960e9689236374a408502c41d046b923047f",
+    "archive": "windowservices-preview-5263960e9689.tar.gz",
+    "publicFiles": 113,
+    "matchesCurrentBuild": true,
+    "note": "Approval changes source configuration and records; the existing staged website payload already contains the approved artwork and is unchanged."
+  }
+}
