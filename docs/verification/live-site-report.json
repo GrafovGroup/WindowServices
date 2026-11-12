@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-11-12T02:14:14.956Z",
+  "checkedAt": "2026-11-12T02:47:36.962Z",
   "origin": "https://windowservices.ca",
   "mode": "production",
-  "sourceCommit": "ef2e0e1162c8e1f88c1e1eb8974cbcadadad7b77",
+  "sourceCommit": "77262a968f35ffc28ba011237a1dc3d6f4f1fd99",
   "sourceDirty": false,
   "connectedTo": "51.161.57.68",
   "certificateValidation": "enabled",
@@ -189,7 +189,7 @@
       "status": 200
     }
   ],
-  "additionalFilesHashMatched": 69,
+  "additionalFilesHashMatched": 84,
   "checks": [
     "All published route bodies match the local release",
     "Localized genuine 404 responses",

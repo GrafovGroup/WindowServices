@@ -1,0 +1,25 @@
+{
+  "deployedAt": "2026-11-12T02:49:14.609334+00:00",
+  "sourceCommit": "77262a968f35ffc28ba011237a1dc3d6f4f1fd99",
+  "sourceDirty": false,
+  "documentRoot": "/home/nqgwub76/windowservices.ca",
+  "package": "windowservices-production-77262a968f35.tar.gz",
+  "bytes": 3532940,
+  "sha256": "31cd664a5f98ae0c269ebcf750f1eebf10dde2c8526487239f3198aee81afcb5",
+  "publicFiles": 131,
+  "serverChecksum": "OK",
+  "terminalCompletion": "DEPLOYED_77262a968f35",
+  "backup": "/home/nqgwub76/windowservices-staging/windowservices-before-seo-20261112.tar.gz",
+  "backupPermissions": "0600",
+  "publicDirectories": "0755",
+  "publicFilesPermissions": "0644",
+  "liveVerification": "42 routes + 84 other public-file hashes; TLS, canonical redirects, security/indexing headers, genuine localized 404s passed",
+  "forms": "No new real enquiries. All form behavior checks mocked Formspree.",
+  "changes": [
+    "Direct answers and deeper scope/decision guidance across four services in EN/FR",
+    "Visible operator and enriched Organization schema",
+    "Form first on mobile; optional details collapsed; sticky mobile contact actions",
+    "Basic opt-in GA4 in the existing account with fixed event allowlists",
+    "Smaller responsive images and content-versioned CSS/module graph"
+  ]
+}

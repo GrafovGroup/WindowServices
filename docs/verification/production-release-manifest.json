@@ -1,31 +1,31 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-11-12T02:13:39.845Z",
+  "createdAt": "2026-11-12T02:46:31.574Z",
   "mode": "production",
   "origin": "https://windowservices.ca",
   "source": {
-    "commit": "ef2e0e1162c8e1f88c1e1eb8974cbcadadad7b77",
+    "commit": "77262a968f35ffc28ba011237a1dc3d6f4f1fd99",
     "dirty": false
   },
   "selectedLogoConcept": 1,
   "logoArtworkConfigured": true,
   "routeCount": 42,
-  "totalBytes": 3797722,
+  "totalBytes": 4374251,
   "files": [
     {
       "path": "_errors/en.html",
-      "bytes": 8141,
-      "sha256": "8204fa8cfd64b99809bbc2ce51a7db700f199d52f7560dd6dbbce5e04f31240e"
+      "bytes": 9460,
+      "sha256": "b90f0f4ea747cf945188d169e12360ff912d839b9c3ce0535cb61978317e7731"
     },
     {
       "path": "_errors/fr.html",
-      "bytes": 8471,
-      "sha256": "7291745ee0db875626b76271611962138c212f3f2b21905dc099077355c79a35"
+      "bytes": 9859,
+      "sha256": "a530dcaad1aa37245a96a39277ac1338085fd64d8a0122453048cf0c80b36c51"
     },
     {
       "path": "_headers",
-      "bytes": 385,
-      "sha256": "e1450293a1d3e581cf3b2f41e32e8e8187fa5421b7642365f6c2363d674954db"
+      "bytes": 550,
+      "sha256": "06e319d0a66f49a302f170c02bf7f347e58aa9da08eec590333954dc56a21acd"
     },
     {
       "path": "_redirects",
@@ -34,13 +34,18 @@
     },
     {
       "path": ".htaccess",
-      "bytes": 1099,
-      "sha256": "fdb15bc43b8fdd73a243f7b57b7885ce7bda432ba8425124313d26a2d5716ad2"
+      "bytes": 1264,
+      "sha256": "14013b6e9dfc9c880541984f79e6581d83bd62b1b53ba1cab7c107861a71a74d"
     },
     {
       "path": "404.html",
-      "bytes": 8141,
-      "sha256": "8204fa8cfd64b99809bbc2ce51a7db700f199d52f7560dd6dbbce5e04f31240e"
+      "bytes": 9460,
+      "sha256": "b90f0f4ea747cf945188d169e12360ff912d839b9c3ce0535cb61978317e7731"
+    },
+    {
+      "path": "analytics.js",
+      "bytes": 5054,
+      "sha256": "3ebacf8fb9f7830a37331d7367dde535801ae7c9ef79b589f6b1e062c7f5b47e"
     },
     {
       "path": "apple-touch-icon.png",
@@ -194,108 +199,108 @@
     },
     {
       "path": "en/404/index.html",
-      "bytes": 8141,
-      "sha256": "8204fa8cfd64b99809bbc2ce51a7db700f199d52f7560dd6dbbce5e04f31240e"
+      "bytes": 9460,
+      "sha256": "b90f0f4ea747cf945188d169e12360ff912d839b9c3ce0535cb61978317e7731"
     },
     {
       "path": "en/about/index.html",
-      "bytes": 9701,
-      "sha256": "10e7b70027dde5aaf7b006912332e0df49a1b7875441942d988d8b6b6e8c349f"
+      "bytes": 13953,
+      "sha256": "bcc4ca2c8bfbc6d6396d40f9c42aa70cf96be71a70f617e8338a113af13909ba"
     },
     {
       "path": "en/accessibility/index.html",
-      "bytes": 8937,
-      "sha256": "a1b0d159750cd688a3653a8868dc2cd89c0ab26dc6b95fbf380dd85011c3a8f8"
+      "bytes": 10264,
+      "sha256": "b82553fd8af2abfe29b4ecbac172fd69fbc69bd57c9d28fd800eaa0a3b4b6904"
     },
     {
       "path": "en/areas/index.html",
-      "bytes": 11081,
-      "sha256": "2ea73ecc33a2eb1edeeb2c915367750147f904138d4171124fe79bf5c53af966"
+      "bytes": 12622,
+      "sha256": "3d0ab4133dba172fd3d546eb95854b06ba73e85a4d52151999f7df3c168f1aa8"
     },
     {
       "path": "en/commercial/index.html",
-      "bytes": 14971,
-      "sha256": "788e6cf57918943aea8ab99df80987b2238bab684b66530defadf42046e4dbab"
+      "bytes": 16940,
+      "sha256": "c53b6f28c5f493182a224af508401311a7ee50fd7b9e3b873e09d7a5021344ed"
     },
     {
       "path": "en/commercial/property-management/index.html",
-      "bytes": 11264,
-      "sha256": "4ab68c98f4314f4a868d881f9fb19d6bfc362a4a4df573c1c04ab20e652fd5fa"
+      "bytes": 12883,
+      "sha256": "fe53de2f624b6de1dcc03354a18ca2f717ce60e47d807eaaf9d390cff1128f45"
     },
     {
       "path": "en/contact/index.html",
-      "bytes": 9095,
-      "sha256": "b9ed881d597b7d0d83cd9ef2f848540ab2f0db931ae70990ee73594bf4847128"
+      "bytes": 10416,
+      "sha256": "e8602bfbb901edf9e1b54f594b52d47c0138cf29c38a2e952e0380391a50ee08"
     },
     {
       "path": "en/index.html",
-      "bytes": 19131,
-      "sha256": "9d48981263000f5c74b11696cb78fa44122fce05ce1119aa0ef097475e34036e"
+      "bytes": 21226,
+      "sha256": "21e5f16f99d800adb3c1620ca3d16915bca67c1cc27af7d34e294119a3ba7f84"
     },
     {
       "path": "en/privacy/index.html",
-      "bytes": 10729,
-      "sha256": "650713ad21a31a52b68e0caf60fd32163362d058f148ae4d2b1232b1f4735ca8"
+      "bytes": 12816,
+      "sha256": "422c2c31bbc32e5525032b6599a735a24ee9f71aa863ce4ba010bd95e46d6f6f"
     },
     {
       "path": "en/request-a-quote/index.html",
-      "bytes": 15971,
-      "sha256": "3c17884827731d5211e91db7bf4babceb2ea517e59adbb74081e5205757c5284"
+      "bytes": 17622,
+      "sha256": "7004db28870ad584fb9dd65f9ab5a12b46320939aa08cbe84c467d847c02a8af"
     },
     {
       "path": "en/residential/index.html",
-      "bytes": 14487,
-      "sha256": "e8d2b47bf55dc878ed9310a2c874161f6439f4c350ed51cb02801ca7e8446533"
+      "bytes": 16460,
+      "sha256": "3423433942ce6e8796396b867b45d0f94c8d71f6838d118901e84b3b51064f78"
     },
     {
       "path": "en/resources/index.html",
-      "bytes": 11008,
-      "sha256": "1b74866fc9085fc2fd3d434916865d6e902342909349c9505bee03a948308e83"
+      "bytes": 12749,
+      "sha256": "ef7ea5fbd0df57337cb96ad81cff013c7d2146790bd61fe2ec9dfb44049f965a"
     },
     {
       "path": "en/resources/preparing-window-service-quote/index.html",
-      "bytes": 11653,
-      "sha256": "608dac4000e7c09b7a67995d2eb04aa4afdfc38d9689bdb8c18102e9d2a6a6f7"
+      "bytes": 13278,
+      "sha256": "4657ce773a91a29caa54703fbfc31e982b9ac428577682a07615ac0e72389453"
     },
     {
       "path": "en/resources/repair-or-replace-windows/index.html",
-      "bytes": 12106,
-      "sha256": "5274c08d0c270c33568783e39576c028a0c5feb8e416019897e4eeb51a0848d3"
+      "bytes": 13711,
+      "sha256": "60e80b716a6d0d7927469fbbae3e05d43ffe42dc3a02e9baa7aece2151b55d74"
     },
     {
       "path": "en/resources/window-condensation/index.html",
-      "bytes": 11428,
-      "sha256": "fa0d0fc7dbc1d3686df1bcdd9ad6f8a8595e674f4e0e6afb30b023da57a933a0"
+      "bytes": 13043,
+      "sha256": "1134e25f2c10c37958f593f372d0ce55d9d1b7451c10e3ad464c4473a62f9f48"
     },
     {
       "path": "en/services/index.html",
-      "bytes": 12656,
-      "sha256": "6b6b3c66f10e8fc4e0acc4ad0537b0a2679681acb18b60dd45f11cfc2deab415"
+      "bytes": 14553,
+      "sha256": "ca8c62a6d24c3ae047735bca2acdfc1bcd1c293a13ca63980ebc44f6207a54d4"
     },
     {
       "path": "en/services/window-cleaning/index.html",
-      "bytes": 13092,
-      "sha256": "191dc2f35d6c43986bb85aad9d9173b372d09ee62db5d304b4af0543e627bef9"
+      "bytes": 16594,
+      "sha256": "4fa1460b78860a874b1376c147d19bb1c41654bc83ee3da9d21666c22f8c5ed4"
     },
     {
       "path": "en/services/window-installation/index.html",
-      "bytes": 13255,
-      "sha256": "ac6bf9318dac9dc476ae4b27294c74c822dab1be441bd36b3349c75e7903bccb"
+      "bytes": 16950,
+      "sha256": "9da2fec2b3ab0db03d74fe30bdee35691ded60fc8d8e04b1779cae6b8ac4fab7"
     },
     {
       "path": "en/services/window-repair/index.html",
-      "bytes": 13085,
-      "sha256": "71762a6fdce709966d5402ebaa7669e09dd91ffdf61bd1d47203a3131762bdc9"
+      "bytes": 16604,
+      "sha256": "50f382d856370e2e63a342ba575f73cd6b2bfb239e0f7165451c9da07a8a385b"
     },
     {
       "path": "en/services/window-replacement/index.html",
-      "bytes": 13224,
-      "sha256": "ccba9664f470eaf335aca0f68703e800f0e2dd30cd63c6b186c6a40d4ec5e26a"
+      "bytes": 16956,
+      "sha256": "c1a2fda7268651bec1aa9e39da320bbf7cc3479e874cdae38738ec93ce074d50"
     },
     {
       "path": "en/thank-you/index.html",
-      "bytes": 9412,
-      "sha256": "e72034998deeb431064c6be560c7aec64651b554df3fd007b488656f42f56cc6"
+      "bytes": 10732,
+      "sha256": "9a259ee5e125d0edfa1b71c7281e08636a8fe4eb5255a07f76e9eddc0f04fd28"
     },
     {
       "path": "favicon-16.png",
@@ -339,108 +344,108 @@
     },
     {
       "path": "fr/404/index.html",
-      "bytes": 8471,
-      "sha256": "7291745ee0db875626b76271611962138c212f3f2b21905dc099077355c79a35"
+      "bytes": 9859,
+      "sha256": "a530dcaad1aa37245a96a39277ac1338085fd64d8a0122453048cf0c80b36c51"
     },
     {
       "path": "fr/a-propos/index.html",
-      "bytes": 10224,
-      "sha256": "6abc2f8bf329a1e0ee218b4aa650e3a12f0640aefa53b5be55c033691aa2f9c6"
+      "bytes": 14806,
+      "sha256": "7f8c0e92bc61560745bebb5f196b4c8185984fb3fcf8da73db9d53b1f3d5e106"
     },
     {
       "path": "fr/accessibilite/index.html",
-      "bytes": 9384,
-      "sha256": "586e1b19cab6cfec865f6485e1ef49692e1de0e510007be70f4f90ee95e43637"
+      "bytes": 10780,
+      "sha256": "cc76981228e8e6c8bbd47dbeea4c0f09fdc064658c37121b1bbf021c4033fcda"
     },
     {
       "path": "fr/commercial/gestion-immobiliere/index.html",
-      "bytes": 11862,
-      "sha256": "0d161c4f62a19dd01fc2b841593b72654a980d4d15d729ce31728d7e6d233240"
+      "bytes": 13568,
+      "sha256": "b6f45a0565a096fc784b9203ead810db4d9edfc1891bac1ee17622c0080ff2f0"
     },
     {
       "path": "fr/commercial/index.html",
-      "bytes": 15758,
-      "sha256": "e85f76ad3f20ec37ce36106fdf5213a02e673d605afed83424e8df97f387d773"
+      "bytes": 17814,
+      "sha256": "e0113a99f77c8b50899a0c5517071558a0104a87f6d30239e10ece5eeb18c61a"
     },
     {
       "path": "fr/confidentialite/index.html",
-      "bytes": 11886,
-      "sha256": "c161ea4db3fdddeefb977fddf0eae16bb37be02af02a1b14b11051058e0a7d62"
+      "bytes": 14167,
+      "sha256": "84e57e4693f537009081d9726a6edfcef8611606d0a49c567e5efc6344d02cb0"
     },
     {
       "path": "fr/contact/index.html",
-      "bytes": 9464,
-      "sha256": "af0b02c8d99c744aa8f8003c8a66146c2c124d83363ec1f00f0d96afd0185ec4"
+      "bytes": 10854,
+      "sha256": "6aa3c1bd6346100fd2a0374f961b9a67b96c27a555240ff556ef54c53805b486"
     },
     {
       "path": "fr/demander-une-soumission/index.html",
-      "bytes": 16638,
-      "sha256": "893e998fe0e340f067a8cbbcb6f7cacbf8420713ee1f5fc510b621ccb33f4aed"
+      "bytes": 18400,
+      "sha256": "1ce30101927dae91a22401d06982e911d62868d1069530ad916a5839e9a9f7c7"
     },
     {
       "path": "fr/index.html",
-      "bytes": 20182,
-      "sha256": "309295f7b465532143b0aaf2e2c4c4a7c332bb79c450ab3f0b55d86d0be7c0f1"
+      "bytes": 22364,
+      "sha256": "b2bea35a3235f56aa987f240c4731e0833d4be075537f07f2846f98bb65323d5"
     },
     {
       "path": "fr/merci/index.html",
-      "bytes": 9884,
-      "sha256": "9e36afbd58d904867fcb853d7d40e6719b832a7ee1c7ce37d879c6b786c51dd4"
+      "bytes": 11273,
+      "sha256": "00def28c39b51ff1b910ee976854bad5e96fa67f0e2867e97421759a2614a229"
     },
     {
       "path": "fr/regions/index.html",
-      "bytes": 11622,
-      "sha256": "26ca198148fb25aa447f6f8942223d3f9ef7af9bd2d3ca97287c9c20734c2ddb"
+      "bytes": 13250,
+      "sha256": "62071fa190cf316c173b77fe6d0ce9d6a5d3877bdf13ed15173461c8816cfacd"
     },
     {
       "path": "fr/residentiel/index.html",
-      "bytes": 15221,
-      "sha256": "7438977591af58e16a5d56d5aa46ca6206f1968b51c2870dd93fe52c1df8826a"
+      "bytes": 17281,
+      "sha256": "c52c78dbcff1d8bd7e1c25a60d654d9bb8559dfb0798cabe41444b6c5d613f12"
     },
     {
       "path": "fr/ressources/condensation-fenetres/index.html",
-      "bytes": 11868,
-      "sha256": "ca502ad4cce8b67440eb80b01afdb3fac563a84540b016b41dd312c48d3a55b7"
+      "bytes": 13570,
+      "sha256": "048ae8f36602a37e69b8405024ba0e0c17b584a9089ea4626a22b8e92550167e"
     },
     {
       "path": "fr/ressources/index.html",
-      "bytes": 11381,
-      "sha256": "10483e67985ec6ccf0df5b61af1342710bba6cf56e0c677164324d2d6fcf919b"
+      "bytes": 13209,
+      "sha256": "7fedfafa2603e5f6dcc707e26aaf68a17dd444025933b551dbdc4edaac032283"
     },
     {
       "path": "fr/ressources/preparer-demande-soumission/index.html",
-      "bytes": 12143,
-      "sha256": "ad9312930c30aaa122eaa0589547df4da45c9cd11a59d7a1c67a4057e2cc02fc"
+      "bytes": 13855,
+      "sha256": "01a69ff18e3739f2aaf06579b97b83f64280eff8bda3c3a747136f428daababd"
     },
     {
       "path": "fr/ressources/reparer-ou-remplacer-fenetres/index.html",
-      "bytes": 12606,
-      "sha256": "ef8e3abf3b0b128ad57e94221050b02e575b6e5c447499ada0812a8dfbf1542a"
+      "bytes": 14298,
+      "sha256": "ab03debf4eb97c28ee9f4badec203f1a8d0340b27a4fc437eb4f4d9a9da1222e"
     },
     {
       "path": "fr/services/index.html",
-      "bytes": 13276,
-      "sha256": "531604b7e16669bd89a2a472ca3091311aaaf0edf150e4fe06491e2631a9e16b"
+      "bytes": 15260,
+      "sha256": "b47f8c51336839cc67c4b9668bf5e4c39eb20a5d7976add2f75c4ec302e9bdfb"
     },
     {
       "path": "fr/services/installation-fenetres/index.html",
-      "bytes": 13879,
-      "sha256": "5f4f23aa0dc0d35203037945978ef4209c6b292688963db927ded94220aee992"
+      "bytes": 17936,
+      "sha256": "addd28ef3eba91914aeb954e2a879734d6a58eeaa0e95cb6587c5f7e7b8e8cc6"
     },
     {
       "path": "fr/services/nettoyage-fenetres/index.html",
-      "bytes": 13863,
-      "sha256": "bfdd9f67f85098d1df0646eae6548ca2a8befb2de1303636133f6ac99dc2aadf"
+      "bytes": 17620,
+      "sha256": "c335bf735b29741b31c6e4b2c0abf4940791a3680b514b00db64ea0edb75acfd"
     },
     {
       "path": "fr/services/remplacement-fenetres/index.html",
-      "bytes": 13788,
-      "sha256": "b8d3c1a375e049df492dd52e6383e477e112678306624634b0adcf856d1deb23"
+      "bytes": 17837,
+      "sha256": "8c78180ea02ffd6e0ef5c9b6654970548087355223f0463a024e2d231f56b803"
     },
     {
       "path": "fr/services/reparation-fenetres/index.html",
-      "bytes": 13868,
-      "sha256": "fcc801e2698f253d9bf3ef1d8d7ede7cacdc6132f4c3ca21c7549938352de751"
+      "bytes": 17778,
+      "sha256": "c83197f251d03d49d0f0189261428cab6c24bccee02ffddd46de402c02c4b0ad"
     },
     {
       "path": "icon-192.png",
@@ -463,9 +468,19 @@
       "sha256": "e6f3144c62e10039088c739dd1f1ab1e0ac609e32e4e4d017a8348c69efce7d7"
     },
     {
+      "path": "images/cleaning-320.webp",
+      "bytes": 6614,
+      "sha256": "b4d5e2415b4dbc9b935c14a1e922a6690e4a5ca2d7704b216f72364571236338"
+    },
+    {
       "path": "images/cleaning-640.webp",
       "bytes": 19306,
       "sha256": "2e08fb71f4da1b19ffdffbb0420ba1d7ad703235b815b7e83f7f008f22fbd8c2"
+    },
+    {
+      "path": "images/cleaning-960.webp",
+      "bytes": 33456,
+      "sha256": "fea9fdfcc949ffe4bb76c5c596d12876e766b9e16a13fd369b7235dbfae87a84"
     },
     {
       "path": "images/commercial-1280.webp",
@@ -478,9 +493,19 @@
       "sha256": "996e85b44af9d2f0763f6d965eacfcc7ba1c31f9431279acda75035375f33a89"
     },
     {
+      "path": "images/commercial-320.webp",
+      "bytes": 24904,
+      "sha256": "11cd42e9b6d9c624b686e972cb884d2b3042de80ae268248f0563465a1978382"
+    },
+    {
       "path": "images/commercial-640.webp",
       "bytes": 80240,
       "sha256": "ff9ab7ac7ad237debc864fa605f364f3e2ca2241fa54ec9961f582fa7e940ea8"
+    },
+    {
+      "path": "images/commercial-960.webp",
+      "bytes": 124876,
+      "sha256": "9d179f0670d9b0296df2f9be78671a1ef08a67614136141c3772031f2ef4b0dd"
     },
     {
       "path": "images/installation-1280.webp",
@@ -493,9 +518,19 @@
       "sha256": "a45dc6027ad1bcce424a8d0b6a3cb9d578a430340eda664d11fb2bb448c85712"
     },
     {
+      "path": "images/installation-320.webp",
+      "bytes": 7040,
+      "sha256": "9a133e0b87b8c73d8b7d40dea26488259ba104b9bea678795829f3d4109ec41f"
+    },
+    {
       "path": "images/installation-640.webp",
       "bytes": 22798,
       "sha256": "b5c9a72f69516a8ce5c9a87895a08564f15e6157a7a7e08441c63e7bf8d8a9f9"
+    },
+    {
+      "path": "images/installation-960.webp",
+      "bytes": 33526,
+      "sha256": "661ddec0b435f136a5cbd67541aabb76996c851e75334cd4dd7247d2ff80e5ab"
     },
     {
       "path": "images/repair-1280.webp",
@@ -508,9 +543,19 @@
       "sha256": "a366675337717c967f151722c46c8fe60f39eeca860f4531d82f578fc8a63589"
     },
     {
+      "path": "images/repair-320.webp",
+      "bytes": 7240,
+      "sha256": "f5da14b5e965d085bb1361e81791b7cfbdbd2d93e17574af0feeb453ae6b2b1e"
+    },
+    {
       "path": "images/repair-640.webp",
       "bytes": 28034,
       "sha256": "88ce03cdb0792299742d816ecd0dc58fafbd8b1cbf40da9951b8a14bf592630d"
+    },
+    {
+      "path": "images/repair-960.webp",
+      "bytes": 43688,
+      "sha256": "055bcef8a3449e9d210ed69b7e644ff24bca50bdafdbcf4ae99b2836dea636f1"
     },
     {
       "path": "images/replacement-1280.webp",
@@ -523,9 +568,19 @@
       "sha256": "afb57b5879579dde973af7a250c6bc84dba0e88dfb2c0f3c9afec53f8f6b1519"
     },
     {
+      "path": "images/replacement-320.webp",
+      "bytes": 11472,
+      "sha256": "297933788e29d9182b11fb0dc56fad30a26676e64bf6f1ca57f0b9b9eedb4e7b"
+    },
+    {
       "path": "images/replacement-640.webp",
       "bytes": 38360,
       "sha256": "0d9cf342829d606736df2e0ee2174113ecc0dfad53b09a5b4e6d4733ef14586e"
+    },
+    {
+      "path": "images/replacement-960.webp",
+      "bytes": 57632,
+      "sha256": "b86d8e7f16143f958415579b77986052e995490a02826fbeb2b963e4e2355a4c"
     },
     {
       "path": "images/residential-1280.webp",
@@ -538,9 +593,19 @@
       "sha256": "691f92983fff963e3e41a9eba1f8a282c22472452f354ec389faa981071a0fac"
     },
     {
+      "path": "images/residential-320.webp",
+      "bytes": 9678,
+      "sha256": "72e81df7c5468071d27da587569bb5dc83ed8873168d7196433fe98051303601"
+    },
+    {
       "path": "images/residential-640.webp",
       "bytes": 34662,
       "sha256": "8db90df9327129c74f799c1fd310a06258763b931745349c82b6a7d9ba28e6ca"
+    },
+    {
+      "path": "images/residential-960.webp",
+      "bytes": 59436,
+      "sha256": "c201f649304a1072d016d9217f5edeff1e35725cf59a01695266b2e93491a1fd"
     },
     {
       "path": "images/sealing-1280.webp",
@@ -553,9 +618,19 @@
       "sha256": "01c7b69ac46592a410e7cc8455797766dc0417467236d8b7a7502caf1463eded"
     },
     {
+      "path": "images/sealing-320.webp",
+      "bytes": 7836,
+      "sha256": "0596db846e9749c455c48ee6992244ace6b040adb0ebb40ab5895246f5192bf8"
+    },
+    {
       "path": "images/sealing-640.webp",
       "bytes": 26674,
       "sha256": "5bc5cdea3bfb9ab6625680939958baaa3ce15576ec614820fbddb860a67467bf"
+    },
+    {
+      "path": "images/sealing-960.webp",
+      "bytes": 40930,
+      "sha256": "5634fe2acc2995787147e9ffadaa8d99eea2b6c1a823c3bad444da39dad70058"
     },
     {
       "path": "index.html",
@@ -574,8 +649,8 @@
     },
     {
       "path": "site.js",
-      "bytes": 7092,
-      "sha256": "ff0d723c9bc804c48e8c84c0a459a5f6a7ae0dece1dd5e9c29af526be7a1b36d"
+      "bytes": 7801,
+      "sha256": "44adb7810aa07dae5cb0cf13c8a62d27c301ad78170b8708a6e6e1406db1f8dd"
     },
     {
       "path": "site.webmanifest",
@@ -589,8 +664,8 @@
     },
     {
       "path": "styles.css",
-      "bytes": 27957,
-      "sha256": "e3ec847b2865a676184eba575719b21ff9041cedbc413b0bf6f0d8a95486a3c1"
+      "bytes": 32123,
+      "sha256": "05833283a9b766ec5a1d5013969d3fa22eda24e6dc7008f11d1a929ebb27533f"
     }
   ]
 }
