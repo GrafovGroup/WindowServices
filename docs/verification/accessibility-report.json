@@ -5,8 +5,7 @@
     "violations": [],
     "incomplete": [
       "aria-valid-attr-value",
-      "color-contrast",
-      "link-in-text-block"
+      "color-contrast"
     ]
   },
   {
@@ -14,8 +13,7 @@
     "width": 390,
     "violations": [],
     "incomplete": [
-      "aria-valid-attr-value",
-      "link-in-text-block"
+      "aria-valid-attr-value"
     ]
   },
   {
@@ -24,8 +22,7 @@
     "violations": [],
     "incomplete": [
       "aria-valid-attr-value",
-      "color-contrast",
-      "link-in-text-block"
+      "color-contrast"
     ]
   },
   {
@@ -33,8 +30,7 @@
     "width": 390,
     "violations": [],
     "incomplete": [
-      "aria-valid-attr-value",
-      "link-in-text-block"
+      "aria-valid-attr-value"
     ]
   },
   {
@@ -42,8 +38,7 @@
     "width": 390,
     "violations": [],
     "incomplete": [
-      "aria-valid-attr-value",
-      "link-in-text-block"
+      "aria-valid-attr-value"
     ]
   },
   {
@@ -52,8 +47,7 @@
     "violations": [],
     "incomplete": [
       "aria-valid-attr-value",
-      "color-contrast",
-      "link-in-text-block"
+      "color-contrast"
     ]
   },
   {
@@ -61,8 +55,7 @@
     "width": 390,
     "violations": [],
     "incomplete": [
-      "aria-valid-attr-value",
-      "link-in-text-block"
+      "aria-valid-attr-value"
     ]
   },
   {
@@ -71,8 +64,7 @@
     "violations": [],
     "incomplete": [
       "aria-valid-attr-value",
-      "color-contrast",
-      "link-in-text-block"
+      "color-contrast"
     ]
   },
   {
@@ -80,8 +72,7 @@
     "width": 390,
     "violations": [],
     "incomplete": [
-      "aria-valid-attr-value",
-      "link-in-text-block"
+      "aria-valid-attr-value"
     ]
   },
   {
@@ -89,8 +80,7 @@
     "width": 390,
     "violations": [],
     "incomplete": [
-      "aria-valid-attr-value",
-      "link-in-text-block"
+      "aria-valid-attr-value"
     ]
   },
   {
@@ -98,83 +88,67 @@
     "width": 1440,
     "violations": [],
     "incomplete": [
-      "color-contrast",
-      "link-in-text-block"
+      "color-contrast"
     ]
   },
   {
     "path": "/en/services/window-repair/",
     "width": 1440,
     "violations": [],
-    "incomplete": [
-      "link-in-text-block"
-    ]
+    "incomplete": []
   },
   {
     "path": "/en/request-a-quote/",
     "width": 1440,
     "violations": [],
     "incomplete": [
-      "color-contrast",
-      "link-in-text-block"
+      "color-contrast"
     ]
   },
   {
     "path": "/en/areas/",
     "width": 1440,
     "violations": [],
-    "incomplete": [
-      "link-in-text-block"
-    ]
+    "incomplete": []
   },
   {
     "path": "/en/privacy/",
     "width": 1440,
     "violations": [],
-    "incomplete": [
-      "link-in-text-block"
-    ]
+    "incomplete": []
   },
   {
     "path": "/fr/",
     "width": 1440,
     "violations": [],
     "incomplete": [
-      "color-contrast",
-      "link-in-text-block"
+      "color-contrast"
     ]
   },
   {
     "path": "/fr/services/reparation-fenetres/",
     "width": 1440,
     "violations": [],
-    "incomplete": [
-      "link-in-text-block"
-    ]
+    "incomplete": []
   },
   {
     "path": "/fr/demander-une-soumission/",
     "width": 1440,
     "violations": [],
     "incomplete": [
-      "color-contrast",
-      "link-in-text-block"
+      "color-contrast"
     ]
   },
   {
     "path": "/fr/regions/",
     "width": 1440,
     "violations": [],
-    "incomplete": [
-      "link-in-text-block"
-    ]
+    "incomplete": []
   },
   {
     "path": "/fr/confidentialite/",
     "width": 1440,
     "violations": [],
-    "incomplete": [
-      "link-in-text-block"
-    ]
+    "incomplete": []
   }
 ]

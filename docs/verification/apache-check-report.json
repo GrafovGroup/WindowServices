@@ -1,0 +1,52 @@
+{
+  "server": "Apache/2.4.67 (Unix)",
+  "date": "2026-11-12T00:26:08.720Z",
+  "checks": [
+    {
+      "path": "/",
+      "status": 302,
+      "lang": null
+    },
+    {
+      "path": "/en/",
+      "status": 200,
+      "lang": "en-CA"
+    },
+    {
+      "path": "/fr/",
+      "status": 200,
+      "lang": "fr-CA"
+    },
+    {
+      "path": "/fr/inconnue/",
+      "status": 404,
+      "lang": "fr-CA"
+    },
+    {
+      "path": "/not-a-page/",
+      "status": 404,
+      "lang": "en-CA"
+    },
+    {
+      "path": "/fr/404/",
+      "status": 404,
+      "lang": "fr-CA"
+    },
+    {
+      "path": "/en/404/",
+      "status": 404,
+      "lang": "en-CA"
+    },
+    {
+      "path": "/404.html",
+      "status": 404,
+      "lang": "en-CA"
+    },
+    {
+      "path": "/brand/logo-horizontal.svg",
+      "status": 200,
+      "lang": null
+    }
+  ],
+  "queryPreservingSlashRedirect": true
+}

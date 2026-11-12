@@ -15,3 +15,7 @@ Real licensed stock, not generated images and not WindowServices.ca projects, st
 Licences: [Unsplash](https://unsplash.com/license), [Pexels](https://www.pexels.com/license/). Usage must not imply endorsement by recognizable people or property owners. All chosen assets were visually inspected. CSS uses object-fit crops. Each primary service has a distinct principal image. Originals are the downloaded, web-sized source files, not camera RAW files.
 
 Temporary vector wordmarks and W favicon are original code assets, unapproved and separate from concept #1. No image generation was used. System fonts are referenced, with no bundled font files. Representative screenshots remain in ignored local `artifacts/`; curated review evidence can be stored under `docs/preview/`.
+
+## Recovered branding — November 11, 2026
+
+The owner-selected original concept sheet is retained unchanged in `assets/originals/brand/windowservices-concepts-original.png`, recovered from the owner's signed-in Library item `libfile_6954415f66a0819193680f97badb4008`. Only concept #1 informed the vector reconstruction; the sheet's photography, operational claims and timelines are not published as evidence. `public/brand/logo-*.svg/png` and the icon/social-card package are repo-native vector artwork and raster exports generated from it. See BRAND_GUIDE.md for reconstruction status, colours, licensed Manrope source and regeneration tools.

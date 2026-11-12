@@ -1,17 +1,56 @@
-# Deployment and recovery
+# WHC deployment and recovery
 
-No hosting account/project or domain binding is configured. No production deployment, DNS/mail changes or Google/Bing submissions have occurred. Local preview is `http://127.0.0.1:4173/en/` and `/fr/` while the server runs on this computer.
+The owner selected existing WHC hosting and authorized the agent to use the signed-in account. Login succeeded through WHC's Classic Client Area after the new dashboard's cPanel launch control failed. No passwords, cookies or session URLs are stored in source.
 
-`node scripts/build.mjs` generates `dist/`. Default review mode uses noindex metadata, an empty sitemap and noindex host headers where supported. Noindex is not privacy: protect any private review deployment with host authentication.
+## Verified hosting state — November 11, 2026
 
-Complete the launch checklist and record evidence before changing `launch` flags in `src/config/site.mjs`. `SITE_MODE=production` fails until all five flags are true. Flags are a safeguard, not independent verification. Production build: `SITE_MODE=production node scripts/build.mjs`.
+| Item | Observed state |
+| --- | --- |
+| Plan | Existing WHC Web Hosting Pro |
+| Server | `srv48.swhc.ca`; shared hosting IP `51.161.57.68` |
+| Web server | Direct virtual-host response identifies LiteSpeed; cPanel reports Apache 2.4.69 compatibility |
+| Domain | `windowservices.ca` created as a separate addon domain |
+| Document root | `~/windowservices.ca`, separate from the primary site's `public_html` |
+| Required internal subdomain | `windowservices.bodycams.ca` |
+| Staging directory | `~/windowservices-staging`, created outside public document roots |
+| Public domain | Still WHC parking: nameservers `parking1.whc.ca` / `parking2.whc.ca`, A `149.56.225.6` |
+| Public site/DNS changes | No website release or registrar DNS/mail change performed |
 
-Confirm actual hosting plan, document root, HTTPS, preferred hostname and server features. For WHC Pro, upload only the contents of `dist/` after authorization; never the repository, `.env`, documentation or local preview server. No Node process is required on the host.
+The cPanel domain creation provisions its hosting-side domain/zone and required subdomain. It does not establish that the registrar's authoritative parking DNS points to this server. Public DNS, existing mail records and final HTTPS must be inspected together before any cutover. Do not change the hosting account's primary domain.
 
-Implement actual HTTP redirects for `/` → `/en/`, HTTPS/preferred hostname and trailing slashes. Invalid routes must return real HTTP 404 with EN/FR error documents, not the homepage. Preserve non-personal quote context. `_headers`/`_redirects` are included for compatible hosts; they are not assumed to configure WHC. Prepare equivalent `.htaccess` only after Apache/LiteSpeed support is confirmed. Verify actual error-document and cache behaviour.
+## Build and review package
 
-CSP allows local assets and Formspree. If embedding a provider CAPTCHA later, configure the exact domains and test it. The current standard POST fallback leaves the site for provider verification. Confirm Formspree domain restrictions against the actual host. Use appropriate static caching on production; preview intentionally uses no-store.
+```sh
+node scripts/build.mjs
+node --test tests/*.test.mjs
+node scripts/audit.mjs
+node scripts/package.mjs
+```
 
-Run unit, route and browser checks on the release output, then verify final hostname, statuses, EN/FR links, actual delivery, icons, canonical/hreflang, robots and sitemap. Never submit a preview sitemap. Search-console verification and submission require the correct authorized account.
+Packaging requires Node 24, Git and `tar` on macOS/Linux. It rebuilds fresh output and audits it before producing `artifacts/windowservices-preview-<commit>.tar.gz` and a SHA-256 sidecar. Working changes add `-working` to the name and are flagged in the manifest. The archive contains:
 
-Canonical source remote: `https://github.com/GrafovGroup/WindowServices.git`. Record `git rev-parse HEAD` for every release. There is no separate Sites remote. Keep the previous host output and matching configuration; rollback by redeploying that verified release. No force-push. Formspree endpoint is public; secrets belong in the host/provider, never in source or browser code.
+- `site/`: only the static website output, including `.htaccess`.
+- `release.json`: source commit, dirty-tree status, mode/origin and every public file's size/checksum.
+- `DEPLOY.txt`: upload and verification instructions.
+
+Extract into an empty local directory, then run `node scripts/verify-package.mjs /path/to/extracted-package`. This checks every file and audits the routes, metadata, social images and sitemap using the packaged origin. Store the archive and manifest outside the public document root. Only the contents of `site/` belong in `~/windowservices.ca` when release is authorized. No Node process, repository, credentials or source documentation belongs on the public host.
+
+Review output uses noindex metadata and headers, an empty sitemap and no-store caching. Noindex is not access control; use host authentication for a private review deployment. Storing an archive in the non-public staging directory does not publish the website.
+
+## Server configuration
+
+The generated `.htaccess` targets the verified Apache-compatible WHC server. It provides `/` → `/en/`, clean directory URLs, real localized 404 responses, MIME types, security headers and mode-specific indexing/cache controls. Production adds HTTPS/preferred-host redirects. `_headers` and `_redirects` remain alternatives for other compatible static hosts; they do not configure WHC.
+
+The rules were tested on local Apache 2.4.67 using real HTTP responses, including French missing pages, explicit 404 routes, security headers and query-preserving trailing-slash redirects. This is not proof of the final live hostname's behaviour. Recheck all rules on WHC after deployment. Preserve any necessary existing host authentication settings when installing the generated configuration.
+
+Production builds require all evidence-backed `launch` flags, both real logo variants and a clean committed source tree for packaging. `SITE_MODE=production node scripts/package.mjs` remains blocked until the launch checklist is resolved. The build reads environment variables directly; `.env` is not automatically loaded. Configure `SITE_URL` to the verified HTTPS origin without a trailing slash.
+
+The Formspree endpoint is public configuration. Confirm provider host restrictions, server validation, abuse controls and final-domain delivery. The CSP currently permits local assets and Formspree; any future CAPTCHA embed needs its exact domains configured and tested.
+
+## Cutover and recovery
+
+Before cutover, inspect the authoritative DNS and preserve mail/unrelated records; use the confirmed WHC target rather than the current parking address. Verify the final certificate, preferred host, redirects, EN/FR deep links, forms, icons, canonical/hreflang, robots and sitemap. No Google/Bing verification or submission has been performed.
+
+Keep the previous verified site output and its host configuration. Roll back by restoring that package and configuration, retaining a record of the source revision. Canonical source is `https://github.com/GrafovGroup/WindowServices.git`; there is no separate Sites remote.
+
+WHC references consulted November 11, 2026: [cPanel access](https://help.whc.ca/en/articles/625469-how-to-access-cpanel), [addon domains](https://clients.whc.ca/index.php?language=english&rp=%2Fknowledgebase%2F153%2FDomaines-suppl%C3%A9mentaires-et-alias.html), [File Manager](https://clients.whc.ca/index.php?language=english&rp=%2Fknowledgebase%2F1730%2FHow-to-use-the-File-Manager.html). The account's actual domain root was verified in cPanel rather than assumed from a primary-domain example.

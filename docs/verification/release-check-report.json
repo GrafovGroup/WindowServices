@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-12T00:03:09.897Z",
+  "checks": [
+    {
+      "check": "Custom SITE_URL build and audit",
+      "result": "PASS: 42 routes; 2380 internal references; canonical/locale URLs; responsive images; icons; schema; preview sitemap and indexing."
+    },
+    {
+      "check": "Wrong canonical rejected",
+      "pass": true
+    },
+    {
+      "check": "Production launch guard",
+      "pass": true
+    },
+    {
+      "check": "Current reconstructed-brand package extraction and audit",
+      "files": 113,
+      "routes": 42,
+      "references": 2548,
+      "pass": true,
+      "sourceStatus": "Working tree based on 2de717f9d3e4; final clean package is identified by its release.json manifest."
+    }
+  ]
+}

@@ -1,10 +1,12 @@
-import { mkdir, rm, cp, writeFile } from 'node:fs/promises';
+import { mkdir, rm, cp, writeFile, stat } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { site, launch } from '../src/config/site.mjs';
+import { brand, validateBrand } from '../src/config/brand.mjs';
 import { routes, route } from '../src/i18n/routes.mjs';
 import { renderPage } from '../src/components/render.mjs';
 import { esc } from '../src/components/html.mjs';
+import { apacheConfig } from './lib/apache-config.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const output=resolve(root,'dist');
@@ -16,6 +18,11 @@ if(site.mode==='production') {
 const origin=new URL(site.origin);
 if(origin.protocol!=='https:' || origin.origin!==site.origin)throw new Error('SITE_URL must be an HTTPS origin without a trailing slash.');
 if(!/^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(site.formEndpoint))throw new Error('Use a verified Formspree endpoint.');
+validateBrand(brand,{production:site.mode==='production'});
+for(const variant of ['horizontal','reversed'])if(brand[variant]) {
+  const asset=join(root,'public',brand[variant].src);
+  if(!(await stat(asset).catch(()=>null))?.isFile())throw new Error(`Missing ${variant} brand asset: ${brand[variant].src}`);
+}
 await rm(output,{recursive:true,force:true});await mkdir(output,{recursive:true});await cp(join(root,'public'),output,{recursive:true});
 const manifest=[];
 for(const id of Object.keys(routes))for(const lang of ['en','fr']) {
@@ -30,4 +37,5 @@ await writeFile(join(output,'robots.txt'),`User-agent: *\nAllow: /\nSitemap: ${s
 await writeFile(join(output,'_redirects'),`/ /en/ ${site.mode==='production'?301:302}\n/fr/* /fr/404/index.html 404\n/* /404.html 404\n`);
 await writeFile(join(output,'_headers'),`/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n  Content-Security-Policy: default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self' https://formspree.io; form-action https://formspree.io; base-uri 'none'; frame-ancestors 'none'; object-src 'none'\n${site.mode==='preview'?'  X-Robots-Tag: noindex, follow\n':''}`);
 await writeFile(join(output,'route-manifest.json'),JSON.stringify(manifest,null,2));
+await writeFile(join(output,'.htaccess'),apacheConfig(site));
 console.log(`Built ${manifest.length} EN/FR routes in ${site.mode} mode. Output: ${output}`);

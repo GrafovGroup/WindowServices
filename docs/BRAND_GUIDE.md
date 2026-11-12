@@ -1,13 +1,25 @@
 # Brand implementation — November 11, 2026
 
-Concept #1 (Architectural / Commercial) is confirmed. On November 11, 2026, after reviewing the original five concept descriptions, the owner explicitly said "lets use option 1". This reaffirms the navy/blue glass-building emblem and WindowServices.ca wordmark; no further concept selection is needed.
+The owner confirmed option #1, Architectural / Commercial, and reconfirmed “lets use option 1” during this build.
 
-The [original Library reference](https://chatgpt.com/library?file_id=libfile_6954415f66a0819193680f97badb4008&account_id=personal) could not be fetched. Opening it in the owner's browser does not make its image bytes available to the repository tools. No matching production file was found in this repository or the accessible Documents/Downloads search. The next required input is the original concept-sheet PNG or a production export of option #1.
+The original [WindowServices.ca concept sheet](https://chatgpt.com/library?file_id=libfile_6954415f66a0819193680f97badb4008&account_id=personal) was recovered through the owner's signed-in Chrome Library session. Its unmodified bytes are retained at `assets/originals/brand/windowservices-concepts-original.png` (1536 × 1024; SHA-256 `70c965885650c54d505c3d5be173acb946999a2bc6ae852aeced1b926b2c83ac`). The entire sheet is a source reference, not a public logo or proof of the operating claims printed on it.
 
-**Temporary typography only:** `public/brand/wordmark*.svg/png`, the HTML wordmark and the W favicon are review assets. They are not a reconstruction or the approved architectural emblem. No fidelity is claimed. Production is gated on the missing artwork.
+## Reconstruction status
 
-When supplied: inspect concept #1; preserve its geometry; prepare stacked, horizontal, compact, reversed and one-colour vector/transparent exports; obtain a visual check if reconstructed; replace the favicon and social assets consistently. The current white wordmark verifies footer treatment without a background box.
+The navy/blue architectural panels and curved base were traced into editable SVG geometry after visual inspection. Wordmark lettering is standardized in Manrope ExtraBold; it is not represented as an exact font match to the raster reference. Solid colours normalize the slightly varying source pixels to navy `#00244C` and blue `#0094E4`. The spelling is WindowServices.ca.
 
-Review tokens: navy `#102E4A`, blue `#176CB3`, cyan `#2AB8E6`, ink `#152B3C`, pale blue `#EDF5FA`, border `#D7E4ED`, white `#FFFFFF`. These are brief defaults, not sampled/approved exact colours. Cyan is decorative, not small text on white.
+This is a **vector reconstruction awaiting the owner's visual check**, not an untouched production original. See `docs/preview/brand-proof.png`. It is applied to the review site; `launch.approvedLogo` remains false until that check is recorded.
 
-System fonts: Avenir Next / Avenir / Segoe UI / Arial. No font binaries or external font services are distributed. Appearance depends on the visitor's OS. Uppercase navigation/buttons use CSS; paragraphs use natural case. No decorative arrows or autoplay. Reduced motion is respected. Stock photos are topic illustrations, never proof of staff or projects; see the media manifest.
+## Delivered assets
+
+`public/brand/` contains horizontal, stacked EN/FR and compact emblem SVGs, each in full colour, white and navy monochrome, plus transparent PNG exports. The white variants contain no background rectangle. SVGs contain real paths, not embedded bitmap images. All lettering is outlined, so a visitor does not need the source font installed.
+
+The favicon package uses the reconstructed emblem: a real 16/32/48 ICO, SVG, 16/32/48/96 PNGs, 180 Apple touch icon and 192/512 manifest icons. Raster icons use a light tile for legibility. Two 1200 × 630 brand social cards support English and French sharing metadata.
+
+The shared renderer is `src/components/brand.mjs`, configured in `src/config/brand.mjs`. Header and mobile navigation use the horizontal mark; the footer uses the reversed mark. The build validates local asset paths, dimensions and file existence, and requires both variants for production. The temporary wordmark exports were removed.
+
+## Sources and regeneration
+
+Manrope is retained with its SIL Open Font License in `assets/fonts/manrope/`. Source: [Google Fonts Manrope](https://github.com/google/fonts/tree/main/ofl/manrope), retrieved November 11, 2026. Font files are not loaded by customer pages. Optional asset generation uses FontTools 4.60.2 (`scripts/prepare-brand.py`) and Sharp 0.35.5 (`scripts/prepare-brand.cjs`). The ordinary Node website build needs neither dependency.
+
+UI navy follows the reconstructed mark. Action/link blue remains `#176CB3` for contrast; bright brand blue is decorative. Body text uses Avenir Next / Avenir / Segoe UI / Arial system fonts. Uppercase navigation/buttons use CSS; paragraphs use natural case. Reduced motion is respected. Stock service photos remain topic illustrations, not proof of staff or projects.
