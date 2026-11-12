@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-11-12T02:47:36.962Z",
+  "checkedAt": "2026-11-12T02:51:55.997Z",
   "origin": "https://windowservices.ca",
   "mode": "production",
-  "sourceCommit": "77262a968f35ffc28ba011237a1dc3d6f4f1fd99",
+  "sourceCommit": "e7a9c9123ab0a86438d9ffb67d4d311743c090f4",
   "sourceDirty": false,
   "connectedTo": "51.161.57.68",
   "certificateValidation": "enabled",

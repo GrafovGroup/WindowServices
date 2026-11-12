@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-11-12T02:52:06.020Z",
+  "sourceCommit": "e7a9c9123ab0a86438d9ffb67d4d311743c090f4",
+  "noRequestsBeforeConsent": true,
+  "noNewRequestsAfterWithdrawal": true,
+  "analyticsCookiesRemoved": true,
+  "responses": [
+    {
+      "host": "www.google-analytics.com",
+      "path": "/g/collect",
+      "status": 204,
+      "event": "page_view",
+      "measurementId": "G-5ZL8YQ5ZPY",
+      "page": "https://windowservices.ca/en/"
+    },
+    {
+      "host": "www.google-analytics.com",
+      "path": "/g/collect",
+      "status": 204,
+      "event": "page_view",
+      "measurementId": "G-5ZL8YQ5ZPY",
+      "page": "https://windowservices.ca/en/"
+    }
+  ],
+  "errors": [],
+  "note": "One real consented QA page_view with debug_mode=true. No lead event or Formspree submission.",
+  "pass": true,
+  "reportingVisibility": "At final inspection the new property DebugView still showed 0 devices/events. Collection endpoint acceptance is verified; dashboard processing/visibility is not yet confirmed.",
+  "totalRealQAVisitsThisPhase": 2
+}

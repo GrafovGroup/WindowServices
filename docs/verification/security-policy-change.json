@@ -1,0 +1,9 @@
+{
+  "before": "77262a968f35ffc28ba011237a1dc3d6f4f1fd99",
+  "after": "e7a9c9123ab0a86438d9ffb67d4d311743c090f4",
+  "changedPublicFiles": [
+    ".htaccess",
+    "_headers"
+  ],
+  "allHTMLCSSJavaScriptImagesUnchanged": true
+}

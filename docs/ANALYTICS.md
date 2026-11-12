@@ -19,3 +19,7 @@ Enhanced measurement is disabled in the stream. Event and user data retention ar
 Reports omit visitors who decline or block Analytics. Native no-JavaScript submissions and provider verification redirects cannot produce a confirmed lead event on this site. There is no automatic retry and no conversion event from merely visiting the next-steps page. Do not interpret a lack of tracked conversions as no enquiries.
 
 Validation: `tests/analytics.mjs` intercepts all Google/Formspree requests to check bilingual refusal, acceptance, withdrawal, sanitized URLs, allowlisted payloads and accepted-lead semantics. Functional browser QA persists a refusal in its isolated browser context. No additional real enquiries are needed for these checks.
+
+Live verification completed: two consented QA homepage visits emitted debug page views during setup. The final check received HTTP 204, had no browser errors, sent no Google requests before consent or after withdrawal, and removed Analytics cookies. No real form enquiries or lead events were sent. The first visit exposed a blocked tag diagnostic image; the documented no-advertising Google tag hosts were added to CSP and the final check passed. See `verification/live-analytics-report.json`.
+
+Reporting visibility remains pending: the new property’s DebugView still showed zero devices/events at final inspection. The live collection endpoint accepted the correct measurement ID with HTTP 204; this verifies delivery to Google, not availability in processed reports. Review reporting once normal opted-in traffic has accumulated.

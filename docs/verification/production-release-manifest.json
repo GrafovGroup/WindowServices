@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-11-12T02:46:31.574Z",
+  "createdAt": "2026-11-12T02:51:08.559Z",
   "mode": "production",
   "origin": "https://windowservices.ca",
   "source": {
-    "commit": "77262a968f35ffc28ba011237a1dc3d6f4f1fd99",
+    "commit": "e7a9c9123ab0a86438d9ffb67d4d311743c090f4",
     "dirty": false
   },
   "selectedLogoConcept": 1,
   "logoArtworkConfigured": true,
   "routeCount": 42,
-  "totalBytes": 4374251,
+  "totalBytes": 4374429,
   "files": [
     {
       "path": "_errors/en.html",
@@ -24,8 +24,8 @@
     },
     {
       "path": "_headers",
-      "bytes": 550,
-      "sha256": "06e319d0a66f49a302f170c02bf7f347e58aa9da08eec590333954dc56a21acd"
+      "bytes": 639,
+      "sha256": "d9afd447e5481e7efe65aaac86ce7b4a70e74232e510457ec04a24dfd1913e35"
     },
     {
       "path": "_redirects",
@@ -34,8 +34,8 @@
     },
     {
       "path": ".htaccess",
-      "bytes": 1264,
-      "sha256": "14013b6e9dfc9c880541984f79e6581d83bd62b1b53ba1cab7c107861a71a74d"
+      "bytes": 1353,
+      "sha256": "dcbc220162d574e8ad0b4e1df5f20031b34047958bd9a42697680542c0efc35f"
     },
     {
       "path": "404.html",

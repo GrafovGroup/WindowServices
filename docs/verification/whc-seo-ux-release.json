@@ -1,14 +1,14 @@
 {
-  "deployedAt": "2026-11-12T02:49:14.609334+00:00",
-  "sourceCommit": "77262a968f35ffc28ba011237a1dc3d6f4f1fd99",
+  "deployedAt": "2026-11-12T02:52:48.702476+00:00",
+  "sourceCommit": "e7a9c9123ab0a86438d9ffb67d4d311743c090f4",
   "sourceDirty": false,
   "documentRoot": "/home/nqgwub76/windowservices.ca",
-  "package": "windowservices-production-77262a968f35.tar.gz",
-  "bytes": 3532940,
-  "sha256": "31cd664a5f98ae0c269ebcf750f1eebf10dde2c8526487239f3198aee81afcb5",
+  "package": "windowservices-production-e7a9c9123ab0.tar.gz",
+  "bytes": 3532957,
+  "sha256": "70ab35ba286fa6abdcfb986e6af0511b78f31f3b9e5713bb76797055d511f118",
   "publicFiles": 131,
   "serverChecksum": "OK",
-  "terminalCompletion": "DEPLOYED_77262a968f35",
+  "terminalCompletion": "DEPLOYED_e7a9c9123ab0",
   "backup": "/home/nqgwub76/windowservices-staging/windowservices-before-seo-20261112.tar.gz",
   "backupPermissions": "0600",
   "publicDirectories": "0755",
@@ -21,5 +21,8 @@
     "Form first on mobile; optional details collapsed; sticky mobile contact actions",
     "Basic opt-in GA4 in the existing account with fixed event allowlists",
     "Smaller responsive images and content-versioned CSS/module graph"
-  ]
+  ],
+  "analyticsLiveCheck": "Final consented debug page_view accepted HTTP 204; no Google requests before consent or after withdrawal; cookies removed; no browser errors.",
+  "realQAAnalyticsVisits": 2,
+  "securityPolicyFollowUp": "Only .htaccess and _headers changed after browser/performance checks; HTML/CSS/JS/images byte-identical."
 }
