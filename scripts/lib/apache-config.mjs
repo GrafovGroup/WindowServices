@@ -1,7 +1,16 @@
-// WHC cPanel server srv48 reports Apache 2.4.69. Validate actual host behaviour before launch.
+// A directory with its own RewriteEngine does not inherit the parent rules.
+function canonicalRedirect({ mode, origin }) {
+  if (mode !== 'production') return '';
+  const host = new URL(origin).host.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return `RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^${host}$ [NC]
+RewriteRule ^ ${origin}%{REQUEST_URI} [R=301,L,NE]
+`;
+}
+
+// WHC cPanel server srv48 reports Apache 2.4.69 compatibility.
 export function apacheConfig({ mode, origin }) {
   const production = mode === 'production';
-  const host = new URL(origin).host.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   return `# WindowServices.ca — generated ${mode} configuration
 Options -Indexes -MultiViews
 DirectoryIndex index.html
@@ -11,10 +20,7 @@ AddType image/svg+xml .svg
 ErrorDocument 404 /_errors/en.html
 
 RewriteEngine On
-${production ? `RewriteCond %{HTTPS} !=on [OR]
-RewriteCond %{HTTP_HOST} !^${host}$ [NC]
-RewriteRule ^ ${origin}%{REQUEST_URI} [R=301,L,NE]
-` : ''}
+${canonicalRedirect({ mode, origin })}
 RewriteRule ^$ /en/ [R=${production ? 301 : 302},L]
 # Dedicated internal documents avoid reliance on REDIRECT_STATUS, which differs on LiteSpeed.
 RewriteRule ^(?:404\\.html|en/404(?:/index\\.html)?/?)$ - [R=404,L]
@@ -27,10 +33,11 @@ ${production ? 'Header set Cache-Control "public, max-age=3600, must-revalidate"
 `;
 }
 
-export function frenchApacheConfig() {
+export function frenchApacheConfig(config) {
   return `# Directory-scoped ErrorDocument works on both Apache and WHC LiteSpeed.
 ErrorDocument 404 /_errors/fr.html
 RewriteEngine On
+${canonicalRedirect(config)}
 RewriteRule ^404(?:/index\\.html)?/?$ - [R=404,L]
 `;
 }

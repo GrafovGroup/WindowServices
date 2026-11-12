@@ -40,5 +40,5 @@ await writeFile(join(output,'_redirects'),`/ /en/ ${site.mode==='production'?301
 await writeFile(join(output,'_headers'),`/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n  Content-Security-Policy: default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self' https://formspree.io; form-action https://formspree.io; base-uri 'none'; frame-ancestors 'none'; object-src 'none'\n${site.mode==='preview'?'  X-Robots-Tag: noindex, follow\n':''}`);
 await writeFile(join(output,'route-manifest.json'),JSON.stringify(manifest,null,2));
 await writeFile(join(output,'.htaccess'),apacheConfig(site));
-await writeFile(join(output,'fr','.htaccess'),frenchApacheConfig());
+await writeFile(join(output,'fr','.htaccess'),frenchApacheConfig(site));
 console.log(`Built ${manifest.length} EN/FR routes in ${site.mode} mode. Output: ${output}`);

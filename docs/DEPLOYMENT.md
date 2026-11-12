@@ -70,3 +70,9 @@ HTTPS initially inherited a certificate unrelated to WindowServices. A non-secre
 Final verification during resolver propagation can use VERIFY_IP=51.161.57.68 with scripts/check-live.mjs. This changes the connection address while preserving the real hostname and strict TLS validation. Browser tests accept HOST_RESOLVER_RULES for the same purpose; all QA Formspree requests are intercepted. These tests do not prove all public recursive resolvers have expired cached parking answers.
 
 To restore a verified package, extract it into a new non-public staging directory, validate its SHA-256 and release inventory, then copy only site/. into the domain root. Preserve .well-known and cgi-bin. Restoring the initial before-launch backup removes the site; use the preceding verified site package for ordinary content rollback. DNS rollback, if necessary, restores only the web A record and must not alter mail records.
+
+### Production extraction permissions and French redirects
+
+Private staging sessions use umask 077. GNU tar extraction without preserved permissions can therefore create 700 directories and 600 files. Before copying a verified site payload, set directories under its site/ folder to 755 and files to 644; keep the containing staging directory and backups private. Copy only that prepared public payload. The first production check caught and corrected this before handoff.
+
+A French directory with its own RewriteEngine does not inherit the parent canonical rules. Both generated configurations now contain the same production HTTPS/preferred-host redirect, followed by their localized error rules. The live verifier checks a French query-bearing URL through HTTP and www to catch this condition.
