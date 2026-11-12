@@ -11,6 +11,8 @@ try {
  const context=await browser.newContext({viewport:{width:390,height:844}});let tags=0;
  await context.route('https://formspree.io/**',r=>r.abort());
  await context.route(/https:\/\/(www\.googletagmanager\.com|[^/]*google-analytics\.com)\//,async r=>{tags++;await r.fulfill({contentType:'text/javascript',body:''});});
+ // Simulate stale unversioned code in a returning visitor's cache. New pages must bypass it.
+ await context.route('**/site.js',r=>r.fulfill({contentType:'text/javascript',body:'throw new Error("Stale script loaded")'}));
  const page=await context.newPage();
  const events=()=>page.evaluate(()=>Array.from(window.dataLayer||[],v=>Array.from(v)).filter(v=>v[0]==='event'));
  for(const lang of ['en','fr']){
@@ -41,8 +43,9 @@ try {
  report.checks.push('Only accepted Formspree response produces one generate_lead; no entered personal data or URL query reaches Analytics');
  await page.locator('[data-analytics-settings]').click();await page.locator('[data-consent="declined"]').click();
  const before=(await events()).length;
- await page.evaluate(async()=>{const {track}=await import('/analytics.js');track('phone_click');});
+ await page.evaluate(async()=>{const {track}=await import('/analytics.js'+new URL(document.querySelector('script[src*="site.js"]').src).search);track('phone_click');});
  assert.equal((await events()).length,before);
+ assert(await page.locator('[data-analytics-settings]').evaluate(e=>e===document.activeElement));
  const prior=tags;await page.reload();assert.equal(tags,prior);assert.equal(await page.evaluate(()=>typeof window.gtag),'undefined');
  report.checks.push('Withdrawal blocks subsequent events and persists across reload; settings return keyboard focus');
  assert(await page.locator('#analytics-consent').isHidden());

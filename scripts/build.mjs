@@ -1,7 +1,8 @@
-import { mkdir, rm, cp, writeFile, stat } from 'node:fs/promises';
+import { mkdir, rm, cp, writeFile, stat, readFile } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { site, launch } from '../src/config/site.mjs';
+import { assetVersion, versionedAssets } from '../src/config/assets.mjs';
 import { brand, validateBrand } from '../src/config/brand.mjs';
 import { routes, route } from '../src/i18n/routes.mjs';
 import { renderPage } from '../src/components/render.mjs';
@@ -25,6 +26,10 @@ for(const variant of ['horizontal','reversed'])if(brand[variant]) {
   if(!(await stat(asset).catch(()=>null))?.isFile())throw new Error(`Missing ${variant} brand asset: ${brand[variant].src}`);
 }
 await rm(output,{recursive:true,force:true});await mkdir(output,{recursive:true});await cp(join(root,'public'),output,{recursive:true});
+for(const file of versionedAssets.filter(file=>file.endsWith('.js'))) {
+  const source=await readFile(join(output,file),'utf8');
+  await writeFile(join(output,file),source.replace(/from '(\.\/[^']+\.js)'/g,`from '$1?v=${assetVersion}'`));
+}
 const manifest=[];
 for(const id of Object.keys(routes))for(const lang of ['en','fr']) {
   const path=route(id,lang),dir=join(output,path);
