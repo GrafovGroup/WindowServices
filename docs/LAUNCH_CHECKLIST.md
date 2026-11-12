@@ -21,6 +21,7 @@ Statuses distinguish a tested review build from a public launch. Production flag
 | Service/region capability | BLOCKED | Core pages are review content. Region availability qualified; no office claims. Confirm fulfilment before release. |
 | Legal/privacy/retention | BLOCKED | Confirm contracting entity and real access/retention practices. Current privacy copy reflects the chosen form processor. |
 | WHC hosting preparation | PASS | Existing Web Hosting Pro account inspected through cPanel. Separate addon-domain root ~/windowservices.ca and non-public ~/windowservices-staging folder created. Server srv48.swhc.ca, shared IP 51.161.57.68, LiteSpeed with Apache-compatible configuration. |
+| WHC staged package | PASS | Clean source 5263960e9689; archive and checksum uploaded outside public roots. Authenticated read-back SHA-256 matches the local archive exactly. See docs/verification/whc-staging-report.json. |
 | Apache rules | PASS — LOCAL | Local Apache 2.4.67: root redirect, real EN/FR 404s, security/noindex headers, MIME handling and query-preserving directory redirects. Full browser suite also ran against Apache. See docs/verification/apache-check-report.json. |
 | Final domain/HTTPS/DNS cutover | BLOCKED | Public domain still uses WHC parking nameservers and A 149.56.225.6. No registrar DNS/mail change or live website release performed. Verify authoritative records, final TLS and WHC behaviour before cutover. |
 | Safari, Edge, Firefox, real mobile devices | NOT TESTED | Current browser verification uses desktop Chrome with responsive viewport sizes. |

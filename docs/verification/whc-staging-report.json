@@ -1,0 +1,39 @@
+{
+  "verifiedAt": "2026-11-12T00:38:12.843Z",
+  "timezone": "America/Toronto",
+  "sourceCommit": "5263960e9689236374a408502c41d046b923047f",
+  "sourceDirty": false,
+  "host": "srv48.swhc.ca",
+  "hostingAddress": "51.161.57.68",
+  "domain": "windowservices.ca",
+  "documentRoot": "~/windowservices.ca",
+  "stagingDirectory": "~/windowservices-staging",
+  "archive": "windowservices-preview-5263960e9689.tar.gz",
+  "archiveBytes": 3044346,
+  "sha256": "1e64428d098d35812459ab372f1e0d79bfa68344ba59c02a0a52c366255707c0",
+  "upload": {
+    "archive": "cPanel uploader reported 100%, 2.90 MB complete",
+    "checksum": "cPanel uploader reported 100%, 109 Bytes complete",
+    "readBackBytes": 3044346,
+    "readBackSha256Matches": true
+  },
+  "packageVerification": {
+    "files": 113,
+    "routes": 42,
+    "internalReferences": 2548,
+    "cleanSourceConfirmed": true
+  },
+  "publicCutover": false,
+  "publicDns": {
+    "nameservers": [
+      "parking1.whc.ca",
+      "parking2.whc.ca"
+    ],
+    "address": "149.56.225.6"
+  },
+  "notes": [
+    "Archive and checksum are outside public document roots; no website files were released to the public domain.",
+    "Authenticated cPanel download was hashed inside the browser and matched the local archive.",
+    "No passwords, cookies or authenticated session URLs are stored in this report."
+  ]
+}
