@@ -23,3 +23,10 @@ These are observations of providers' own sites, not rankings or endorsements. No
 - [Unsplash licence](https://unsplash.com/license) and [Pexels licence](https://www.pexels.com/license/): illustrative photography; per-asset records in MEDIA_MANIFEST.md.
 
 No local office, staff identity, customer outcome, insurance, certification, operating history, emergency dispatch, response guarantee, energy saving, rebate, warranty or search ranking is asserted. Stock photography is not capability evidence. Content supports assessment/enquiry, not DIY glass or work-at-height instructions. French is implemented but has not undergone a professional linguistic review.
+
+## Launch configuration references — reviewed November 11, 2026
+
+- [Formspree localization](https://help.formspree.io/articles/building-your-form/localization-and-translation/): hidden _language field uses en/fr for hosted fallback pages; no extra submission was sent to retest this fallback.
+- [Formspree domain restriction](https://help.formspree.io/articles/form-and-project-settings/restrict-to-domain/): saved project restriction to windowservices.ca; both authorized live-origin tests accepted.
+- [cPanel SSL guide](https://docs.cpanel.net/knowledge-base/security/guide-to-ssl/118/): remove the affected SSL host binding before requesting AutoSSL when an installed certificate prevents the intended renewal. The WindowServices binding was repaired; no stored key/certificate was deleted.
+- [WHC DNS records](https://help.whc.ca/en/articles/618475-how-do-i-update-my-domain-s-dns-records): authoritative web A updated while mail and unrelated records were preserved.

@@ -13,8 +13,8 @@ The owner selected existing WHC hosting and authorized the agent to use the sign
 | Document root | `~/windowservices.ca`, separate from the primary site's `public_html` |
 | Required internal subdomain | `windowservices.bodycams.ca` |
 | Staging directory | `~/windowservices-staging`, created outside public document roots |
-| Public domain | Still WHC parking: nameservers `parking1.whc.ca` / `parking2.whc.ca`, A `149.56.225.6` |
-| Public site/DNS changes | No website release or registrar DNS/mail change performed |
+| Public domain | Nameservers retained: `parking1.whc.ca` / `parking2.whc.ca`; A changed to `51.161.57.68`, TTL 300 |
+| DNS/mail changes | Web A record only; www CNAME and all mail/unrelated records preserved |
 
 The cPanel domain creation provisions its hosting-side domain/zone and required subdomain. It does not establish that the registrar's authoritative parking DNS points to this server. Public DNS, existing mail records and final HTTPS must be inspected together before any cutover. Do not change the hosting account's primary domain.
 
@@ -43,7 +43,7 @@ The generated `.htaccess` targets the verified Apache-compatible WHC server. It 
 
 The rules were tested on local Apache 2.4.67 using real HTTP responses, including French missing pages, explicit 404 routes, security headers and query-preserving trailing-slash redirects. This is not proof of the final live hostname's behaviour. Recheck all rules on WHC after deployment. Preserve any necessary existing host authentication settings when installing the generated configuration.
 
-Production builds require all evidence-backed `launch` flags, both real logo variants and a clean committed source tree for packaging. `SITE_MODE=production node scripts/package.mjs` remains blocked until the launch checklist is resolved. The build reads environment variables directly; `.env` is not automatically loaded. Configure `SITE_URL` to the verified HTTPS origin without a trailing slash.
+Production builds require all evidence-backed `launch` flags, both real logo variants and a clean committed source tree for packaging. `SITE_MODE=production node scripts/package.mjs` is enabled: the owner confirmations and live form/hosting checks support all five gates. The build reads environment variables directly; `.env` is not automatically loaded. Configure `SITE_URL` to the verified HTTPS origin without a trailing slash.
 
 The Formspree endpoint is public configuration. Confirm provider host restrictions, server validation, abuse controls and final-domain delivery. The CSP currently permits local assets and Formspree; any future CAPTCHA embed needs its exact domains configured and tested.
 
@@ -56,3 +56,17 @@ Keep the previous verified site output and its host configuration. Roll back by 
 WHC references consulted November 11, 2026: [cPanel access](https://help.whc.ca/en/articles/625469-how-to-access-cpanel), [addon domains](https://clients.whc.ca/index.php?language=english&rp=%2Fknowledgebase%2F153%2FDomaines-suppl%C3%A9mentaires-et-alias.html), [File Manager](https://clients.whc.ca/index.php?language=english&rp=%2Fknowledgebase%2F1730%2FHow-to-use-the-File-Manager.html). The account's actual domain root was verified in cPanel rather than assumed from a primary-domain example.
 
 Staging verification: `windowservices-preview-5263960e9689.tar.gz` and its checksum are uploaded to `~/windowservices-staging`. The archive was built from clean source `5263960e9689236374a408502c41d046b923047f`. Its authenticated WHC read-back matches SHA-256 `1e64428d098d35812459ab372f1e0d79bfa68344ba59c02a0a52c366255707c0` (3,044,346 bytes). This is a non-public staged package, not a live deployment. Evidence: `docs/verification/whc-staging-report.json`.
+
+## Launch preparation — November 11, 2026
+
+Authoritative DNS now points to 51.161.57.68. The previous web A was 149.56.225.6 with a roughly four-hour TTL; some recursive caches can retain it until expiry. The authoritative nameservers, www CNAME, MX, SPF and forwarding verification records were preserved. The before/after record comparison confirmed no non-web changes.
+
+The preview release 0a0de7fe57fb was installed and its output verified on WHC. The before-launch backup is ~/windowservices-staging/windowservices-before-launch-20261111.tar.gz (mode 600). It preserves the original empty domain root, including host cgi-bin and .well-known. Retain the verified preview archive for content rollback; it is deliberately noindex.
+
+Live LiteSpeed needed stable error-document paths. The generator now creates /_errors/en.html and /_errors/fr.html; fr/.htaccess selects the French document. These files carry noindex metadata. Missing routes and explicit /en/404/ and /fr/404/ return genuine 404 responses. Root .htaccess provides security and production canonical redirects. Never publish source, archives, private evidence or credentials in the document root.
+
+HTTPS initially inherited a certificate unrelated to WindowServices. A non-secret binding inventory was saved to ~/windowservices-staging/tls-bindings-before-20261111.json (mode 600). Only the WindowServices SSL host binding was removed using cPanel SSL delete_ssl; stored certificates/private keys and other domain bindings were preserved. AutoSSL was rerun and strict apex/www certificate validation then passed. See [cPanel SSL guide](https://docs.cpanel.net/knowledge-base/security/guide-to-ssl/118/).
+
+Final verification during resolver propagation can use VERIFY_IP=51.161.57.68 with scripts/check-live.mjs. This changes the connection address while preserving the real hostname and strict TLS validation. Browser tests accept HOST_RESOLVER_RULES for the same purpose; all QA Formspree requests are intercepted. These tests do not prove all public recursive resolvers have expired cached parking answers.
+
+To restore a verified package, extract it into a new non-public staging directory, validate its SHA-256 and release inventory, then copy only site/. into the domain root. Preserve .well-known and cgi-bin. Restoring the initial before-launch backup removes the site; use the preceding verified site package for ordinary content rollback. DNS rollback, if necessary, restores only the web A record and must not alter mail records.

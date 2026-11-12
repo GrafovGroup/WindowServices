@@ -1,32 +1,25 @@
 # Launch checklist — November 11, 2026
 
-Statuses distinguish a tested review build from a public launch. Each production flag is enabled only when its supporting evidence is recorded.
+Production flags are supported by the evidence below. The final installed release and checks are recorded in PROJECT_STATUS.md and docs/verification.
 
-| Check | Status | Evidence / remaining work |
+| Check | Status | Evidence / scope |
 | --- | --- | --- |
-| Static build | PASS | Node 24.22.1; no build dependencies; 42 EN/FR routes. |
-| Validation, routes, branding and package integrity | PASS | Eight Node test groups: contact alternatives, lengths/IDs, locale mapping, safe context, logo requirements/variants and detection of tampered, missing, extra, private or linked release files. |
-| Generated output | PASS | 42 routes, 2,548 internal references including responsive image candidates and branded social cards; unique metadata, H1s, icons, canonical/hreflang, JSON-LD and exact sitemap membership. Custom SITE_URL passes; deliberately incorrect canonical is rejected. |
-| Downloadable review package | PASS | 113 public output files; extracted archive passes all file checksums and the 42-route audit. Source commit and working-tree status recorded. Production guard remains enforced. See docs/verification/release-check-report.json. |
-| Browser HTTP/interaction/responsive checks | PASS | Chrome 157.0.8103.51 via Playwright 1.62.1: 42 routes, 84 responsive views (360/390/768/1280/1440/1920), EN/FR provider mocks, menu focus/Escape, locale links, 404s, no-JS form and reduced motion. Exact browser version in docs/verification/browser-report.json. |
-| Automated accessibility | PASS | axe-core 4.11.0 in Chrome; 20 page/viewport combinations, zero automatic A/AA violations. Not an accessibility certification. |
-| Visual review | PASS | Desktop EN home/repair, mobile FR home/quote, tablet FR areas screenshots inspected. Long French copy fits. |
-| Favicon implementation | PASS | Approved reconstructed architectural emblem in valid 16/32/48 ICO, SVG, 96/180/192/512 PNGs and manifest. Owner approved the visual proof on November 11, 2026. |
-| Logo concept selection | PASS | Owner reconfirmed option #1 — Architectural / Commercial — on November 11, 2026. |
-| Concept #1 artwork implementation | PASS — OWNER APPROVED | Owner explicitly replied “Approve this logo reconstruction” on November 11, 2026 after viewing the proof. Real SVG paths, transparent/reversed/monochrome PNGs, icons and bilingual social cards are installed. See docs/verification/brand-approval.json. |
-| Form endpoint integration | PASS | Owner's `mppdzldb` endpoint in real HTML POST and JS enhancement. |
-| Live form acceptance | PASS | Two owner-authorized live submissions on November 11, 2026 at about 6:15 p.m. Toronto time: EN/email and FR/phone-only. Both returned HTTP 200 with `ok: true` and displayed localized confirmation. Exactly two POSTs, no retries. See docs/verification/live-form-report.json. |
-| Notification/inbox receipt | PASS — OWNER CONFIRMED | Owner replied "received" after the two live tests on November 11, 2026. Receipt is owner-confirmed; mailbox contents, French notification formatting and dashboard settings were not independently inspected. |
-| Provider rules and abuse controls | BLOCKED | Dashboard verification required: required/contact rules, limits, CAPTCHA/spam and host restrictions. Honeypot is not complete protection. |
-| Service/region capability | BLOCKED | Core pages are review content. Region availability qualified; no office claims. Confirm fulfilment before release. |
-| Legal/privacy/retention | BLOCKED | Confirm contracting entity and real access/retention practices. Current privacy copy reflects the chosen form processor. |
-| WHC hosting preparation | PASS | Existing Web Hosting Pro account inspected through cPanel. Separate addon-domain root ~/windowservices.ca and non-public ~/windowservices-staging folder created. Server srv48.swhc.ca, shared IP 51.161.57.68, LiteSpeed with Apache-compatible configuration. |
-| WHC staged package | PASS | Clean source 5263960e9689; archive and checksum uploaded outside public roots. Authenticated read-back SHA-256 matches the local archive exactly. See docs/verification/whc-staging-report.json. |
-| Apache rules | PASS — LOCAL | Local Apache 2.4.67: root redirect, real EN/FR 404s, security/noindex headers, MIME handling and query-preserving directory redirects. Full browser suite also ran against Apache. See docs/verification/apache-check-report.json. |
-| Final domain/HTTPS/DNS cutover | BLOCKED | Public domain still uses WHC parking nameservers and A 149.56.225.6. No registrar DNS/mail change or live website release performed. Verify authoritative records, final TLS and WHC behaviour before cutover. |
-| Safari, Edge, Firefox, real mobile devices | NOT TESTED | Current browser verification uses desktop Chrome with responsive viewport sizes. |
-| Field performance | NOT TESTED | No production field data, Lighthouse score or Core Web Vitals claim. Self-hosted media and small JS limit runtime requests. |
-| Google/Bing | NOT TESTED | No property verification, sitemap submission or indexing evidence. Review sitemap is empty. |
-| Analytics, uploads, accounts/payments | NOT APPLICABLE | Not included in this scope. |
+| Approved artwork | PASS | Owner approved option #1 reconstruction after reviewing the visual proof; brand-approval.json. |
+| Core service capability | PASS | Owner confirmed cleaning, repair, installation and replacement, subject to project/location confirmation; launch-owner-confirmations.json. |
+| Operator and privacy facts | PASS | Superclean Canada Inc.; Privacy Officer at info@windowservices.ca; unsuccessful enquiries deleted after 12 months from last contact, with legal/dispute exceptions. Owner-adopted policy appears in EN/FR. |
+| Form endpoint and acceptance | PASS | Owner's mppdzldb endpoint; two earlier enquiries accepted and receipt owner-confirmed. Two final authorized live-origin enquiries accepted (EN/email and FR/phone-only); live-launch-forms-report.json. |
+| Final notification receipt | NOT TESTED | Final requests accepted by provider; final recipient inbox receipt is not independently confirmed. Earlier receipt is owner-confirmed. |
+| Provider controls | PASS | Enabled, Formshield, honeypot, domain restriction, required/type/length rules and available quota verified; form-provider-settings.json. Contact OR and enum checks are client-side, not provider combination rules. |
+| WHC account and backup | PASS | Existing Pro plan, srv48.swhc.ca, separate ~/windowservices.ca root; packages/backups in non-public ~/windowservices-staging. |
+| DNS cutover | PASS | Both authoritative servers return 51.161.57.68, TTL 300; all non-web records preserved. Cached parking answers may persist through their previous TTL. |
+| Valid HTTPS | PASS | Strict certificate verification succeeds for windowservices.ca and www. AutoSSL repaired after removing this domain's incorrect certificate binding. |
+| Build, Node checks and audit | PASS | Eight Node test groups; 42 routes, 2,548 internal references; branding, routes, validation, metadata, sitemap and package-integrity checks. Final production rerun recorded with release. |
+| WHC preview integrity and 404s | PASS | Live 42-route + 69-file hash crawl. Dedicated localized error documents resolve LiteSpeed internal-error recursion; real EN/FR missing URLs and explicit error routes return 404. |
+| Production package/install | NOT TESTED | Final production package and installation pending in this source checkpoint. |
+| Production live crawl/browser/a11y | NOT TESTED | Final production rerun pending. Earlier Chrome tests passed 42 routes, 84 responsive views and 20 automated axe combinations. |
+| Safari/Firefox/Edge and physical mobile | NOT TESTED | Desktop Chrome with responsive viewports only; not a real-device or accessibility certification. |
+| Field performance | NOT TESTED | No production field data or Core Web Vitals claim. |
+| Search consoles | NOT TESTED | No property verification or sitemap submission claimed. |
+| Analytics/uploads/accounts/payments | NOT APPLICABLE | Outside the implemented scope. |
 
-Before public release: confirm actual operations and legal/privacy facts, confirm provider controls, and verify DNS/HTTPS and form behaviour on the final domain. The logo visual check is complete. No fake placeholder offices, reviews, projects, certifications, prices or guarantees appear.
+Review builds remain noindex by default. Production uses the approved HTTPS origin and includes only canonical indexable pages in its sitemap. Quote, confirmation and error pages remain noindex. No fake offices, testimonials, certifications or service guarantees are published.

@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 
 const extensions = new Set(['.html', '.css', '.js', '.json', '.xml', '.txt', '.svg', '.ico', '.png', '.webp', '.webmanifest']);
-const hostFiles = new Set(['_headers', '_redirects', '.htaccess']);
+const hostFiles = new Set(['_headers', '_redirects', '.htaccess', 'fr/.htaccess']);
 
 // Package only the freshly built public output. Never follow symbolic links.
 export async function inventory(directory, prefix = '') {

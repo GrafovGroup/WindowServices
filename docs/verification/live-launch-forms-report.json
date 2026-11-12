@@ -1,0 +1,38 @@
+{
+  "authorization": "Owner: Send the two final launch tests",
+  "origin": "https://windowservices.ca",
+  "connectedTo": "51.161.57.68 (during DNS propagation)",
+  "certificateValidation": "enabled",
+  "startedAt": "2026-11-12T01:50:05.428Z",
+  "attempts": [
+    {
+      "language": "en",
+      "reference": "WS-LAUNCH-20261111-EN",
+      "requests": 1,
+      "sentAt": "2026-11-12T01:50:07.850Z",
+      "status": 200,
+      "body": {
+        "next": "/thanks?language=en",
+        "ok": true
+      },
+      "successHeading": "Your request has been accepted.",
+      "result": "accepted"
+    },
+    {
+      "language": "fr",
+      "reference": "WS-LAUNCH-20261111-FR",
+      "requests": 1,
+      "sentAt": "2026-11-12T01:50:09.814Z",
+      "status": 200,
+      "body": {
+        "next": "/thanks?language=en",
+        "ok": true
+      },
+      "successHeading": "Votre demande a été acceptée.",
+      "result": "accepted"
+    }
+  ],
+  "finishedAt": "2026-11-12T01:50:10.125Z",
+  "inboxReceipt": "Earlier EN/FR tests were owner-confirmed. Final launch notifications are not yet independently confirmed in the recipient inbox.",
+  "followUpFix": "Added the documented Formspree _language field for localized provider fallback pages; standard in-page EN/FR success passed in both live tests. No additional submissions sent."
+}

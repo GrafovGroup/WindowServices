@@ -1,11 +1,13 @@
 # Project brief — November 11, 2026
 
-Owner: Dmitry Grafov / Grafov Group. Brand: **WindowServices.ca**, singular Window. Current authorization: build from the preserved master prompt and store the work in GitHub for review. No public launch or DNS change was requested.
+Owner: Dmitry Grafov / Grafov Group. Brand: **WindowServices.ca**, singular Window. Operator: **Superclean Canada Inc.** The owner authorized building from the preserved master prompt, storing all source in GrafovGroup/WindowServices, and completing launch on existing WHC hosting.
 
-Audience: commercial property/facility managers, homeowners, institutional/industrial buyers and construction projects. Direct service enquiry journey, not a directory. Primary pathways: cleaning, repair, installation and replacement. A management page qualifies recurring/multi-property needs without claiming established national contract capacity.
+Audience: commercial property/facility managers, homeowners, institutional/industrial buyers and construction projects. Direct service enquiries, not a directory. Core pathways: cleaning, repair, installation and replacement. The owner confirmed all four, subject to project and location confirmation. No universal availability, local offices, specialist credentials, reviews, projects, guarantees, rebates or 24/7 promises are invented.
 
-Contacts from the brief: (833) 696-9996 and info@windowservices.ca. Link syntax is tested; phone operation is not independently verified; the owner confirmed receipt of both live test notifications. Owner supplied Formspree form `mppdzldb` during this build. Notification destination/settings are not visible locally.
+Contacts: (833) 696-9996 and info@windowservices.ca. Phone operation is not independently verified. The owner supplied Formspree form mppdzldb and confirmed earlier test notification receipt. Its existing verified Superclean inbox remains the notification recipient. Two additional authorized launch enquiries were accepted from the real HTTPS origin; see the verification reports.
 
-English and Canadian French are implemented. Enquiries can select all ten provinces and three territories. No local offices or universal availability are claimed. Actual specialists, access, service and scheduling need project-level confirmation.
+Canadian English and French cover all ten provinces and three territories through one qualified enquiry hub. Availability, scope, access and scheduling are confirmed per project.
 
-The owner selected existing WHC Web Hosting Pro. Its separate WindowServices.ca domain root and non-public staging directory are now configured; the public domain remains on WHC parking DNS. Static HTML/CSS/JS plus Formspree requires no production Node server or database. Unresolved: contracting entity, regional/service capability, qualifications, working hours, privacy retention/access and final terms. No reviews, past projects, guarantees, numerical achievements, rebates, warranty or 24/7 promises are invented.
+Privacy contact: Privacy Officer, Superclean Canada Inc., info@windowservices.ca. Owner-adopted retention: delete unsuccessful enquiries 12 months after last contact, except records required for legal obligations or disputes. This is an operating policy the team must follow, not a legal certification.
+
+Hosting: existing WHC Web Hosting Pro, separate domain root ~/windowservices.ca, staging outside public roots. Static HTML/CSS/JS plus Formspree requires no persistent Node process or database. The approved option #1 logo reconstruction is installed. No analytics, uploads, accounts or payments are included.

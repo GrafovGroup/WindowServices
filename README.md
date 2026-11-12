@@ -2,9 +2,9 @@
 
 Bilingual static website for commercial and residential window-service enquiries. Canonical source: [GrafovGroup/WindowServices](https://github.com/GrafovGroup/WindowServices).
 
-The initial review build has **42 EN/FR routes**: home, four core services, commercial, residential, property management, a national enquiry hub, three guides, contact, quote, about, privacy, accessibility, next steps and localized 404s. The quote form uses the owner's Formspree endpoint `https://formspree.io/f/mppdzldb`.
+The website has **42 EN/FR routes**: home, four core services, commercial, residential, property management, a national enquiry hub, three guides, contact, quote, about, privacy, accessibility, next steps and localized 404s. The quote form uses the owner's Formspree endpoint `https://formspree.io/f/mppdzldb`.
 
-**Review build, not a production launch.** All pages are noindex. Production is gated on the evidence in [the launch checklist](docs/LAUNCH_CHECKLIST.md). The original option #1 reference has been recovered and reconstructed as editable logo variants and icons. The owner approved this reconstruction on November 11, 2026, and it is installed in the review site and verified WHC staging package. See [the approved logo proof](docs/preview/brand-proof.png).
+The owner has authorized public launch on existing WHC hosting. All five production gates are supported by the [launch checklist](docs/LAUNCH_CHECKLIST.md). The approved option #1 reconstruction is installed; see the [logo proof](docs/preview/brand-proof.png). The operator is Superclean Canada Inc. The release record and current deployment status are in [project status](docs/PROJECT_STATUS.md).
 
 ## Build and preview
 
@@ -17,15 +17,15 @@ node scripts/serve.mjs
 
 Open `http://127.0.0.1:4173/en/` or `/fr/`. Rebuild after source edits, then reload. Stop the server with Ctrl+C. Set `PORT` to change the port. The loopback preview server always sends noindex headers and is not a production server.
 
-Equivalent npm scripts: `npm run build`, `npm run dev`, `npm run check`. The lockfile records the intentionally dependency-free build. Generated `dist/` is ignored; deploy its contents only after release checks. The owner selected existing WHC hosting. Its separate domain root and non-public staging folder are configured; public DNS still serves WHC's parking page.
+Equivalent npm scripts: `npm run build`, `npm run dev`, `npm run check`. The lockfile records the intentionally dependency-free build. Generated `dist/` is ignored; deploy its contents only after release checks. The owner selected existing WHC hosting. Its separate domain root and non-public staging folder are configured. Authoritative web DNS points to WHC; mail records were preserved.
 
-## Downloadable review package
+## Release package
 
 ```sh
-node scripts/package.mjs
+SITE_MODE=production node scripts/package.mjs
 ```
 
-This rebuilds and audits the site, then creates `artifacts/windowservices-preview-<revision>.tar.gz` and its SHA-256 checksum. Packaging uses Node 24, Git and the system `tar` command (available on macOS/Linux). The archive contains `site/`, a file-checksum/source manifest and deployment instructions. Working changes are explicitly marked in preview package names and metadata; production packaging requires committed source and all launch gates.
+This rebuilds and audits the site, then creates `artifacts/windowservices-production-<revision>.tar.gz` and its SHA-256 checksum. Packaging uses Node 24, Git and the system `tar` command (available on macOS/Linux). The archive contains `site/`, a file-checksum/source manifest and deployment instructions. Working changes are explicitly marked in preview package names and metadata; production packaging requires committed source and all launch gates.
 
 Extract into an empty directory, then verify it from the source checkout:
 
@@ -71,4 +71,4 @@ Use `route()` and `quoteLink()` rather than hardcoded navigation. Add both trans
 
 ## Resume
 
-Read [MASTER_PROMPT.md](MASTER_PROMPT.md), [status](docs/PROJECT_STATUS.md), [decisions](docs/DECISIONS.md) and [launch checklist](docs/LAUNCH_CHECKLIST.md). Preserve the approved option #1 reconstruction, confirm business facts and provider controls, and prepare the final WHC/DNS cutover. Live test receipt is owner-confirmed. No production publishing, registrar DNS/mail changes or search submissions have been performed.
+Read [MASTER_PROMPT.md](MASTER_PROMPT.md), [status](docs/PROJECT_STATUS.md), [decisions](docs/DECISIONS.md) and [launch checklist](docs/LAUNCH_CHECKLIST.md). Preserve the approved option #1 reconstruction and owner-confirmed operating/privacy policy. Final live EN/email and FR/phone-only enquiries were accepted under the configured provider restrictions. Earlier notification receipt was owner-confirmed. Follow the deployment record for the installed release and remaining checks; never resubmit real test enquiries without explicit authorization.

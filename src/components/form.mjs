@@ -11,7 +11,7 @@ export function quoteForm(lang) {
   return `<div class="quote-layout wrap"><aside class="quote-aside"><span class="eyebrow">${t.quoteSide}</span><h2>${lang === 'en' ? 'The details make<br>the difference.' : 'Les détails font<br>la différence.'}</h2><p>${t.quoteSideText}</p><p class="safety-note">${t.safe}</p><a class="phone-large" href="${site.phoneHref}">${site.phone}</a><a href="mailto:${site.email}">${site.email}</a><p class="small">${t.availability}</p></aside>
   <div class="form-panel"><form id="quote-form" action="${esc(site.formEndpoint)}" method="POST" accept-charset="UTF-8" data-lang="${lang}">
   <p class="small form-instructions">${t.required}</p>
-  <input type="hidden" name="language" value="${lang}-CA"><input type="hidden" name="source_route" value="${route('quote',lang)}">
+  <input type="hidden" name="language" value="${lang}-CA"><input type="hidden" name="_language" value="${lang}"><input type="hidden" name="source_route" value="${route('quote',lang)}">
   <input type="hidden" name="subject" value="WindowServices.ca — ${lang === 'en' ? 'Quote request' : 'Demande de soumission'}">
   <input type="hidden" name="submission_id" value="">
   <div class="honeypot" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="_gotcha" tabindex="-1" autocomplete="off"></div>

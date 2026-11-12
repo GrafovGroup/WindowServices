@@ -5,7 +5,7 @@ import { route } from '../src/i18n/routes.mjs';
 const require=createRequire(import.meta.url);
 const { chromium }=require('playwright');
 const axeSource=await readFile(process.env.AXE_SCRIPT||require.resolve('axe-core/axe.min.js'),'utf8');
-const browser=await chromium.launch({headless:true,...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{})});
+const browser=await chromium.launch({headless:true,...(process.env.HOST_RESOLVER_RULES?{args:['--host-resolver-rules='+process.env.HOST_RESOLVER_RULES]}:{}),...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{})});
 const results=[];
 try {
  const page=await browser.newPage();await page.route('https://formspree.io/**',r=>r.abort());

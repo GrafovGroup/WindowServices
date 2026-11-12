@@ -14,8 +14,8 @@ export const launch = {
   approvedLogo: true,
   serviceScopeVerified: true,
   legalAndPrivacyReviewed: true,
-  formDeliveryVerified: false,
-  hostingVerified: false,
+  formDeliveryVerified: true,
+  hostingVerified: true,
 };
 
 export const regions = [
