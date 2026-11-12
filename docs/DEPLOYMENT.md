@@ -41,7 +41,7 @@ Root .htaccess sets security headers, preferred HTTPS host, / to /en/ (301 in pr
 
 Production indexable pages have no noindex directive. Quote, confirmation and error pages retain noindex. robots.txt allows crawling and points to the actual 36-URL sitemap. Canonical/hreflang, structured data, responsive images and icons are audited. Headers include CSP, nosniff, restricted device permissions and strict-origin-when-cross-origin referrers. Production public cache lifetime is one hour with revalidation.
 
-Formspree mppdzldb is public configuration, with native POST plus small JavaScript enhancement. Domain restriction, Formshield, honeypot and backend required/type/length rules are verified. Email-or-phone and enum membership are website checks; provider settings do not express those combination rules. _language=en/fr localizes provider fallback pages. Existing notifications go to the verified Superclean inbox. No CAPTCHA embed, analytics, uploads, user accounts or payments are installed. Shared provider capacity is 200 enquiries/month; check current usage in the account.
+Formspree mppdzldb is public configuration, with native POST plus small JavaScript enhancement. Domain restriction, Formshield, honeypot and backend required/type/length rules are verified. Email-or-phone and enum membership are website checks; provider settings do not express those combination rules. _language=en/fr localizes provider fallback pages. Existing notifications go to the verified Superclean inbox. Optional consent-gated GA4 is configured; see ANALYTICS.md. No CAPTCHA embed, uploads, user accounts or payments are installed. Shared provider capacity is 200 enquiries/month; check current usage in the account.
 
 ## DNS and TLS
 

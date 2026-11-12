@@ -1,3 +1,4 @@
+import { contentSecurityPolicy } from './security.mjs';
 // A directory with its own RewriteEngine does not inherit the parent rules.
 function canonicalRedirect({ mode, origin }) {
   if (mode !== 'production') return '';
@@ -28,7 +29,7 @@ RewriteRule ^(?:404\\.html|en/404(?:/index\\.html)?/?)$ - [R=404,L]
 Header always set X-Content-Type-Options "nosniff"
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
 Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
-Header always set Content-Security-Policy "default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self' https://formspree.io; form-action https://formspree.io; base-uri 'none'; frame-ancestors 'none'; object-src 'none'"
+Header always set Content-Security-Policy "${contentSecurityPolicy}"
 ${production ? 'Header set Cache-Control "public, max-age=3600, must-revalidate"' : 'Header always set X-Robots-Tag "noindex, follow"\nHeader always set Cache-Control "no-store"'}
 `;
 }

@@ -10,6 +10,9 @@ const browser=await chromium.launch({headless:true,...(process.env.HOST_RESOLVER
 const context=await browser.newContext({viewport:{width:1440,height:1000}});
 // Never send test enquiries to the real provider. Each test explicitly mocks a result.
 await context.route('https://formspree.io/**',r=>r.abort());
+// Keep functional QA free of real analytics and dismiss only in the test browser.
+await context.route(/https:\/\/(www\.googletagmanager\.com|[^/]*google-analytics\.com)\//,r=>r.abort());
+await context.addInitScript(()=>localStorage.setItem('ws-analytics-consent-v1',JSON.stringify({choice:'declined',at:Date.now()})));
 const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
 const report={browser:await browser.version(),checkedAt:new Date().toISOString(),origin:base,connectedTo:process.env.HOST_RESOLVER_RULES||'default DNS',routes:0,responsive:[],forms:[],screenshots:[]};
 await mkdir('artifacts',{recursive:true});
@@ -26,12 +29,16 @@ try {
    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);assert.equal(overflow,false,`${lang}/${id} overflows at ${width}`);
    report.responsive.push(`${lang}/${id}@${width}`);
  }
- for(const [lang,id,width,name] of [['en','home',1440,'home-desktop'],['fr','home',390,'home-mobile-fr'],['fr','quote',390,'quote-mobile-fr'],['en','repair',1440,'repair-desktop'],['fr','areas',768,'areas-tablet-fr']]) {
+ for(const [lang,id,width,name] of [['en','home',1440,'home-desktop'],['fr','home',390,'home-mobile-fr'],['fr','quote',390,'quote-mobile-fr'],['en','repair',1440,'repair-desktop'],['fr','areas',768,'areas-tablet-fr'],['en','about',1440,'about-desktop']]) {
    await page.setViewportSize({width,height:1000});await page.goto(base+route(id,lang));
    await page.evaluate(async()=>{for(const img of document.images){img.loading='eager';}await Promise.all([...document.images].map(img=>img.decode().catch(()=>{})));});
    await page.screenshot({path:`artifacts/${name}.png`,fullPage:true});report.screenshots.push(name+'.png');
  }
  await page.setViewportSize({width:390,height:844});await page.goto(base+'/fr/');
+ assert(await page.locator('.mobile-actions').isVisible());
+ await page.goto(base+route('quote','fr'));assert.equal(await page.locator('.mobile-actions').count(),0);
+ assert((await page.locator('.form-panel').boundingBox()).y<(await page.locator('.quote-aside').boundingBox()).y);
+ await page.goto(base+'/fr/');
  await page.locator('#menu-toggle').click();assert(await page.locator('#mobile-menu').evaluate(el=>el.open));
  assert(await page.evaluate(()=>document.body.classList.contains('menu-open')));
  await page.keyboard.press('Shift+Tab');assert(await page.locator('#mobile-menu').evaluate(el=>el.contains(document.activeElement)));
@@ -43,7 +50,8 @@ try {
    await page.goto(base+route('quote',lang)+'?service=cleaning&property=commercial&province=QC&source=cleaning');
    assert.equal(await page.locator('input[name="_language"]').inputValue(),lang);assert.equal(await page.locator('#service').inputValue(),'cleaning');assert.equal(await page.locator('#property').inputValue(),'commercial');
    assert.equal(await page.locator('input[name="source_route"]').inputValue(),route('cleaning',lang));
-   assert(await page.locator('#frequency').isVisible());
+   assert(await page.locator('#frequency').isHidden());
+   await page.locator('#project-details summary').click();assert(await page.locator('#frequency').isVisible());
    await page.locator('#name').fill('WEBSITE TEST — DO NOT BOOK');await page.locator('#email').fill('website-test@example.com');
    await page.locator('#city').fill('Montréal');await page.locator('#message').fill('Integration test only. Essai technique — aucun travail demandé.');
  }
@@ -65,7 +73,7 @@ try {
    await page.locator('#submit-request').click();await page.locator('#form-status').waitFor({state:'visible'});assert(await page.locator('#form-success').isHidden());assert.equal(await page.locator('#name').inputValue(),'WEBSITE TEST — DO NOT BOOK');
    report.forms.push(`${lang}: network failure and progressive field state`);
  }
- const noJs=await browser.newContext({javaScriptEnabled:false});await noJs.route('https://formspree.io/**',r=>r.abort());const plain=await noJs.newPage();await plain.goto(base+'/fr/demander-une-soumission/');assert.equal(await plain.locator('form').getAttribute('action'),'https://formspree.io/f/mppdzldb');assert(await plain.locator('#quote-form noscript').isVisible());assert.equal(await plain.locator('input[name="_language"]').inputValue(),'fr');await noJs.close();
+ const noJs=await browser.newContext({javaScriptEnabled:false});await noJs.route('https://formspree.io/**',r=>r.abort());const plain=await noJs.newPage();await plain.goto(base+'/fr/demander-une-soumission/');assert.equal(await plain.locator('form').getAttribute('action'),'https://formspree.io/f/mppdzldb');assert(await plain.locator('#quote-form noscript').isVisible());assert.equal(await plain.locator('input[name="_language"]').inputValue(),'fr');await plain.locator('#project-details summary').click();assert(await plain.locator('#company').isVisible());await noJs.close();
  await page.emulateMedia({reducedMotion:'reduce'});await page.goto(base+'/en/');assert.equal(await page.evaluate(()=>getComputedStyle(document.documentElement).scrollBehavior),'auto');
  assert.equal((await page.goto(base+'/fr/page-inconnue/')).status(),404);assert.equal(await page.locator('html').getAttribute('lang'),'fr-CA');
  assert.deepEqual(errors,[]);report.pass=true;await writeFile('artifacts/browser-report.json',JSON.stringify(report,null,2));console.log(`PASS: ${report.routes} HTTP routes; ${report.responsive.length} responsive views; bilingual form states; menu keyboard/focus; locale links; 404; reduced motion; no-JS form.`);

@@ -22,6 +22,7 @@ Production flags are supported by the evidence below. The final installed releas
 | Search property verification/submission | PASS | Google domain ownership and Bing site ownership verified by added DNS records. Production 36-URL sitemap submitted to both; search-launch-report.json. |
 | Google live crawl eligibility | PASS | Live test reports URL available to Google and page can be indexed. Fetched HTML contains the new operator/site content and correct /en/ canonical. |
 | Search indexing | NOT TESTED | /en/ discovered but currently not indexed. Initial Google sitemap fetch delay; Bing successfully read all 36 URLs. No ranking or indexing guarantee. |
-| Analytics/uploads/accounts/payments | NOT APPLICABLE | Outside the implemented scope. |
+| Analytics | IMPLEMENTED, QA IN PROGRESS | Owner authorized existing account; bilingual consent and no-personal-data event allowlists. See ANALYTICS.md. |
+| Uploads/visitor accounts/payments | NOT APPLICABLE | Outside the implemented scope. |
 
 Review builds remain noindex by default. Production uses the approved HTTPS origin and includes only canonical indexable pages in its sitemap. Quote, confirmation and error pages remain noindex. No fake offices, testimonials, certifications or service guarantees are published.

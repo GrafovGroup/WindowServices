@@ -1,6 +1,6 @@
 # Media manifest — November 11, 2026
 
-Real licensed stock, not generated images and not WindowServices.ca projects, staff, equipment or premises. Originals: `assets/originals/`. WebP derivatives: `public/images/{name}-{640,1280,1920}.webp`. Images are served locally; no runtime image-CDN requests. Platform licences permit this illustrative use without mandatory credit; provenance is retained here.
+Real licensed stock, not generated images and not WindowServices.ca projects, staff, equipment or premises. Originals: `assets/originals/`. WebP derivatives: `public/images/{name}-{320,640,960,1280,1920}.webp`. Images are served locally; no runtime image-CDN requests. Platform licences permit this illustrative use without mandatory credit; provenance is retained here.
 
 | Name | Source / creator | Placement |
 | --- | --- | --- |
@@ -19,3 +19,7 @@ Temporary vector wordmarks and W favicon are original code assets, unapproved an
 ## Recovered branding — November 11, 2026
 
 The owner-selected original concept sheet is retained unchanged in `assets/originals/brand/windowservices-concepts-original.png`, recovered from the owner's signed-in Library item `libfile_6954415f66a0819193680f97badb4008`. Only concept #1 informed the vector reconstruction; the sheet's photography, operational claims and timelines are not published as evidence. `public/brand/logo-*.svg/png` and the icon/social-card package are repo-native vector artwork and raster exports generated from it. See BRAND_GUIDE.md for reconstruction status, colours, licensed Manrope source and regeneration tools.
+
+## Responsive delivery improvement
+
+Added 320 px and 960 px WebP derivatives from the same licensed originals using `scripts/prepare-responsive.cjs` (Sharp 0.35.5, quality 76). Card `sizes` now reflects the actual two-column mobile layout. No scene content, licensing or project attribution changed. Local Lighthouse 12.8.2 simulated-mobile comparison: 749 KiB → 307 KiB transferred, performance score 87 → 97, LCP 4.1 s → 2.6 s, CLS 0 and TBT 0 ms. These are local lab observations, not field Core Web Vitals.

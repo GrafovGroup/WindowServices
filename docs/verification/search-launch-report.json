@@ -26,8 +26,11 @@
       "note": "Fetched before the later punctuation-only correction; site structure, metadata, forms and all assets unchanged."
     },
     "indexingRequest": "Accepted: English homepage URL added to a priority crawl queue",
-    "lastObservedSitemapStatus": "Couldn't fetch",
-    "sitemapRetry": "One retry after successful live fetch; latest sitemap report still shows Couldn't fetch. No further resubmissions made."
+    "lastObservedSitemapStatus": "Success",
+    "sitemapRetry": "One retry after successful live fetch; latest sitemap report still shows Couldn't fetch. No further resubmissions made.",
+    "URLsDiscovered": 36,
+    "lastRead": "2026-11-11",
+    "successfulReadObservedAt": "2026-11-12 (UTC), SEO/UX improvement session"
   },
   "bing": {
     "property": "https://windowservices.ca/",
@@ -42,7 +45,6 @@
     "lastCrawl": "2026-11-12 (console display date)"
   },
   "limitations": [
-    "Google sitemap processing remains pending after an initial fetch error; its live homepage fetch succeeded and Bing successfully read all 36 sitemap URLs.",
     "Submission, discovery and live crawl eligibility do not establish indexing or rankings."
   ]
 }

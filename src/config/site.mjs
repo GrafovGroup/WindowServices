@@ -6,6 +6,8 @@ export const site = {
   email: 'info@windowservices.ca',
   origin: process.env.SITE_URL || 'https://windowservices.ca',
   formEndpoint: process.env.FORMSPREE_ENDPOINT || 'https://formspree.io/f/mppdzldb',
+  // Public GA4 stream in the existing Grafov Group account; opt-in only.
+  analyticsId: 'G-5ZL8YQ5ZPY',
   mode: process.env.SITE_MODE || 'preview',
 };
 

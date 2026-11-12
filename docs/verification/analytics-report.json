@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-11-12T02:35:26.657Z",
+  "origin": "http://127.0.0.1:4173",
+  "checks": [
+    "en: no Google requests before consent or after refusal",
+    "fr: no Google requests before consent or after refusal",
+    "Only accepted Formspree response produces one generate_lead; no entered personal data or URL query reaches Analytics",
+    "Withdrawal blocks subsequent events and persists across reload; settings return keyboard focus"
+  ],
+  "pass": true
+}

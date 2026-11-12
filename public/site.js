@@ -1,5 +1,7 @@
 import { validateQuote } from './form-validation.js';
+import { initAnalytics, track } from './analytics.js';
 document.documentElement.classList.add('js');
+initAnalytics();
 
 const menu = document.querySelector('#mobile-menu');
 const menuButton = document.querySelector('#menu-toggle');
@@ -25,6 +27,8 @@ if(form) {
   const status=document.querySelector('#form-status');const submit=document.querySelector('#submit-request');
   const standard=document.querySelector('#standard-submit');let submitting=false,accepted=false;
   const initialText=submit.textContent; const params=new URLSearchParams(location.search);
+  const measure=(event,details={})=>track(event,{service:form.elements.service.value,property_type:form.elements.property.value,...details});
+  let began=false;form.addEventListener('input',()=>{if(!began){began=true;measure('quote_start');}});
   const routeMap=JSON.parse(document.querySelector('#route-map').textContent);
   for(const field of ['service','property','province']) {
     const value=params.get(field);const control=form.elements.namedItem(field);
@@ -32,7 +36,7 @@ if(form) {
   }
   const source=params.get('source');if(routeMap[source])form.elements.source_route.value=routeMap[source][lang];
   // Only non-personal, allowlisted context crosses the language switch.
-  document.querySelectorAll('[data-language]').forEach(link=>{
+  document.querySelectorAll('a[data-language]').forEach(link=>{
     const target=new URL(link.href);for(const field of ['service','property','province'])if(form.elements[field].value)target.searchParams.set(field,form.elements[field].value);
     if(routeMap[source])target.searchParams.set('source',source);link.href=target.href;
   });
@@ -46,9 +50,10 @@ if(form) {
   const displayStatus=(text)=>{status.textContent=text;status.hidden=false;status.focus();};
   const resetErrors=()=>{form.querySelectorAll('[aria-invalid]').forEach(el=>el.removeAttribute('aria-invalid'));form.querySelectorAll('.field-error').forEach(el=>el.textContent='');status.hidden=true;standard.hidden=true;};
   const showErrors=(errors)=>{
+    measure('quote_validation_error',{error_type:'validation'});
     for(const [key,message] of Object.entries(errors)) {
       const input=form.elements.namedItem(key);const error=document.getElementById(`${key}-error`);
-      if(input&&error){input.setAttribute('aria-invalid','true');error.textContent=message;}
+      if(input&&error){const details=input.closest('details');if(details)details.open=true;input.setAttribute('aria-invalid','true');error.textContent=message;}
     }
     displayStatus(fr?'Veuillez vérifier les champs indiqués.':'Please review the highlighted fields.');
     form.querySelector('[aria-invalid="true"]')?.focus();
@@ -68,8 +73,10 @@ if(form) {
       const response=await fetch(form.action,{method:'POST',body,headers:{Accept:'application/json'},signal:controller.signal,credentials:'omit',referrerPolicy:'origin'});
       const result=await response.json().catch(()=>null);
       if(response.ok && result?.ok===true) {
+        measure('generate_lead');
         accepted=true;form.hidden=true;const success=document.querySelector('#form-success');success.hidden=false;success.focus();form.reset();
       } else {
+        measure('quote_submit_error',{error_type:response.status===429?'rate_limit':'provider'});
         const providerErrors={};
         for(const error of result?.errors||[]) if(typeof error.field==='string' && form.elements.namedItem(error.field)) providerErrors[error.field]=fr?'Veuillez vérifier ce renseignement.':'Please check this detail.';
         if(Object.keys(providerErrors).length)showErrors(providerErrors);
@@ -77,6 +84,7 @@ if(form) {
         standard.hidden=response.status===429;
       }
     } catch(error) {
+      measure('quote_submit_error',{error_type:error.name==='AbortError'?'timeout':'network'});
       displayStatus(error.name==='AbortError' ? (fr?'La confirmation prend trop de temps. La demande pourrait avoir été reçue. Appelez-nous pour vérifier avant de la renvoyer.':'Confirmation took too long. Your request may have been received. Please call to check before sending it again.') : (fr?'La connexion a été interrompue. La réception n’est pas confirmée. Vos renseignements sont conservés ici; appelez-nous avant de réessayer.':'The connection was interrupted. Receipt is unconfirmed. Your details are still here; please call before retrying.'));
     } finally {
       clearTimeout(timeout);submitting=false;form.removeAttribute('aria-busy');submit.disabled=accepted;submit.textContent=initialText;

@@ -10,4 +10,4 @@ Canadian English and French cover all ten provinces and three territories throug
 
 Privacy contact: Privacy Officer, Superclean Canada Inc., info@windowservices.ca. Owner-adopted retention: delete unsuccessful enquiries 12 months after last contact, except records required for legal obligations or disputes. This is an operating policy the team must follow, not a legal certification.
 
-Hosting: existing WHC Web Hosting Pro, separate domain root ~/windowservices.ca, staging outside public roots. Static HTML/CSS/JS plus Formspree requires no persistent Node process or database. The approved option #1 logo reconstruction is installed. No analytics, uploads, accounts or payments are included.
+Hosting: existing WHC Web Hosting Pro, separate domain root ~/windowservices.ca, staging outside public roots. Static HTML/CSS/JS plus Formspree requires no persistent Node process or database. The approved option #1 logo reconstruction is installed. Owner-authorized, opt-in GA4 is configured in the existing Grafov Group account. No uploads, visitor accounts or payments are included.

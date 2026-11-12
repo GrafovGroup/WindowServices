@@ -13,7 +13,8 @@
     "width": 390,
     "violations": [],
     "incomplete": [
-      "aria-valid-attr-value"
+      "aria-valid-attr-value",
+      "color-contrast"
     ]
   },
   {
@@ -30,11 +31,20 @@
     "width": 390,
     "violations": [],
     "incomplete": [
-      "aria-valid-attr-value"
+      "aria-valid-attr-value",
+      "color-contrast"
     ]
   },
   {
     "path": "/en/privacy/",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      "aria-valid-attr-value"
+    ]
+  },
+  {
+    "path": "/en/about/",
     "width": 390,
     "violations": [],
     "incomplete": [
@@ -55,7 +65,8 @@
     "width": 390,
     "violations": [],
     "incomplete": [
-      "aria-valid-attr-value"
+      "aria-valid-attr-value",
+      "color-contrast"
     ]
   },
   {
@@ -72,7 +83,8 @@
     "width": 390,
     "violations": [],
     "incomplete": [
-      "aria-valid-attr-value"
+      "aria-valid-attr-value",
+      "color-contrast"
     ]
   },
   {
@@ -80,7 +92,17 @@
     "width": 390,
     "violations": [],
     "incomplete": [
-      "aria-valid-attr-value"
+      "aria-valid-attr-value",
+      "color-contrast"
+    ]
+  },
+  {
+    "path": "/fr/a-propos/",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      "aria-valid-attr-value",
+      "color-contrast"
     ]
   },
   {
@@ -95,7 +117,9 @@
     "path": "/en/services/window-repair/",
     "width": 1440,
     "violations": [],
-    "incomplete": []
+    "incomplete": [
+      "color-contrast"
+    ]
   },
   {
     "path": "/en/request-a-quote/",
@@ -109,13 +133,23 @@
     "path": "/en/areas/",
     "width": 1440,
     "violations": [],
-    "incomplete": []
+    "incomplete": [
+      "color-contrast"
+    ]
   },
   {
     "path": "/en/privacy/",
     "width": 1440,
     "violations": [],
     "incomplete": []
+  },
+  {
+    "path": "/en/about/",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      "color-contrast"
+    ]
   },
   {
     "path": "/fr/",
@@ -129,7 +163,9 @@
     "path": "/fr/services/reparation-fenetres/",
     "width": 1440,
     "violations": [],
-    "incomplete": []
+    "incomplete": [
+      "color-contrast"
+    ]
   },
   {
     "path": "/fr/demander-une-soumission/",
@@ -143,12 +179,22 @@
     "path": "/fr/regions/",
     "width": 1440,
     "violations": [],
-    "incomplete": []
+    "incomplete": [
+      "color-contrast"
+    ]
   },
   {
     "path": "/fr/confidentialite/",
     "width": 1440,
     "violations": [],
     "incomplete": []
+  },
+  {
+    "path": "/fr/a-propos/",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      "color-contrast"
+    ]
   }
 ]

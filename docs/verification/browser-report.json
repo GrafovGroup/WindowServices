@@ -1,8 +1,8 @@
 {
   "browser": "157.0.8103.51",
-  "checkedAt": "2026-11-12T01:57:25.623Z",
-  "origin": "https://windowservices.ca",
-  "connectedTo": "MAP windowservices.ca 51.161.57.68, MAP www.windowservices.ca 51.161.57.68",
+  "checkedAt": "2026-11-12T02:35:16.447Z",
+  "origin": "http://127.0.0.1:4173",
+  "connectedTo": "default DNS",
   "routes": 42,
   "responsive": [
     "en/home@360",
@@ -105,7 +105,8 @@
     "home-mobile-fr.png",
     "quote-mobile-fr.png",
     "repair-desktop.png",
-    "areas-tablet-fr.png"
+    "areas-tablet-fr.png",
+    "about-desktop.png"
   ],
   "pass": true
 }

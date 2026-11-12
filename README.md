@@ -67,7 +67,7 @@ Use `CHROME_PATH` for an existing Chrome executable, `NODE_PATH` for an existing
 - `scripts/`, `tests/`: build, preview and verification.
 - `docs/`: project continuity, source evidence and deployment notes.
 
-Use `route()` and `quoteLink()` rather than hardcoded navigation. Add both translations together. No analytics, uploads, accounts, payments or database are included. The build reads environment variables directly; `.env` is not automatically loaded. Use `.env.example` as a reference or `node --env-file=.env scripts/build.mjs`. Never commit credentials or enquiries. The Formspree form ID is intentionally public.
+Use `route()` and `quoteLink()` rather than hardcoded navigation. Add both translations together. Optional, consent-gated GA4 measures visits and enquiry steps; see docs/ANALYTICS.md. No uploads, visitor accounts, payments or database are included. The build reads environment variables directly; `.env` is not automatically loaded. Use `.env.example` as a reference or `node --env-file=.env scripts/build.mjs`. Never commit credentials or enquiries. The Formspree form ID is intentionally public.
 
 ## Resume
 

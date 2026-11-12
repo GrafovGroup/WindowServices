@@ -12,7 +12,7 @@
 | Noindex review build with production gates | Preview remains the safe default. All production gates are now supported by owner confirmations and live hosting/form evidence. |
 | Reconstructed option #1 replaces temporary wordmark and W icon | Original sheet recovered and retained unchanged. Geometry traced; licensed Manrope lettering outlined. Owner explicitly approved the reconstruction on November 11, 2026 after viewing the proof. |
 | Four service pages, useful guides, one coverage hub | No verified specialist capability/local presence to justify more advertised services or city pages. |
-| No uploads, analytics or accounts | No approved integrations or need. Personal data never goes into URLs or analytics. |
+| Optional analytics; no uploads or visitor accounts | Owner authorized the existing Grafov Group GA account. Basic opt-in only; personal enquiry data never goes into URLs or analytics. |
 | Mocked submission tests | Real Formspree tests may send notifications; explicit authorization requested separately. |
 
 Sites skill design and local-preview guidance informed the build. No Sites project was registered: the selected destination is GitHub, and the owner selected existing WHC for the authorized production release.

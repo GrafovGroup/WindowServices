@@ -9,7 +9,7 @@ const browser=await chromium.launch({headless:true,...(process.env.HOST_RESOLVER
 const results=[];
 try {
  const page=await browser.newPage();await page.route('https://formspree.io/**',r=>r.abort());
- for(const width of [390,1440])for(const lang of ['en','fr'])for(const id of ['home','repair','quote','areas','privacy']) {
+ for(const width of [390,1440])for(const lang of ['en','fr'])for(const id of ['home','repair','quote','areas','privacy','about']) {
   await page.setViewportSize({width,height:900});await page.goto((process.env.TEST_URL||'http://127.0.0.1:4173')+route(id,lang));
   await page.evaluate(axeSource);
   const result=await page.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}}));
