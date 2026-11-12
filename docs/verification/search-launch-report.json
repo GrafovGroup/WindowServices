@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-12T02:11:36.678325+00:00",
+  "checkedAt": "2026-11-12T02:15:42.378520+00:00",
   "site": "https://windowservices.ca",
   "sitemap": "https://windowservices.ca/sitemap.xml",
   "sitemapCanonicalURLs": 36,
@@ -22,23 +22,27 @@
       "newSiteHTMLConfirmed": true,
       "operatorInFetchedHTML": "Superclean Canada Inc.",
       "canonical": "https://windowservices.ca/en/",
-      "title": "Window Cleaning, Repair & Installation | WindowServices.ca"
+      "title": "Window Cleaning, Repair & Installation | WindowServices.ca",
+      "note": "Fetched before the later punctuation-only correction; site structure, metadata, forms and all assets unchanged."
     },
-    "indexingRequest": "Accepted: URL added to a priority crawl queue"
+    "indexingRequest": "Accepted: English homepage URL added to a priority crawl queue",
+    "lastObservedSitemapStatus": "Couldn't fetch",
+    "sitemapRetry": "One retry after successful live fetch; latest sitemap report still shows Couldn't fetch. No further resubmissions made."
   },
   "bing": {
     "property": "https://windowservices.ca/",
     "ownership": "verified",
     "method": "Additional verification CNAME to verify.bing.com.; existing records preserved",
-    "sitemapStatus": "Processing",
+    "sitemapStatus": "Success",
     "knownSitemaps": 1,
     "sitemapErrors": 0,
     "sitemapWarnings": 0,
-    "URLsDiscovered": 0,
-    "indexedURLs": "Not observed"
+    "URLsDiscovered": 36,
+    "indexedURLs": "Not observed",
+    "lastCrawl": "2026-11-12 (console display date)"
   },
   "limitations": [
-    "Submission and live crawl eligibility do not establish indexing or rankings.",
-    "Initial sitemap fetch delay observed during DNS propagation; do not claim a successful processed sitemap until console reports it."
+    "Google sitemap processing remains pending after an initial fetch error; its live homepage fetch succeeded and Bing successfully read all 36 sitemap URLs.",
+    "Submission, discovery and live crawl eligibility do not establish indexing or rankings."
   ]
 }

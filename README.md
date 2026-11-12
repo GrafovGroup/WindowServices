@@ -4,7 +4,7 @@ Bilingual static website for commercial and residential window-service enquiries
 
 The website has **42 EN/FR routes**: home, four core services, commercial, residential, property management, a national enquiry hub, three guides, contact, quote, about, privacy, accessibility, next steps and localized 404s. The quote form uses the owner's Formspree endpoint `https://formspree.io/f/mppdzldb`.
 
-**Live on WHC:** [English](https://windowservices.ca/en/) · [Français](https://windowservices.ca/fr/). All five production gates are supported by the [launch checklist](docs/LAUNCH_CHECKLIST.md). The approved option #1 reconstruction is installed; see the [logo proof](docs/preview/brand-proof.png). The operator is Superclean Canada Inc. The clean deployed revision is e79777ac11b3. Release evidence and current deployment status are in [project status](docs/PROJECT_STATUS.md).
+**Live on WHC:** [English](https://windowservices.ca/en/) · [Français](https://windowservices.ca/fr/). All five production gates are supported by the [launch checklist](docs/LAUNCH_CHECKLIST.md). The approved option #1 reconstruction is installed; see the [logo proof](docs/preview/brand-proof.png). The operator is Superclean Canada Inc. The clean deployed revision is ef2e0e1162c8. Release evidence and current deployment status are in [project status](docs/PROJECT_STATUS.md).
 
 ## Build and preview
 

@@ -10,9 +10,9 @@ The owner authorized public launch on the existing WHC Web Hosting Pro account. 
 | Document root | /home/nqgwub76/windowservices.ca; separate from the primary site's public_html |
 | Internal addon subdomain | windowservices.bodycams.ca |
 | Non-public staging | /home/nqgwub76/windowservices-staging |
-| Source | e79777ac11b372f20798dc98c65e2994dea30a43, clean |
-| Package | windowservices-production-e79777ac11b3.tar.gz; 3,048,872 bytes |
-| SHA-256 | 446621473ebfb5ae702bcc7d18df62ac84499c571a85215f1beaacafc887b378 |
+| Source | ef2e0e1162c8e1f88c1e1eb8974cbcadadad7b77, clean |
+| Package | windowservices-production-ef2e0e1162c8.tar.gz; 3,048,909 bytes |
+| SHA-256 | 5c3118c1dd6650109b95e15654a0f9cb5cd0e8167243e814d9453ea9f62589ab |
 | Output | 116 public files; 42 routes; 36 indexable sitemap URLs |
 | Evidence | verification/whc-production-report.json, production-release-manifest.json and live-site-report.json |
 
@@ -69,7 +69,7 @@ Keep these non-public backups:
 
 - windowservices-before-launch-20261111.tar.gz: original domain root before any website files (cgi-bin/.well-known).
 - windowservices-preview-before-production-20261111.tar.gz: functional noindex preview immediately before production.
-- windowservices-production-e79777ac11b3.tar.gz and its extracted release directory: final verified production.
+- windowservices-production-ef2e0e1162c8.tar.gz and its extracted release directory: final verified production.
 
 For ordinary rollback, verify a known package, extract it into a new non-public directory, normalize only its public payload permissions and restore site/. plus its host configuration. Check files removed by later versions against manifests; do not blindly delete host-created cgi-bin or .well-known. The preview backup deliberately disables indexing. Restoring the initial backup removes the website and is not the usual content rollback. A DNS rollback, if needed, changes only the web A record and preserves mail.
 

@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-11-12T02:07:02.604558+00:00",
+  "checkedAt": "2026-11-12T02:14:51.026583+00:00",
   "status": "production installed and verified",
-  "sourceCommit": "e79777ac11b372f20798dc98c65e2994dea30a43",
+  "sourceCommit": "ef2e0e1162c8e1f88c1e1eb8974cbcadadad7b77",
   "sourceDirty": false,
-  "archive": "windowservices-production-e79777ac11b3.tar.gz",
-  "archiveBytes": 3048872,
-  "sha256": "446621473ebfb5ae702bcc7d18df62ac84499c571a85215f1beaacafc887b378",
+  "archive": "windowservices-production-ef2e0e1162c8.tar.gz",
+  "archiveBytes": 3048909,
+  "sha256": "5c3118c1dd6650109b95e15654a0f9cb5cd0e8167243e814d9453ea9f62589ab",
   "localExtractedVerification": "116 public files, 42 routes; checksum inventory and site audit passed",
   "whcUpload": "100% complete; sha256sum -c passed on WHC",
   "documentRoot": "/home/nqgwub76/windowservices.ca",
@@ -30,9 +30,10 @@
     "axeCombinations": 20,
     "automaticViolations": 0,
     "publicFilesChangedAfterBrowserRun": [
-      "fr/.htaccess"
+      "fr/.htaccess",
+      "45 HTML files: operator punctuation only (see operator-punctuation-change.json)"
     ],
-    "note": "Only host configuration changed after the browser/a11y run; final live hash/status/redirect verification passed on the final clean release."
+    "note": "French canonical redirects were verified on WHC; subsequent operator punctuation was byte-compared against the verified HTML. Final live hash/status/redirect verification passed on the final clean release."
   },
   "visualReview": [
     "English desktop homepage",

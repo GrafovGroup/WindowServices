@@ -17,6 +17,8 @@
 
 Sites skill design and local-preview guidance informed the build. No Sites project was registered: the selected destination is GitHub, and the owner selected existing WHC for the authorized production release.
 
+| Launch decision | Authority / reason |
+| --- | --- |
 | Launch on existing WHC | Explicit owner request to complete remaining checks and get the site live. Web DNS changes preserve mail/unrelated records. |
 | Confirmed operator and privacy policy | Owner supplied Superclean Canada Inc. and adopted the Privacy Officer contact plus 12-month unsuccessful-enquiry policy. |
 | Four core services with qualified availability | Owner confirmed all four subject to project and location confirmation. |
@@ -25,4 +27,4 @@ Sites skill design and local-preview guidance informed the build. No Sites proje
 
 ## Production launch outcome
 
-Clean release e79777ac11b3 is installed on existing WHC. Archive SHA-256 and final file/route hashes match. All four core services remain subject to project/location confirmation. The adopted operator and privacy policy are published bilingually. Google and Bing domain ownership were verified with additional DNS records; the 36-URL production sitemap was submitted to both. Processing/indexing is recorded separately. No recurring automation or extra real test enquiry was created.
+Clean release ef2e0e1162c8 is installed on existing WHC. Archive SHA-256 and final file/route hashes match. All four core services remain subject to project/location confirmation. The adopted operator and privacy policy are published bilingually. Google and Bing domain ownership were verified with additional DNS records; the 36-URL production sitemap was submitted to both. Processing/indexing is recorded separately. No recurring automation or extra real test enquiry was created.
