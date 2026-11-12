@@ -1,0 +1,596 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-12T01:59:17.204Z",
+  "mode": "production",
+  "origin": "https://windowservices.ca",
+  "source": {
+    "commit": "e79777ac11b372f20798dc98c65e2994dea30a43",
+    "dirty": false
+  },
+  "selectedLogoConcept": 1,
+  "logoArtworkConfigured": true,
+  "routeCount": 42,
+  "totalBytes": 3797769,
+  "files": [
+    {
+      "path": "_errors/en.html",
+      "bytes": 8142,
+      "sha256": "ff9d2a5d1849442c8055f8e489ef2bf9fda1409b18875dc584d62983f2683c03"
+    },
+    {
+      "path": "_errors/fr.html",
+      "bytes": 8472,
+      "sha256": "94a68777490ee7d057b1f926bd8a089ca3faac4ad8efae9199b7c37b2a161dd4"
+    },
+    {
+      "path": "_headers",
+      "bytes": 385,
+      "sha256": "e1450293a1d3e581cf3b2f41e32e8e8187fa5421b7642365f6c2363d674954db"
+    },
+    {
+      "path": "_redirects",
+      "bytes": 57,
+      "sha256": "df97bf62a1eec0e7ed1f7b9883ea85c6c806cbb9b8dd983fc31d4ca3f89c7611"
+    },
+    {
+      "path": ".htaccess",
+      "bytes": 1099,
+      "sha256": "fdb15bc43b8fdd73a243f7b57b7885ce7bda432ba8425124313d26a2d5716ad2"
+    },
+    {
+      "path": "404.html",
+      "bytes": 8142,
+      "sha256": "ff9d2a5d1849442c8055f8e489ef2bf9fda1409b18875dc584d62983f2683c03"
+    },
+    {
+      "path": "apple-touch-icon.png",
+      "bytes": 4331,
+      "sha256": "a517e1179c6cfeb3cda90ead80161a9ea521e395f12d2ed56bf12bf558486fd6"
+    },
+    {
+      "path": "brand/icon-source.svg",
+      "bytes": 995,
+      "sha256": "f432810cef0b1622e7ce213394841bcafcd4e9dd795ba3993a0623e446c2ff6b"
+    },
+    {
+      "path": "brand/logo-emblem-mono.png",
+      "bytes": 9016,
+      "sha256": "5c3805440d056098c80bd64eba4852fd1baacc32732e76befc0e4f8e4fb18c4d"
+    },
+    {
+      "path": "brand/logo-emblem-mono.svg",
+      "bytes": 928,
+      "sha256": "bf35b6705cc28e15cbaefc3846c67e798e5a8ffe76bee6daa130a4cb3a711452"
+    },
+    {
+      "path": "brand/logo-emblem-white.png",
+      "bytes": 7753,
+      "sha256": "dd0c1821ee5dcfa887ab63afc370232557369f3d55e6c943aa5ea6f811f90aa7"
+    },
+    {
+      "path": "brand/logo-emblem-white.svg",
+      "bytes": 928,
+      "sha256": "4c2eca088d58d1e96ec995bc44c3c22606d493e9a1f417e8fab0d31850bb0488"
+    },
+    {
+      "path": "brand/logo-emblem.png",
+      "bytes": 9387,
+      "sha256": "bc52d318281955ad0cbc81a1295e6c307540beb89d8d26a1dcdcca5119f78df1"
+    },
+    {
+      "path": "brand/logo-emblem.svg",
+      "bytes": 928,
+      "sha256": "e0665ebf3ae84123fa59dd875a75b983561713b6cc271de66d61aa8a3a224e13"
+    },
+    {
+      "path": "brand/logo-horizontal-mono.png",
+      "bytes": 27931,
+      "sha256": "8fa2b02c503967dffbf790f535834b152df5ba0cc0c0e219f43f7a189cfb066e"
+    },
+    {
+      "path": "brand/logo-horizontal-mono.svg",
+      "bytes": 7150,
+      "sha256": "72236399ed6e72e5abd52f50fdd4ff39704c792a1697e4b38ca62426e83fd14e"
+    },
+    {
+      "path": "brand/logo-horizontal-white.png",
+      "bytes": 24121,
+      "sha256": "40bf788030e6de2610d4b139716d42cd59999a3cc15bdca0167aa08d019f5d14"
+    },
+    {
+      "path": "brand/logo-horizontal-white.svg",
+      "bytes": 7150,
+      "sha256": "514c23058fca1ea5eac5a83f08001e18454ad4ed23dfea41614f15f2713354d6"
+    },
+    {
+      "path": "brand/logo-horizontal.png",
+      "bytes": 29306,
+      "sha256": "7495fd6850319376023d9567ed9f1fd05d8cd94217b7f96432847d9b3961ad7f"
+    },
+    {
+      "path": "brand/logo-horizontal.svg",
+      "bytes": 7150,
+      "sha256": "596c8bdc0b3e56ea8abb9ed5efece95ae51c4d1a2bc0bdf01346289b8aa24036"
+    },
+    {
+      "path": "brand/logo-stacked-en-mono.png",
+      "bytes": 65093,
+      "sha256": "8d4746876af28b8c0d6a1a5290058ed9b778e353048ac6362a45e92c1f9c7e70"
+    },
+    {
+      "path": "brand/logo-stacked-en-mono.svg",
+      "bytes": 17499,
+      "sha256": "65dfbc2d831667284c06d9cf2d52410956681c85eda2751587823a751b5d37e3"
+    },
+    {
+      "path": "brand/logo-stacked-en-white.png",
+      "bytes": 55177,
+      "sha256": "4756f159a0e12631585a0f986b252c6382d5165d045edd6eb99a71b90a605c99"
+    },
+    {
+      "path": "brand/logo-stacked-en-white.svg",
+      "bytes": 17499,
+      "sha256": "f0260c61cf798b795bc0f70d137c42978c3463582062995e75de8ec7dd5db387"
+    },
+    {
+      "path": "brand/logo-stacked-en.png",
+      "bytes": 66636,
+      "sha256": "3ad98c25fe9345710dde5030a1aa5c82460593b0f944bf3f3e0eda6e70279c9e"
+    },
+    {
+      "path": "brand/logo-stacked-en.svg",
+      "bytes": 17499,
+      "sha256": "5fa671fee4fbb606be311b7ed988924f0bec29816daca53e2ee9b1c1f6561a56"
+    },
+    {
+      "path": "brand/logo-stacked-fr-mono.png",
+      "bytes": 63342,
+      "sha256": "5d284f23d9013c7af9c3f1c4683a1653a6b8d4664f7dfb42ee18ce277c4e99ef"
+    },
+    {
+      "path": "brand/logo-stacked-fr-mono.svg",
+      "bytes": 20351,
+      "sha256": "44e5f2c1363c249ad94eb27f57e99a698fd591a75efa4cdf7448485dd4109fa1"
+    },
+    {
+      "path": "brand/logo-stacked-fr-white.png",
+      "bytes": 53541,
+      "sha256": "a9bb6d0deeaa8e92c4e6524c3c96d2d8bd77a01cd0c5558ff2c5b075a94f0a38"
+    },
+    {
+      "path": "brand/logo-stacked-fr-white.svg",
+      "bytes": 20351,
+      "sha256": "7822f307add2a77292c8d9a920d6fd03163d03fd1eb2a2f70d2c13ad73f61d72"
+    },
+    {
+      "path": "brand/logo-stacked-fr.png",
+      "bytes": 64762,
+      "sha256": "803cd076f96c120c05d1c00d04ddc624ebe86d5fa9108ef9a6b0cb92065af60c"
+    },
+    {
+      "path": "brand/logo-stacked-fr.svg",
+      "bytes": 20351,
+      "sha256": "0fdf4de1cf7b1f69528b5fc79cd45410486770b12e0576a2ee090f571bccf578"
+    },
+    {
+      "path": "brand/social-card-en.png",
+      "bytes": 70699,
+      "sha256": "289dda08238c63eb5e4fd0a5857d323d8ad6398c601124d389fd1ca5dd2ce0d2"
+    },
+    {
+      "path": "brand/social-card-en.svg",
+      "bytes": 33289,
+      "sha256": "ec11445dbd6e408f73d5c292cda53200c79cda5df60b3cf06d3918d3e39026fc"
+    },
+    {
+      "path": "brand/social-card-fr.png",
+      "bytes": 70522,
+      "sha256": "6d43b21b68cd2c44966edd3f1b70492d6912a89756f0d0ba504aac280dd33e2b"
+    },
+    {
+      "path": "brand/social-card-fr.svg",
+      "bytes": 37767,
+      "sha256": "d926ce8bb163d05a174ef61d41fb96083ce8b3932b29de4614eace6aea872074"
+    },
+    {
+      "path": "en/404/index.html",
+      "bytes": 8142,
+      "sha256": "ff9d2a5d1849442c8055f8e489ef2bf9fda1409b18875dc584d62983f2683c03"
+    },
+    {
+      "path": "en/about/index.html",
+      "bytes": 9702,
+      "sha256": "aace9e7326f68c103f0c05f029526602e6caa0ce758866ac329ed6915b5f2312"
+    },
+    {
+      "path": "en/accessibility/index.html",
+      "bytes": 8938,
+      "sha256": "3127f5c04fc8cd60530aceeefd70d2279ab2a2959f28cef5a69272189f764b26"
+    },
+    {
+      "path": "en/areas/index.html",
+      "bytes": 11082,
+      "sha256": "9ea5293155d54443fe45f2b6fddc5ba6abb1492dd41f51349225408764d536d5"
+    },
+    {
+      "path": "en/commercial/index.html",
+      "bytes": 14972,
+      "sha256": "9c6d9b8cd35c86b7e4c20f89adbf0ef588554b74a9ac2798e85fb30e81613f05"
+    },
+    {
+      "path": "en/commercial/property-management/index.html",
+      "bytes": 11265,
+      "sha256": "466cf871c7b54c2b1c3ff94c0c03eaa9a28495353c89aed9ba7c5fda799871e2"
+    },
+    {
+      "path": "en/contact/index.html",
+      "bytes": 9096,
+      "sha256": "3ce997a983b33d62f51d6907cdeca66531fcbc0e2624727ce60a264618e36ab0"
+    },
+    {
+      "path": "en/index.html",
+      "bytes": 19132,
+      "sha256": "8ad99ef7e36dba3ae943b8f09fbbb9cdffd0801d31c41a11b0804fa01656cec0"
+    },
+    {
+      "path": "en/privacy/index.html",
+      "bytes": 10731,
+      "sha256": "de561be9c7e704ef29548da1b5efbc71b0a268f53ec31bf59411c7ea0721f435"
+    },
+    {
+      "path": "en/request-a-quote/index.html",
+      "bytes": 15972,
+      "sha256": "7e36c88235845e8ca4c102a95f27798f7615e72ddf611986b16cede81af82819"
+    },
+    {
+      "path": "en/residential/index.html",
+      "bytes": 14488,
+      "sha256": "6dd03a8cda370fcac6b2baa4981e8df8089219239bc35793769efad35616540c"
+    },
+    {
+      "path": "en/resources/index.html",
+      "bytes": 11009,
+      "sha256": "ddab42acc6040c70dcc887ecb571a0d0b3c97f0a12c3ca3483ea94570b92225a"
+    },
+    {
+      "path": "en/resources/preparing-window-service-quote/index.html",
+      "bytes": 11654,
+      "sha256": "0c1dbeb1077756da67e37e0b7fd99d4c9b6e72d890658aadc5355cee168fc1ae"
+    },
+    {
+      "path": "en/resources/repair-or-replace-windows/index.html",
+      "bytes": 12107,
+      "sha256": "e66ef0ee8596d651ee74460eecda7699c8418ce22d09e7da1178d6e5b238f495"
+    },
+    {
+      "path": "en/resources/window-condensation/index.html",
+      "bytes": 11429,
+      "sha256": "fd0decf60e785c0159f148468e828ae41ebf319f65169d03f5f737628c275bad"
+    },
+    {
+      "path": "en/services/index.html",
+      "bytes": 12657,
+      "sha256": "78dc58504f7838106b2fbb3d555c28dab590c5b195c6db4283258fda420286a9"
+    },
+    {
+      "path": "en/services/window-cleaning/index.html",
+      "bytes": 13093,
+      "sha256": "e06d89511539869f5e0124baaf12ca4a43dd129eeeb2b5478c8bfdb5c88e38e2"
+    },
+    {
+      "path": "en/services/window-installation/index.html",
+      "bytes": 13256,
+      "sha256": "69416877c8ca5f4e35f5351880524f04018dc11d399e9999cd9c6683c032957d"
+    },
+    {
+      "path": "en/services/window-repair/index.html",
+      "bytes": 13086,
+      "sha256": "781ab3589c1d5377039316845f7bc2f3cc739de3b08e86f0814091df44c6468c"
+    },
+    {
+      "path": "en/services/window-replacement/index.html",
+      "bytes": 13225,
+      "sha256": "7f5079f477df59d4bb5cfabe4e5ab58deffe20f43334a143df33607d0657cd5a"
+    },
+    {
+      "path": "en/thank-you/index.html",
+      "bytes": 9413,
+      "sha256": "155abf23be9da495e2dc3f155a5083a32bbddd37d0e3cb0f38cecd0831117ce6"
+    },
+    {
+      "path": "favicon-16.png",
+      "bytes": 436,
+      "sha256": "52be6d204a792b43ad72a4bd725f526bae80af6846d36642401c45bb790440e7"
+    },
+    {
+      "path": "favicon-32.png",
+      "bytes": 808,
+      "sha256": "d9841e006c66db807f491e81bbdd7a74b66a732afebfccbd04408fbbf5ee185d"
+    },
+    {
+      "path": "favicon-48.png",
+      "bytes": 1171,
+      "sha256": "5ef05da145754ae82257fc07059e24a2ce101716499d819a1209baff1f159249"
+    },
+    {
+      "path": "favicon-96.png",
+      "bytes": 2245,
+      "sha256": "a8047296899a0f083531c081e3f64679a52c373339260b2dab883ce614fcc761"
+    },
+    {
+      "path": "favicon.ico",
+      "bytes": 2469,
+      "sha256": "49b7c6b573ab1ad21c0e2bf81d2e9930fa44005237e3e286ebaebb9c1e78d33b"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 995,
+      "sha256": "f432810cef0b1622e7ce213394841bcafcd4e9dd795ba3993a0623e446c2ff6b"
+    },
+    {
+      "path": "form-validation.js",
+      "bytes": 1881,
+      "sha256": "68384a0e6fbc1401851061425905930721a0e8a7dc2f12bca2a9ca429c2df38c"
+    },
+    {
+      "path": "fr/.htaccess",
+      "bytes": 325,
+      "sha256": "49b1907b89142b99d7afb2e249518176cd08eb32cdc7158504a022e787d1b8f7"
+    },
+    {
+      "path": "fr/404/index.html",
+      "bytes": 8472,
+      "sha256": "94a68777490ee7d057b1f926bd8a089ca3faac4ad8efae9199b7c37b2a161dd4"
+    },
+    {
+      "path": "fr/a-propos/index.html",
+      "bytes": 10225,
+      "sha256": "b94d02b289aebfc65107632fefc6c06713d90c26f31fdc6bc2c1b8eb49322388"
+    },
+    {
+      "path": "fr/accessibilite/index.html",
+      "bytes": 9385,
+      "sha256": "32fc2850f111c1f9d5a3c38f695d53fef29eae0a2f1c0404d1c5015037965dc4"
+    },
+    {
+      "path": "fr/commercial/gestion-immobiliere/index.html",
+      "bytes": 11863,
+      "sha256": "debc687dd4cac485b3523bdd1816d63adaad0ed83bf1b4f84584ecded7280c20"
+    },
+    {
+      "path": "fr/commercial/index.html",
+      "bytes": 15759,
+      "sha256": "534c023d3b2ed6a148ce813caeb95c0e2931a1e60576494ffc0a3f92188c121e"
+    },
+    {
+      "path": "fr/confidentialite/index.html",
+      "bytes": 11888,
+      "sha256": "503e12eec854f5104196f9689b2cf18d66bae3e96f9f2727d7743e3bdd02efec"
+    },
+    {
+      "path": "fr/contact/index.html",
+      "bytes": 9465,
+      "sha256": "3f5c70d72b79503e43c8f9a3b6a02e8529b4bd309752f0228bb7b60186ca14f5"
+    },
+    {
+      "path": "fr/demander-une-soumission/index.html",
+      "bytes": 16639,
+      "sha256": "b5c9bf9b3287ac0b84ce602e504723f28cce890e426f46c23ff4f7dc8daf5945"
+    },
+    {
+      "path": "fr/index.html",
+      "bytes": 20183,
+      "sha256": "f8b86f1ce5f47549d4b21d64811b749dd7dd2d1d381fd6baddd11e599786c997"
+    },
+    {
+      "path": "fr/merci/index.html",
+      "bytes": 9885,
+      "sha256": "1532a37bc5c77b824e17ab64d6bd473d664494072d5f193982f921ce9ba300cf"
+    },
+    {
+      "path": "fr/regions/index.html",
+      "bytes": 11623,
+      "sha256": "8c047abb006bac35eb53359ca19a4abac03db1ba05eae360684634f83601d8bf"
+    },
+    {
+      "path": "fr/residentiel/index.html",
+      "bytes": 15222,
+      "sha256": "8f3f05aadcdd6d0eec61a81a629f4122deb9af4ca92608ef9d3e97eaded2fa3a"
+    },
+    {
+      "path": "fr/ressources/condensation-fenetres/index.html",
+      "bytes": 11869,
+      "sha256": "d44af2c661966cf1fd1d87d9542fa912c9c55e8a55f73a6357fc5f1a7a687c4f"
+    },
+    {
+      "path": "fr/ressources/index.html",
+      "bytes": 11382,
+      "sha256": "7350f819f4cf4f0c2d99f02ab1c196c215955687f162edb713f040f0d0bcfa90"
+    },
+    {
+      "path": "fr/ressources/preparer-demande-soumission/index.html",
+      "bytes": 12144,
+      "sha256": "91748c166722b4d90f246bd40508140e1fecd938c489b2c87b0513762195bc3b"
+    },
+    {
+      "path": "fr/ressources/reparer-ou-remplacer-fenetres/index.html",
+      "bytes": 12607,
+      "sha256": "b5005a6c9e46205b00ba632dff6b6a7e4a0f333cfce32d86562317e55e322b40"
+    },
+    {
+      "path": "fr/services/index.html",
+      "bytes": 13277,
+      "sha256": "accb7fe114c4bb14dbdd69a0a2a7704a45fd5dafa3802be4614fa63c3ba7770e"
+    },
+    {
+      "path": "fr/services/installation-fenetres/index.html",
+      "bytes": 13880,
+      "sha256": "029776e2cd0ddf54c8c1ea9c7161ed31753af23e48b2f474339d8cf52cafb5a3"
+    },
+    {
+      "path": "fr/services/nettoyage-fenetres/index.html",
+      "bytes": 13864,
+      "sha256": "f2050042c5be5abc96ef5f144f2a54c86e8737d35af628223433683415cbd593"
+    },
+    {
+      "path": "fr/services/remplacement-fenetres/index.html",
+      "bytes": 13789,
+      "sha256": "77ee59949e7ff4703b0b7bdfa405e871ca615c23f0d85a79c3e4f2f83db89bf2"
+    },
+    {
+      "path": "fr/services/reparation-fenetres/index.html",
+      "bytes": 13869,
+      "sha256": "98d33aad4dbcdabdc28d28ad638f7897eedf950841bac9fc66db700b765f6e28"
+    },
+    {
+      "path": "icon-192.png",
+      "bytes": 4627,
+      "sha256": "2eeebed7aeb08ae6ab8c121866cc769ac2446043e70813bdd6a1c1643a76019d"
+    },
+    {
+      "path": "icon-512.png",
+      "bytes": 14039,
+      "sha256": "8035dfbe5373e3f450c9ec82d397a702f1991c87f055e6351fbde8b5c07b9cbc"
+    },
+    {
+      "path": "images/cleaning-1280.webp",
+      "bytes": 69452,
+      "sha256": "0ac6c863de4e09049459b4131d822519b6b990d62dc9f97f83f392ceab0fbb0c"
+    },
+    {
+      "path": "images/cleaning-1920.webp",
+      "bytes": 145138,
+      "sha256": "e6f3144c62e10039088c739dd1f1ab1e0ac609e32e4e4d017a8348c69efce7d7"
+    },
+    {
+      "path": "images/cleaning-640.webp",
+      "bytes": 19306,
+      "sha256": "2e08fb71f4da1b19ffdffbb0420ba1d7ad703235b815b7e83f7f008f22fbd8c2"
+    },
+    {
+      "path": "images/commercial-1280.webp",
+      "bytes": 210796,
+      "sha256": "e5f85f6df33378bef58b99bc59eae7ac7dc3b23d0de46fd0179573ca962c3450"
+    },
+    {
+      "path": "images/commercial-1920.webp",
+      "bytes": 367958,
+      "sha256": "996e85b44af9d2f0763f6d965eacfcc7ba1c31f9431279acda75035375f33a89"
+    },
+    {
+      "path": "images/commercial-640.webp",
+      "bytes": 80240,
+      "sha256": "ff9ab7ac7ad237debc864fa605f364f3e2ca2241fa54ec9961f582fa7e940ea8"
+    },
+    {
+      "path": "images/installation-1280.webp",
+      "bytes": 59574,
+      "sha256": "9e8e0e924e42abb2f4fe7c91e471442f67d1158a4b9fe39785bad4822f2805d9"
+    },
+    {
+      "path": "images/installation-1920.webp",
+      "bytes": 103382,
+      "sha256": "a45dc6027ad1bcce424a8d0b6a3cb9d578a430340eda664d11fb2bb448c85712"
+    },
+    {
+      "path": "images/installation-640.webp",
+      "bytes": 22798,
+      "sha256": "b5c9a72f69516a8ce5c9a87895a08564f15e6157a7a7e08441c63e7bf8d8a9f9"
+    },
+    {
+      "path": "images/repair-1280.webp",
+      "bytes": 109698,
+      "sha256": "b0cbbf81bbc77c83b0fbc03ebf56dc6b101eba0de2ab3c5c7265b7b80d90ffda"
+    },
+    {
+      "path": "images/repair-1920.webp",
+      "bytes": 228598,
+      "sha256": "a366675337717c967f151722c46c8fe60f39eeca860f4531d82f578fc8a63589"
+    },
+    {
+      "path": "images/repair-640.webp",
+      "bytes": 28034,
+      "sha256": "88ce03cdb0792299742d816ecd0dc58fafbd8b1cbf40da9951b8a14bf592630d"
+    },
+    {
+      "path": "images/replacement-1280.webp",
+      "bytes": 111928,
+      "sha256": "dc6d997780103405487d7a8641b01f9391e30272d0887de750c444e7dedb8cb4"
+    },
+    {
+      "path": "images/replacement-1920.webp",
+      "bytes": 194228,
+      "sha256": "afb57b5879579dde973af7a250c6bc84dba0e88dfb2c0f3c9afec53f8f6b1519"
+    },
+    {
+      "path": "images/replacement-640.webp",
+      "bytes": 38360,
+      "sha256": "0d9cf342829d606736df2e0ee2174113ecc0dfad53b09a5b4e6d4733ef14586e"
+    },
+    {
+      "path": "images/residential-1280.webp",
+      "bytes": 109008,
+      "sha256": "399d75095565ac4747c1faadf6930844ebada950d5359dfdce1c8a82a1306bab"
+    },
+    {
+      "path": "images/residential-1920.webp",
+      "bytes": 188990,
+      "sha256": "691f92983fff963e3e41a9eba1f8a282c22472452f354ec389faa981071a0fac"
+    },
+    {
+      "path": "images/residential-640.webp",
+      "bytes": 34662,
+      "sha256": "8db90df9327129c74f799c1fd310a06258763b931745349c82b6a7d9ba28e6ca"
+    },
+    {
+      "path": "images/sealing-1280.webp",
+      "bytes": 73504,
+      "sha256": "6960b98a7d53396629b1ffffe1aa2ea6836feeb6695028117f2063aea507ba3b"
+    },
+    {
+      "path": "images/sealing-1920.webp",
+      "bytes": 123652,
+      "sha256": "01c7b69ac46592a410e7cc8455797766dc0417467236d8b7a7502caf1463eded"
+    },
+    {
+      "path": "images/sealing-640.webp",
+      "bytes": 26674,
+      "sha256": "5bc5cdea3bfb9ab6625680939958baaa3ce15576ec614820fbddb860a67467bf"
+    },
+    {
+      "path": "index.html",
+      "bytes": 682,
+      "sha256": "68a42446aeb92b37ef166ed9a703952228bf4ffae332d27a55b9010005666adf"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 70,
+      "sha256": "81cb41693e99ac0dd1e827bafc28532815fd32bc59cedbbb0eedc3c51886ed87"
+    },
+    {
+      "path": "route-manifest.json",
+      "bytes": 4590,
+      "sha256": "6354241fd6d066dba6fa105be7cca6122b9479f08c8d56bb6d8a08fe706c4593"
+    },
+    {
+      "path": "site.js",
+      "bytes": 7092,
+      "sha256": "ff0d723c9bc804c48e8c84c0a459a5f6a7ae0dece1dd5e9c29af526be7a1b36d"
+    },
+    {
+      "path": "site.webmanifest",
+      "bytes": 283,
+      "sha256": "536c7b77ed37264992ff28cd810ed5c7555feb44f7a756cc1f17593748d1dcac"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 2631,
+      "sha256": "8be40d4e50295cae65fe9c51455581a2baf2acc0c1c239184ad237a10397eb94"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 27957,
+      "sha256": "e3ec847b2865a676184eba575719b21ff9041cedbc413b0bf6f0d8a95486a3c1"
+    }
+  ]
+}

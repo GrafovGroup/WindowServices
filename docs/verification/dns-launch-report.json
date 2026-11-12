@@ -1,0 +1,151 @@
+{
+  "before": [
+    {
+      "type": "SOA",
+      "name": "@",
+      "ttl": "14400",
+      "data": "Serial: 8 Expire: 86400 Primary NS: parking1.whc.ca. Responsible Email: sysadmin.whc.ca. Minimum: 14400 Refresh: 900 Retry: 600"
+    },
+    {
+      "type": "A",
+      "name": "@",
+      "ttl": "300",
+      "data": "IPv4 Address: 149.56.225.6"
+    },
+    {
+      "type": "NS",
+      "name": "@",
+      "ttl": "14440",
+      "data": "Target: parking2.whc.ca."
+    },
+    {
+      "type": "NS",
+      "name": "@",
+      "ttl": "14440",
+      "data": "Target: parking2.whc.ca."
+    },
+    {
+      "type": "NS",
+      "name": "@",
+      "ttl": "14400",
+      "data": "Target: parking1.whc.ca."
+    },
+    {
+      "type": "MX",
+      "name": "@",
+      "ttl": "14440",
+      "data": "Priority: 10 Host: mx1.forwardemail.net."
+    },
+    {
+      "type": "MX",
+      "name": "@",
+      "ttl": "14440",
+      "data": "Priority: 10 Host: mx2.forwardemail.net."
+    },
+    {
+      "type": "TXT",
+      "name": "@",
+      "ttl": "14440",
+      "data": "Value: \"v=spf1 a mx include:emailfwd.whc.ca ~all\""
+    },
+    {
+      "type": "TXT",
+      "name": "@",
+      "ttl": "14440",
+      "data": "Value: \"forward-email-site-verification=Wci2t93nPr\""
+    },
+    {
+      "type": "CNAME",
+      "name": "www",
+      "ttl": "300",
+      "data": "Target: windowservices.ca."
+    }
+  ],
+  "after": [
+    {
+      "type": "SOA",
+      "name": "@",
+      "ttl": "14400",
+      "data": "Serial: 9 Expire: 86400 Primary NS: parking1.whc.ca. Responsible Email: sysadmin.whc.ca. Minimum: 14400 Refresh: 900 Retry: 600"
+    },
+    {
+      "type": "A",
+      "name": "@",
+      "ttl": "300",
+      "data": "IPv4 Address: 51.161.57.68"
+    },
+    {
+      "type": "NS",
+      "name": "@",
+      "ttl": "14400",
+      "data": "Target: parking1.whc.ca."
+    },
+    {
+      "type": "NS",
+      "name": "@",
+      "ttl": "14440",
+      "data": "Target: parking2.whc.ca."
+    },
+    {
+      "type": "NS",
+      "name": "@",
+      "ttl": "14440",
+      "data": "Target: parking2.whc.ca."
+    },
+    {
+      "type": "MX",
+      "name": "@",
+      "ttl": "14440",
+      "data": "Priority: 10 Host: mx2.forwardemail.net."
+    },
+    {
+      "type": "MX",
+      "name": "@",
+      "ttl": "14440",
+      "data": "Priority: 10 Host: mx1.forwardemail.net."
+    },
+    {
+      "type": "TXT",
+      "name": "@",
+      "ttl": "14440",
+      "data": "Value: \"forward-email-site-verification=Wci2t93nPr\""
+    },
+    {
+      "type": "TXT",
+      "name": "@",
+      "ttl": "14440",
+      "data": "Value: \"v=spf1 a mx include:emailfwd.whc.ca ~all\""
+    },
+    {
+      "type": "CNAME",
+      "name": "www",
+      "ttl": "300",
+      "data": "Target: windowservices.ca."
+    }
+  ],
+  "nonWebRecordsUnchanged": true,
+  "checkedAt": "2026-11-12T02:07:02.604558+00:00",
+  "additionalSearchVerificationRecords": [
+    {
+      "type": "TXT",
+      "name": "@",
+      "purpose": "Google Search Console domain ownership",
+      "ttl": 300
+    },
+    {
+      "type": "CNAME",
+      "name": "a21b8003bb7516203cab45e15a00ec21",
+      "target": "verify.bing.com.",
+      "purpose": "Bing Webmaster ownership",
+      "ttl": 300
+    }
+  ],
+  "additionalRecordsPreservedExisting": true,
+  "observedResolvers": {
+    "parking1.whc.ca": "51.161.57.68",
+    "parking2.whc.ca": "51.161.57.68",
+    "1.1.1.1": "51.161.57.68",
+    "8.8.8.8": "51.161.57.68"
+  },
+  "localSystemHttpsCache": "A default curl request still reached the previous Caddy parking response despite fresh DNS query results. Direct-origin HTTPS and final content hashes passed."
+}

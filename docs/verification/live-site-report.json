@@ -1,0 +1,204 @@
+{
+  "checkedAt": "2026-11-12T01:59:55.734Z",
+  "origin": "https://windowservices.ca",
+  "mode": "production",
+  "sourceCommit": "e79777ac11b372f20798dc98c65e2994dea30a43",
+  "sourceDirty": false,
+  "connectedTo": "51.161.57.68",
+  "certificateValidation": "enabled",
+  "certificate": {
+    "subject": {
+      "CN": "windowservices.ca"
+    },
+    "issuer": {
+      "C": "US",
+      "O": "Let's Encrypt",
+      "CN": "YR2"
+    },
+    "validFrom": "Nov 12 00:49:55 2026 GMT",
+    "validTo": "Feb 10 00:49:54 2027 GMT",
+    "subjectAltName": "DNS:windowservices.ca, DNS:www.windowservices.ca"
+  },
+  "routes": [
+    {
+      "path": "/en/",
+      "status": 200
+    },
+    {
+      "path": "/fr/",
+      "status": 200
+    },
+    {
+      "path": "/en/services/",
+      "status": 200
+    },
+    {
+      "path": "/fr/services/",
+      "status": 200
+    },
+    {
+      "path": "/en/commercial/",
+      "status": 200
+    },
+    {
+      "path": "/fr/commercial/",
+      "status": 200
+    },
+    {
+      "path": "/en/residential/",
+      "status": 200
+    },
+    {
+      "path": "/fr/residentiel/",
+      "status": 200
+    },
+    {
+      "path": "/en/commercial/property-management/",
+      "status": 200
+    },
+    {
+      "path": "/fr/commercial/gestion-immobiliere/",
+      "status": 200
+    },
+    {
+      "path": "/en/areas/",
+      "status": 200
+    },
+    {
+      "path": "/fr/regions/",
+      "status": 200
+    },
+    {
+      "path": "/en/resources/",
+      "status": 200
+    },
+    {
+      "path": "/fr/ressources/",
+      "status": 200
+    },
+    {
+      "path": "/en/resources/repair-or-replace-windows/",
+      "status": 200
+    },
+    {
+      "path": "/fr/ressources/reparer-ou-remplacer-fenetres/",
+      "status": 200
+    },
+    {
+      "path": "/en/resources/window-condensation/",
+      "status": 200
+    },
+    {
+      "path": "/fr/ressources/condensation-fenetres/",
+      "status": 200
+    },
+    {
+      "path": "/en/resources/preparing-window-service-quote/",
+      "status": 200
+    },
+    {
+      "path": "/fr/ressources/preparer-demande-soumission/",
+      "status": 200
+    },
+    {
+      "path": "/en/about/",
+      "status": 200
+    },
+    {
+      "path": "/fr/a-propos/",
+      "status": 200
+    },
+    {
+      "path": "/en/contact/",
+      "status": 200
+    },
+    {
+      "path": "/fr/contact/",
+      "status": 200
+    },
+    {
+      "path": "/en/request-a-quote/",
+      "status": 200
+    },
+    {
+      "path": "/fr/demander-une-soumission/",
+      "status": 200
+    },
+    {
+      "path": "/en/privacy/",
+      "status": 200
+    },
+    {
+      "path": "/fr/confidentialite/",
+      "status": 200
+    },
+    {
+      "path": "/en/accessibility/",
+      "status": 200
+    },
+    {
+      "path": "/fr/accessibilite/",
+      "status": 200
+    },
+    {
+      "path": "/en/thank-you/",
+      "status": 200
+    },
+    {
+      "path": "/fr/merci/",
+      "status": 200
+    },
+    {
+      "path": "/en/404/",
+      "status": 404
+    },
+    {
+      "path": "/fr/404/",
+      "status": 404
+    },
+    {
+      "path": "/en/services/window-cleaning/",
+      "status": 200
+    },
+    {
+      "path": "/fr/services/nettoyage-fenetres/",
+      "status": 200
+    },
+    {
+      "path": "/en/services/window-repair/",
+      "status": 200
+    },
+    {
+      "path": "/fr/services/reparation-fenetres/",
+      "status": 200
+    },
+    {
+      "path": "/en/services/window-installation/",
+      "status": 200
+    },
+    {
+      "path": "/fr/services/installation-fenetres/",
+      "status": 200
+    },
+    {
+      "path": "/en/services/window-replacement/",
+      "status": 200
+    },
+    {
+      "path": "/fr/services/remplacement-fenetres/",
+      "status": 200
+    }
+  ],
+  "additionalFilesHashMatched": 69,
+  "checks": [
+    "All published route bodies match the local release",
+    "Localized genuine 404 responses",
+    "Security and indexing headers",
+    "Static asset SHA-256 matches",
+    "Host configuration files forbidden",
+    "Root redirect",
+    "HTTP to HTTPS redirect",
+    "www to canonical host redirect",
+    "Redirect query preserved"
+  ]
+}

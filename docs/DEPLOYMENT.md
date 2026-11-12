@@ -1,78 +1,76 @@
 # WHC deployment and recovery
 
-The owner selected existing WHC hosting and authorized the agent to use the signed-in account. Login succeeded through WHC's Classic Client Area after the new dashboard's cPanel launch control failed. No passwords, cookies or session URLs are stored in source.
+The owner authorized public launch on the existing WHC Web Hosting Pro account. The site is live at https://windowservices.ca/en/ and /fr/. No passwords, cookies, private keys or browser-session URLs are stored in source.
 
-## Verified hosting state — November 11, 2026
+## Installed release
 
-| Item | Observed state |
+| Item | Verified state |
 | --- | --- |
-| Plan | Existing WHC Web Hosting Pro |
-| Server | `srv48.swhc.ca`; shared hosting IP `51.161.57.68` |
-| Web server | Direct virtual-host response identifies LiteSpeed; cPanel reports Apache 2.4.69 compatibility |
-| Domain | `windowservices.ca` created as a separate addon domain |
-| Document root | `~/windowservices.ca`, separate from the primary site's `public_html` |
-| Required internal subdomain | `windowservices.bodycams.ca` |
-| Staging directory | `~/windowservices-staging`, created outside public document roots |
-| Public domain | Nameservers retained: `parking1.whc.ca` / `parking2.whc.ca`; A changed to `51.161.57.68`, TTL 300 |
-| DNS/mail changes | Web A record only; www CNAME and all mail/unrelated records preserved |
+| Server | srv48.swhc.ca, 51.161.57.68, LiteSpeed with Apache compatibility |
+| Document root | /home/nqgwub76/windowservices.ca; separate from the primary site's public_html |
+| Internal addon subdomain | windowservices.bodycams.ca |
+| Non-public staging | /home/nqgwub76/windowservices-staging |
+| Source | e79777ac11b372f20798dc98c65e2994dea30a43, clean |
+| Package | windowservices-production-e79777ac11b3.tar.gz; 3,048,872 bytes |
+| SHA-256 | 446621473ebfb5ae702bcc7d18df62ac84499c571a85215f1beaacafc887b378 |
+| Output | 116 public files; 42 routes; 36 indexable sitemap URLs |
+| Evidence | verification/whc-production-report.json, production-release-manifest.json and live-site-report.json |
 
-The cPanel domain creation provisions its hosting-side domain/zone and required subdomain. It does not establish that the registrar's authoritative parking DNS points to this server. Public DNS, existing mail records and final HTTPS must be inspected together before any cutover. Do not change the hosting account's primary domain.
+The uploaded archive checksum matched on WHC. Only site/. was copied into the document root. cgi-bin and .well-known were preserved. No source tree, Node process, database, credentials, release archive or private evidence is deployed publicly.
 
-## Build and review package
+## Build, package and verify
+
+Use Node 24, Git and tar on macOS/Linux. All launch gates must have evidence; production packaging rejects dirty source.
 
 ```sh
-node scripts/build.mjs
 node --test tests/*.test.mjs
-node scripts/audit.mjs
-node scripts/package.mjs
+SITE_MODE=production node scripts/package.mjs
+mkdir /tmp/windowservices-release
+# Extract the actual archive produced by the command above.
+tar -xzf artifacts/windowservices-production-<revision>.tar.gz -C /tmp/windowservices-release
+node scripts/verify-package.mjs /tmp/windowservices-release
 ```
 
-Packaging requires Node 24, Git and `tar` on macOS/Linux. It rebuilds fresh output and audits it before producing `artifacts/windowservices-preview-<commit>.tar.gz` and a SHA-256 sidecar. Working changes add `-working` to the name and are flagged in the manifest. The archive contains:
+The archive contains site/, release.json (source, mode/origin and all file hashes) and DEPLOY.txt. Keep the manifest, instructions and archive outside public roots. The build reads environment variables directly; .env is not automatically loaded. SITE_URL defaults to https://windowservices.ca. Normal development/preview builds remain noindex with an empty sitemap.
 
-- `site/`: only the static website output, including `.htaccess`.
-- `release.json`: source commit, dirty-tree status, mode/origin and every public file's size/checksum.
-- `DEPLOY.txt`: upload and verification instructions.
+Upload to non-public staging, verify the SHA-256, then extract into a unique release directory. Private sessions may use umask 077, so explicitly set directories within the verified site/ payload to 755 and files to 644 before copying it. Keep the containing staging directory and backups private. The first production check detected and corrected restrictive extraction permissions before handoff.
 
-Extract into an empty local directory, then run `node scripts/verify-package.mjs /path/to/extracted-package`. This checks every file and audits the routes, metadata, social images and sitemap using the packaged origin. Store the archive and manifest outside the public document root. Only the contents of `site/` belong in `~/windowservices.ca` when release is authorized. No Node process, repository, credentials or source documentation belongs on the public host.
+## Routing, indexing and forms
 
-Review output uses noindex metadata and headers, an empty sitemap and no-store caching. Noindex is not access control; use host authentication for a private review deployment. Storing an archive in the non-public staging directory does not publish the website.
+Root .htaccess sets security headers, preferred HTTPS host, / to /en/ (301 in production), clean directory URLs and real English 404s. fr/.htaccess selects the French error document and repeats canonical redirect rules, because its RewriteEngine does not inherit the parent rules. Stable /_errors/en.html and /_errors/fr.html avoid LiteSpeed internal-error recursion; their HTML is noindex. Missing paths and explicit localized 404 routes return actual 404 status. _headers and _redirects are alternatives for other static hosts and do not configure WHC.
 
-## Server configuration
+Production indexable pages have no noindex directive. Quote, confirmation and error pages retain noindex. robots.txt allows crawling and points to the actual 36-URL sitemap. Canonical/hreflang, structured data, responsive images and icons are audited. Headers include CSP, nosniff, restricted device permissions and strict-origin-when-cross-origin referrers. Production public cache lifetime is one hour with revalidation.
 
-The generated `.htaccess` targets the verified Apache-compatible WHC server. It provides `/` → `/en/`, clean directory URLs, real localized 404 responses, MIME types, security headers and mode-specific indexing/cache controls. Production adds HTTPS/preferred-host redirects. `_headers` and `_redirects` remain alternatives for other compatible static hosts; they do not configure WHC.
+Formspree mppdzldb is public configuration, with native POST plus small JavaScript enhancement. Domain restriction, Formshield, honeypot and backend required/type/length rules are verified. Email-or-phone and enum membership are website checks; provider settings do not express those combination rules. _language=en/fr localizes provider fallback pages. Existing notifications go to the verified Superclean inbox. No CAPTCHA embed, analytics, uploads, user accounts or payments are installed. Shared provider capacity is 200 enquiries/month; check current usage in the account.
 
-The rules were tested on local Apache 2.4.67 using real HTTP responses, including French missing pages, explicit 404 routes, security headers and query-preserving trailing-slash redirects. This is not proof of the final live hostname's behaviour. Recheck all rules on WHC after deployment. Preserve any necessary existing host authentication settings when installing the generated configuration.
+## DNS and TLS
 
-Production builds require all evidence-backed `launch` flags, both real logo variants and a clean committed source tree for packaging. `SITE_MODE=production node scripts/package.mjs` is enabled: the owner confirmations and live form/hosting checks support all five gates. The build reads environment variables directly; `.env` is not automatically loaded. Configure `SITE_URL` to the verified HTTPS origin without a trailing slash.
+Authoritative nameservers remain parking1.whc.ca and parking2.whc.ca. The web A record changed from 149.56.225.6 to 51.161.57.68, TTL 300. www CNAME, MX, SPF and forwarding verification were preserved. Google TXT and Bing CNAME ownership records were subsequently added while preserving all existing records. See verification/dns-launch-report.json. Some caches can retain the previous roughly four-hour A-record TTL despite fresh authoritative answers.
 
-The Formspree endpoint is public configuration. Confirm provider host restrictions, server validation, abuse controls and final-domain delivery. The CSP currently permits local assets and Formspree; any future CAPTCHA embed needs its exact domains configured and tested.
+The previous SSL binding on this domain used an unrelated certificate. Non-secret binding metadata was backed up to staging/tls-bindings-before-20261111.json, mode 600. Only WindowServices' SSL host binding was removed; stored certificates/private keys and other host bindings were preserved. AutoSSL was rerun and issued a valid Let's Encrypt certificate for apex and www, expiring February 10, 2027. Renewal is active, will_renew=1, has_problems=0. All three other bindings match the pre-change inventory. See [cPanel SSL guide](https://docs.cpanel.net/knowledge-base/security/guide-to-ssl/118/).
 
-## Cutover and recovery
+## Final live checks
 
-Before cutover, inspect the authoritative DNS and preserve mail/unrelated records; use the confirmed WHC target rather than the current parking address. Verify the final certificate, preferred host, redirects, EN/FR deep links, forms, icons, canonical/hreflang, robots and sitemap. No Google/Bing verification or submission has been performed.
+```sh
+SITE_MODE=production node scripts/check-live.mjs
+```
 
-Keep the previous verified site output and its host configuration. Roll back by restoring that package and configuration, retaining a record of the source revision. Canonical source is `https://github.com/GrafovGroup/WindowServices.git`; there is no separate Sites remote.
+During propagation, VERIFY_IP=51.161.57.68 selects the verified WHC origin while preserving the hostname and strict TLS validation. Final origin checks passed 42 route bodies and 69 additional public file hashes, localized 404s, forbidden host-configuration files, root redirect, HTTP/www canonical redirects with queries, security and indexing headers.
 
-WHC references consulted November 11, 2026: [cPanel access](https://help.whc.ca/en/articles/625469-how-to-access-cpanel), [addon domains](https://clients.whc.ca/index.php?language=english&rp=%2Fknowledgebase%2F153%2FDomaines-suppl%C3%A9mentaires-et-alias.html), [File Manager](https://clients.whc.ca/index.php?language=english&rp=%2Fknowledgebase%2F1730%2FHow-to-use-the-File-Manager.html). The account's actual domain root was verified in cPanel rather than assumed from a primary-domain example.
+Browser tests use TEST_URL, optional CHROME_PATH and NODE_PATH, and optional HOST_RESOLVER_RULES during propagation. All Formspree traffic is mocked or aborted. Chrome tested 42 routes and 84 responsive views; axe tested 20 combinations. Desktop responsive emulation is not evidence of physical-device/Safari/Firefox/Edge behaviour.
 
-Staging verification: `windowservices-preview-5263960e9689.tar.gz` and its checksum are uploaded to `~/windowservices-staging`. The archive was built from clean source `5263960e9689236374a408502c41d046b923047f`. Its authenticated WHC read-back matches SHA-256 `1e64428d098d35812459ab372f1e0d79bfa68344ba59c02a0a52c366255707c0` (3,044,346 bytes). This is a non-public staged package, not a live deployment. Evidence: `docs/verification/whc-staging-report.json`.
+Two final explicitly authorized real enquiries were accepted after provider settings and TLS were configured. Earlier test notifications were owner-confirmed. Final inbox receipt is not independently confirmed. Never rerun a live submission test without explicit authorization.
 
-## Launch preparation — November 11, 2026
+Google and Bing ownership are verified and the final sitemap was submitted. Check verification/search-launch-report.json for fetch/processing status; submission does not imply indexing.
 
-Authoritative DNS now points to 51.161.57.68. The previous web A was 149.56.225.6 with a roughly four-hour TTL; some recursive caches can retain it until expiry. The authoritative nameservers, www CNAME, MX, SPF and forwarding verification records were preserved. The before/after record comparison confirmed no non-web changes.
+## Recovery
 
-The preview release 0a0de7fe57fb was installed and its output verified on WHC. The before-launch backup is ~/windowservices-staging/windowservices-before-launch-20261111.tar.gz (mode 600). It preserves the original empty domain root, including host cgi-bin and .well-known. Retain the verified preview archive for content rollback; it is deliberately noindex.
+Keep these non-public backups:
 
-Live LiteSpeed needed stable error-document paths. The generator now creates /_errors/en.html and /_errors/fr.html; fr/.htaccess selects the French document. These files carry noindex metadata. Missing routes and explicit /en/404/ and /fr/404/ return genuine 404 responses. Root .htaccess provides security and production canonical redirects. Never publish source, archives, private evidence or credentials in the document root.
+- windowservices-before-launch-20261111.tar.gz: original domain root before any website files (cgi-bin/.well-known).
+- windowservices-preview-before-production-20261111.tar.gz: functional noindex preview immediately before production.
+- windowservices-production-e79777ac11b3.tar.gz and its extracted release directory: final verified production.
 
-HTTPS initially inherited a certificate unrelated to WindowServices. A non-secret binding inventory was saved to ~/windowservices-staging/tls-bindings-before-20261111.json (mode 600). Only the WindowServices SSL host binding was removed using cPanel SSL delete_ssl; stored certificates/private keys and other domain bindings were preserved. AutoSSL was rerun and strict apex/www certificate validation then passed. See [cPanel SSL guide](https://docs.cpanel.net/knowledge-base/security/guide-to-ssl/118/).
+For ordinary rollback, verify a known package, extract it into a new non-public directory, normalize only its public payload permissions and restore site/. plus its host configuration. Check files removed by later versions against manifests; do not blindly delete host-created cgi-bin or .well-known. The preview backup deliberately disables indexing. Restoring the initial backup removes the website and is not the usual content rollback. A DNS rollback, if needed, changes only the web A record and preserves mail.
 
-Final verification during resolver propagation can use VERIFY_IP=51.161.57.68 with scripts/check-live.mjs. This changes the connection address while preserving the real hostname and strict TLS validation. Browser tests accept HOST_RESOLVER_RULES for the same purpose; all QA Formspree requests are intercepted. These tests do not prove all public recursive resolvers have expired cached parking answers.
-
-To restore a verified package, extract it into a new non-public staging directory, validate its SHA-256 and release inventory, then copy only site/. into the domain root. Preserve .well-known and cgi-bin. Restoring the initial before-launch backup removes the site; use the preceding verified site package for ordinary content rollback. DNS rollback, if necessary, restores only the web A record and must not alter mail records.
-
-### Production extraction permissions and French redirects
-
-Private staging sessions use umask 077. GNU tar extraction without preserved permissions can therefore create 700 directories and 600 files. Before copying a verified site payload, set directories under its site/ folder to 755 and files to 644; keep the containing staging directory and backups private. Copy only that prepared public payload. The first production check caught and corrected this before handoff.
-
-A French directory with its own RewriteEngine does not inherit the parent canonical rules. Both generated configurations now contain the same production HTTPS/preferred-host redirect, followed by their localized error rules. The live verifier checks a French query-bearing URL through HTTP and www to catch this condition.
+Reference: [WHC DNS records](https://help.whc.ca/en/articles/618475-how-do-i-update-my-domain-s-dns-records). Actual account/domain paths were inspected; the primary hosting domain was not changed. There is no separate Sites-hosted project.

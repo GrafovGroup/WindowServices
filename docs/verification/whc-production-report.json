@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-11-12T02:07:02.604558+00:00",
+  "status": "production installed and verified",
+  "sourceCommit": "e79777ac11b372f20798dc98c65e2994dea30a43",
+  "sourceDirty": false,
+  "archive": "windowservices-production-e79777ac11b3.tar.gz",
+  "archiveBytes": 3048872,
+  "sha256": "446621473ebfb5ae702bcc7d18df62ac84499c571a85215f1beaacafc887b378",
+  "localExtractedVerification": "116 public files, 42 routes; checksum inventory and site audit passed",
+  "whcUpload": "100% complete; sha256sum -c passed on WHC",
+  "documentRoot": "/home/nqgwub76/windowservices.ca",
+  "stagingDirectory": "/home/nqgwub76/windowservices-staging",
+  "server": "srv48.swhc.ca",
+  "ip": "51.161.57.68",
+  "backups": [
+    "windowservices-before-launch-20261111.tar.gz",
+    "windowservices-preview-before-production-20261111.tar.gz"
+  ],
+  "publicPermissions": {
+    "directories": "755",
+    "files": "644",
+    "scope": "Only verified public payload; private staging and backups retain restricted permissions"
+  },
+  "browser": {
+    "version": "157.0.8103.51",
+    "routes": 42,
+    "responsiveViews": 84,
+    "formTraffic": "intercepted; no real submissions",
+    "axeVersion": "4.11.0",
+    "axeCombinations": 20,
+    "automaticViolations": 0,
+    "publicFilesChangedAfterBrowserRun": [
+      "fr/.htaccess"
+    ],
+    "note": "Only host configuration changed after the browser/a11y run; final live hash/status/redirect verification passed on the final clean release."
+  },
+  "visualReview": [
+    "English desktop homepage",
+    "French mobile homepage and quote form",
+    "English repair desktop",
+    "French service areas tablet"
+  ],
+  "tls": {
+    "strictApexAndWwwValidation": true,
+    "autoSSL": {
+      "has_problems": 0,
+      "is_active": 1,
+      "is_excluded": 0,
+      "will_renew": 1
+    },
+    "otherCertificateBindingsChecked": 3,
+    "otherCertificateBindingsChanged": 0,
+    "certificateDetails": "live-site-report.json"
+  },
+  "limitations": [
+    "Desktop Chrome responsive emulation, not physical devices or Safari/Firefox/Edge.",
+    "No production field-performance data or accessibility certification.",
+    "Final launch enquiries accepted; final inbox receipt not independently confirmed. Earlier receipt owner-confirmed."
+  ]
+}

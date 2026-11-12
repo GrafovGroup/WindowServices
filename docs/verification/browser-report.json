@@ -1,6 +1,8 @@
 {
   "browser": "157.0.8103.51",
-  "date": "2026-11-11",
+  "checkedAt": "2026-11-12T01:57:25.623Z",
+  "origin": "https://windowservices.ca",
+  "connectedTo": "MAP windowservices.ca 51.161.57.68, MAP www.windowservices.ca 51.161.57.68",
   "routes": 42,
   "responsive": [
     "en/home@360",

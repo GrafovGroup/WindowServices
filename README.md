@@ -4,7 +4,7 @@ Bilingual static website for commercial and residential window-service enquiries
 
 The website has **42 EN/FR routes**: home, four core services, commercial, residential, property management, a national enquiry hub, three guides, contact, quote, about, privacy, accessibility, next steps and localized 404s. The quote form uses the owner's Formspree endpoint `https://formspree.io/f/mppdzldb`.
 
-The owner has authorized public launch on existing WHC hosting. All five production gates are supported by the [launch checklist](docs/LAUNCH_CHECKLIST.md). The approved option #1 reconstruction is installed; see the [logo proof](docs/preview/brand-proof.png). The operator is Superclean Canada Inc. The release record and current deployment status are in [project status](docs/PROJECT_STATUS.md).
+**Live on WHC:** [English](https://windowservices.ca/en/) · [Français](https://windowservices.ca/fr/). All five production gates are supported by the [launch checklist](docs/LAUNCH_CHECKLIST.md). The approved option #1 reconstruction is installed; see the [logo proof](docs/preview/brand-proof.png). The operator is Superclean Canada Inc. The clean deployed revision is e79777ac11b3. Release evidence and current deployment status are in [project status](docs/PROJECT_STATUS.md).
 
 ## Build and preview
 
@@ -17,7 +17,7 @@ node scripts/serve.mjs
 
 Open `http://127.0.0.1:4173/en/` or `/fr/`. Rebuild after source edits, then reload. Stop the server with Ctrl+C. Set `PORT` to change the port. The loopback preview server always sends noindex headers and is not a production server.
 
-Equivalent npm scripts: `npm run build`, `npm run dev`, `npm run check`. The lockfile records the intentionally dependency-free build. Generated `dist/` is ignored; deploy its contents only after release checks. The owner selected existing WHC hosting. Its separate domain root and non-public staging folder are configured. Authoritative web DNS points to WHC; mail records were preserved.
+Equivalent npm scripts: `npm run build`, `npm run dev`, `npm run check`. The lockfile records the intentionally dependency-free build. Generated `dist/` is ignored; deploy verified output using the release process. The owner selected existing WHC hosting. Its separate domain root and non-public staging folder are configured. Authoritative web DNS points to WHC; mail records were preserved.
 
 ## Release package
 

@@ -22,3 +22,7 @@ Sites skill design and local-preview guidance informed the build. No Sites proje
 | Four core services with qualified availability | Owner confirmed all four subject to project and location confirmation. |
 | Provider fallback language | Formspree _language uses en/fr alongside internal language=en-CA/fr-CA. Documented provider option; mocked browser payloads verify it without extra live submissions. |
 | Stable LiteSpeed error routing | Live testing exposed generic 404s with the previous conditional configuration. Separate internal documents and French directory scope passed actual WHC checks. |
+
+## Production launch outcome
+
+Clean release e79777ac11b3 is installed on existing WHC. Archive SHA-256 and final file/route hashes match. All four core services remain subject to project/location confirmation. The adopted operator and privacy policy are published bilingually. Google and Bing domain ownership were verified with additional DNS records; the 36-URL production sitemap was submitted to both. Processing/indexing is recorded separately. No recurring automation or extra real test enquiry was created.
