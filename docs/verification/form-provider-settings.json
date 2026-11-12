@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-11-11",
+  "timezone": "America/Toronto",
+  "formId": "mppdzldb",
+  "project": "WindowServices.ca",
+  "notifications": "Existing Superclean Canada Inc. inbox; owner confirmed earlier EN/FR receipt",
+  "enabled": true,
+  "archive": true,
+  "formshield": true,
+  "captcha": "Disabled in existing configuration; passive Formshield, honeypot and project domain restriction used",
+  "restrictedDomain": "windowservices.ca",
+  "backendValidation": {
+    "name": {
+      "required": true,
+      "min": 1,
+      "max": 100
+    },
+    "city": {
+      "required": true,
+      "min": 1,
+      "max": 100
+    },
+    "province": {
+      "required": true,
+      "min": 2,
+      "max": 2
+    },
+    "property": {
+      "required": true,
+      "min": 1,
+      "max": 20
+    },
+    "service": {
+      "required": true,
+      "min": 1,
+      "max": 30
+    },
+    "message": {
+      "required": true,
+      "min": 10,
+      "max": 5000
+    },
+    "email": {
+      "type": "email",
+      "required": false
+    },
+    "phone": {
+      "required": false,
+      "min": 0,
+      "max": 40
+    },
+    "company": {
+      "required": false,
+      "min": 0,
+      "max": 150
+    },
+    "timing": {
+      "required": false,
+      "min": 0,
+      "max": 150
+    },
+    "access": {
+      "required": false,
+      "min": 0,
+      "max": 500
+    }
+  },
+  "preflight": "Both localized generated forms checked: all 13 province values are two-letter codes, every service/property option is accepted, text maxima match, and optional empty values are accepted. Automated approval initially rejected the batch; the contract was verified and optional phone minimum changed to zero before the approved retry.",
+  "limitations": [
+    "Email-or-phone combination and allowed enum membership are enforced by website validation; provider UI adds type, required and length checks, not this combination rule.",
+    "Final-domain acceptance and provider account capacity remain to be checked."
+  ],
+  "sources": [
+    "https://help.formspree.io/articles/form-and-project-settings/restrict-to-domain/",
+    "https://help.formspree.io/articles/form-and-project-settings/recaptcha-settings/"
+  ]
+}

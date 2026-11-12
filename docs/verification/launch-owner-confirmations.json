@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-11",
+  "timezone": "America/Toronto",
+  "launchRequest": "lets complete the remaining launch checks and get the site live on WHC",
+  "serviceScope": {
+    "response": "Yes—all four, subject to project/location confirmation",
+    "services": [
+      "cleaning",
+      "repair",
+      "installation",
+      "replacement"
+    ],
+    "availability": "Confirmed per project and location; no universal coverage guarantee"
+  },
+  "legalName": "Superclean Canada Inc.",
+  "privacy": {
+    "contact": "Privacy Officer, Superclean Canada Inc., info@windowservices.ca",
+    "unsuccessfulQuoteRetention": "12 months after last contact, except legal obligations or disputes",
+    "response": "Use this contact and 12-month policy"
+  },
+  "verificationScope": "Owner-confirmed operating facts and published policy; not a legal compliance certification"
+}

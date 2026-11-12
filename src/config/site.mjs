@@ -1,5 +1,6 @@
 export const site = {
   name: 'WindowServices.ca',
+  legalName: 'Superclean Canada Inc.',
   phone: '(833) 696-9996',
   phoneHref: 'tel:+18336969996',
   email: 'info@windowservices.ca',
@@ -11,8 +12,8 @@ export const site = {
 // Change only when evidence is recorded in docs/LAUNCH_CHECKLIST.md.
 export const launch = {
   approvedLogo: true,
-  serviceScopeVerified: false,
-  legalAndPrivacyReviewed: false,
+  serviceScopeVerified: true,
+  legalAndPrivacyReviewed: true,
   formDeliveryVerified: false,
   hostingVerified: false,
 };
